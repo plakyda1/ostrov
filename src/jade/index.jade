@@ -1,0 +1,66 @@
+extends _layout.jade
+block main
+	.carousel-wrap
+		div(class="carousel-main")
+			.item.slider-content-wrap
+				.slider-title-wrap
+					h2.pre-slider-title Канцелярские товары
+					h3.slider-title только оптом
+				a.slider-details(href='#' alt='Подробнее')
+					|Подробнее
+			.item.slider-content-wrap
+				.slider-title-wrap
+					h2.pre-slider-title Акция
+					h3.slider-title -25%
+				a.slider-details(href='#' alt='Подробнее')
+					|Подробнее
+			.item.slider-content-wrap
+				.slider-title-wrap
+					h2.pre-slider-title Весенняя
+					h3.slider-title розпродажа
+				a.slider-details(href='#' alt='Подробнее')
+					|Подробнее
+	section.assort
+		.container
+			.assort__wrap
+				ul.assort__list
+					//- Массив с названиями картинок
+					-var assort = ['news', 'pen', 'discount', 'pencil', 'paper', 'notes', 'skrepki', 'sumki', 'calc', 'globus', 'papki', 'portmone', 'balls', 'watch', 'box', 'muskul' ];
+					//- Массив с Контентом на картинках
+					-var nameAssort = ['Новинки', 'Ручки и стержни', 'Акционные товары', 'Письменные пренадлежности', 'Бумажно-беловые офисные товары', 'Бумажно-беловые школьные товары', 'Конторские принадлежности', 'Школьные товары', 'Офисные принадлежности', 'Глобусы','Папки и регистраторы','Деловая кожгалантерея', 'Товары для праздника', 'Подарки и сувениры', 'Новогодние товары', 'Хозяйствинные товары'];
+					-for (var j = 0; j < assort.length; j++)
+						//- условие для отображения маленких картинон (модификатор '.assort__item_small')
+						if (j==1 || j==3 || j==6 || j==8 || j==9 || j==11 || j==13 )
+							li.assort__item.assort__item_small
+								a(href="#" class="assort__link") 
+									span.assort-dscr #{nameAssort[j]}
+									img(src="img/assort/#{assort[j]}.jpg", alt="#{assort[j]}").assort__image
+						else
+							//- большие картинки
+							li.assort__item
+								a(href="#" class="assort__link")
+									span.assort-dscr #{nameAssort[j]}
+									img(src="img/assort/#{assort[j]}.jpg", alt="#{assort[j]}").assort__image
+
+	section.news
+		.container
+			.news__wrap
+				h2.news__title Новости
+				ul.news__list
+					//- Цыкл со списком новостей
+					- for (var i = 1; i <= 4; i++)
+						li.news__item
+							.img-news
+								if (i==2 || i==3)
+									//- Показывает, что при отстсвии картинки верстка не ломается
+								else
+									a(href="#").img-news__link
+										img(src="img/news/news-img#{i}.png", alt="Image-news").img-news__image
+							.content-news
+								.content-news__date 23.09.2015
+								h3.content-news__title Новость #{i}
+								.content-news__text   
+									.box Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там, что. Снова оксмокс ручеек своего образ деревни на берегу страна взобравшись, о которое выйти напоивший вершину, меня коварный курсивных.
+									//- .box нужен для нормального обрезания текста, что выходит за границы блока с контентом
+			a(href="#").news__all-news Все новости
+

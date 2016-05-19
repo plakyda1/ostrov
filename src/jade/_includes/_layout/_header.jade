@@ -1,0 +1,36 @@
+-var menu_items=["О компании","Новости","Контакты","Оплата и доставка"];
+	header.header
+		.header__search-line
+			.header__search-line-wrap
+				a.logo(href='/' alt="Остров")
+					img(src='img/logo.png' alt='Остров')
+				.authorization
+					a.authorization__login-link(href="#" alt='вход') Вход
+					a.authorization__reg-link(href="#" alt='регистрация') Регистрация
+				.shopping-cart
+					a.shopping-cart__link(href='#' alt='Перейти в корзину')
+						img(href='' alt='Перейти в корзину' src='img/icons/cart.svg')
+					.shopping-cart__calculations-wrap
+						p.shopping-cart__quantity
+							|Всего
+							span.shopping-cart__value 12
+						p.shopping-cart__sum
+							|на сумму
+							span.shopping-cart__value 2 950 руб.
+				form.search-form
+					input.search-form__input(type='text' placeholder='Что будем искать?' name='search_request')
+					button(type='submit' name='submit_search_request').search-form__submit
+		.header__menu-line
+			.header__menu-line-wrap
+				a.product_catalog(href="#" alt='Каталог продукции') Каталог продукции
+				.contact-list__phone-wrap
+					a(href="tel:+78123808588").contact-list__phone
+						|+7 (812) 380-85-88
+						a(href="tel:+78123808592").contact-list__phone_shorter 380-85-92
+							span.contact-list__additional-text (для иногородних клиентов)
+						a(href="tel:+78123808593").contact-list__phone_shorter 380-85-93
+							span.contact-list__additional-text (обслуживание организаций)
+				ul.main-menu
+					each text, index in menu_items
+						li.main-menu__li
+							a.main-menu__a(href="#") #{text}

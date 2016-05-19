@@ -1,0 +1,13 @@
+// base
+@import "base/variables";
+@import "base/mixins";
+@import "base/base";
+@import "base/typo";
+
+// vendor css
+@import "vendor/vendor";
+
+// Стили отдельных блоков/страниц
+@import "layout/index";
+// Your css
+@import "layout/style";
