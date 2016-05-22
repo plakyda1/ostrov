@@ -8,6 +8,7 @@ $(document).ready(function(){
   	autoplay:true,
   	responsive: {
   	}
+
   });
   $(".carousel-wrap").css({'visibility': 'visible', 'opacity':'1' });
   // -----------------------------------SOC BAR----------------------------
@@ -20,4 +21,38 @@ $(document).ready(function(){
     var h=d[g]('body')[0];
     h.appendChild(s);
   }})();
+
+$('.slider-for').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  fade: true,
+  asNavFor: '.slider-nav'
 });
+$('.slider-nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider-for',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true
+});
+});
+
+// ---------------слайдер для товара с миниатюрами----------------
+$(document).ready(function() {
+      $('.minus').click(function () {
+        var $input = $(this).parent().find('input');
+        var count = parseInt($input.val()) - 1;
+        count = count < 1 ? 1 : count;
+        $input.val(count);
+        $input.change();
+        return false;
+      });
+      $('.plus').click(function () {
+        var $input = $(this).parent().find('input');
+        $input.val(parseInt($input.val()) + 1);
+        $input.change();
+        return false;
+      });
+    });
