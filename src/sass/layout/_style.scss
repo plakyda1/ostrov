@@ -4,7 +4,7 @@
 }
 
 h1{
-	font-size: 2em; 
+	font-size: 2em;
 }
 main{
 		color: $black;
@@ -12,13 +12,13 @@ main{
 }
 @include breakpoint(1024){
 	h1{
-		font-size: .2em; 
+		font-size: .2em;
 	}
-	
+
 }
 
 //Подключение глобальных блоков
 @import "layout/_header";
 @import "layout/_footer";
-@import "layout/_kartochka";
+
 

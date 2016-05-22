@@ -1,10 +1,10 @@
 .assort__card{
 	background: #fff;
-	
+
 	&-item__path{
 		font-family: 'pt_sansregular', serif;
 		font-size: 14px;
-		@include opacity(.7); 
+		@include opacity(.7);
 		margin-bottom: 35px;
 		display: block;
 		margin-top: 5px;
@@ -30,7 +30,13 @@
 		}
 	}
 }
-.assort__card-item__gallery 
+.assort__card-item__gallery {
+	overflow: hidden;
+	.slick-slide{
+		display: inline-block;
+		outline: none;
+	}
+}
 .assort__card-item__gallery-new{
 	position: absolute;
 	left: 10px;
@@ -40,7 +46,7 @@
 .slider-nav{
 	min-height: 65px;
 	margin-top: 20px;
-	a{	
+	a{
 		margin-right: 20px;
 		border: 1px solid #dfe0e2;
 		width: auto !important;
@@ -98,7 +104,7 @@
 		margin-bottom: 22px;
 		&:before{
 			content: "\2022";
-			position: absolute;	
+			position: absolute;
 			left: -11px;
 			font-size: 25px;
 			top: -8px;
@@ -123,10 +129,12 @@
 }
 .assort__card-add__basket--btn{
 	@extend .product_catalog;
+	display: inline-block;
 		font-size: 14px;
 		float: none;
 		position: relative;
 		margin: 0 auto;
+		margin-right: 0!important;
 		display: block;
 		text-align: center;
 		&:before{
