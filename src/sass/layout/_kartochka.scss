@@ -22,13 +22,8 @@
 		}
 	}
 }
-.assort__card{
+.product__card{
 	background: #fff;
-	&-item__title{
-		font-size: 34px;
-		font-family: 'pt_sansbold', sans-serif;
-		margin-bottom: 20px;
-	}
 	&-item__gallery{
 		margin-right: 90px;
 		float: left;
@@ -45,14 +40,19 @@
 		}
 	}
 }
-.assort__card-item__gallery {
+.__title{
+	font-size: 34px;
+	font-family: 'pt_sansbold', sans-serif;
+	margin-bottom: 20px;
+}
+.product__card-item__gallery {
 	overflow: hidden;
 	.slick-slide{
 		display: inline-block;
 		outline: none;
 	}
 }
-.assort__card-item__gallery-new{
+.product__card-item__gallery-new{
 	position: absolute;
 	left: 10px;
 	top: 12px;
@@ -78,7 +78,7 @@
 	border-radius: 2px !important;
 }
 
-.assort__card-about__item{
+.product__card-about__item{
 	width: 32.2%;
 	float: left;
 	margin-right: 20px;
@@ -95,7 +95,7 @@
 	}
 }
 
-.assort__card-basket{
+.product__card-basket{
 	padding: 28px;
 	width: 300px;
 	min-height: 250px;
@@ -133,7 +133,7 @@
 		margin-bottom: 35px;
 	}
 }
-.assort__card-add__basket--btn{
+.product__card-add__basket--btn{
 	@extend .product_catalog;
 		// display: inline-block !important;
 		font-size: 14px;
@@ -153,8 +153,8 @@
 			left: 14px;
 		}
 	}
-.assort__card-basket_stock,
-.assort__card-basket_price{
+.product__card-basket_stock,
+.product__card-basket_price{
 	display: block;
 }
 
@@ -204,22 +204,22 @@
 
 
 @include breakpoint(1200px){
-	.assort__card-add__basket--btn{
+	.product__card-add__basket--btn{
 		float: left !important;
 	}
-	.assort__card-about__item{
+	.product__card-about__item{
 		width: 50%;
 		float: right;
 		margin-bottom: 30px;
 	}
-	.assort__card-basket{
+	.product__card-basket{
 		float: right;
 		margin-right: 20px;
 		width: 300px;
 	}
 }
 @include breakpoint(804px){
-	.assort__card-gallery{
+	.product__card-gallery{
 		width: 100%;
 	}
 	.slick-slide{
@@ -227,22 +227,22 @@
 			margin: 0 auto;
 		}
 	}
-	.assort__card-about__item{
+	.product__card-about__item{
 		width: 50%;
 		float: right;
 	}
 }
 @include breakpoint(700px){
-	.assort__card-about__item{
+	.product__card-about__item{
 		width: 100%;
 		margin-right: 0;
 		margin-top: 20px;
 	}
-	.assort__card-basket{
+	.product__card-basket{
 		width: 100%;
 		margin-right: 0;
 	}
-	.assort__card-item__gallery {
+	.product__card-item__gallery {
 	    float: left;
 	    width: 100%;
 	    position: relative;

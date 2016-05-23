@@ -1,6 +1,6 @@
 extends _layout.jade
 block main
-	section.assort__card
+	section.product__card
 		.container
 			.breadcrumbs
 				ul.breadcrumbs__list
@@ -12,10 +12,10 @@ block main
 						a.breadcrumbs__link(href="#") Ручки и стержни
 					li.breadcrumbs__item
 						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Шариковая ручка синяя Erich Krause «R-301»
-			h2.assort__card-item__title
+			h2.__title
 				| Шариковая ручка синяя Erich Krause «R-301»
-			.assort__card-item__gallery
-				.assort__card-item__gallery-new
+			.product__card-item__gallery
+				.product__card-item__gallery-new
 					| Новинка
 				.slider-for
 					a(href="#111")
@@ -27,10 +27,10 @@ block main
 						img(src="img/pen-sm.jpg", alt="")
 					a(href="#222")
 						img(src="img/box-sm.jpg", alt="")
-			.assort__card-about__item
-				h3.assort__card-about__item-title
+			.product__card-about__item
+				h3.product__card-about__item-title
 					| Упаковка: 30 шт.
-				p.assort__card-about__item-dscr
+				p.product__card-about__item-dscr
 					| Шариковая ручка с синими чернилами
 					| 'R-301' удобна для записей и заполнения
 					| документов. Корпус из тонированного
@@ -40,18 +40,18 @@ block main
 					| позволяет крепить ручку к одежде, папке
 					| или бумагам. Качественные чернила оставляют
 					| яркий и четкий след.
-			.assort__card-basket
-				span.assort__card-basket_stock
+			.product__card-basket
+				span.product__card-basket_stock
 					| В наличии
-				span.assort__card-basket_price
-					span.assort__card-basket_price--big 20
+				span.product__card-basket_price
+					span.product__card-basket_price--big 20
 					| руб./шт.
 				form
 					.number
 						span.minus
 						input.input(type='text', value='60', size='5')
 						span.plus
-				span.assort__card-basket_count
+				span.product__card-basket_count
 					| (2 уп.) — 1 200 руб.
-				a(href="#").assort__card-add__basket--btn
+				a(href="#").product__card-add__basket--btn
 					| Добавить в корзину
