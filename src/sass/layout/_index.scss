@@ -329,7 +329,7 @@
 		max-height: 100px !important ;
 	}
 }
-@include breakpoint(400){
+@include breakpoint(400px){
 	.assort-dscr{
 		@include font-size(18px);
 	}

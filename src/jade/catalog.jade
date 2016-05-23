@@ -3,26 +3,26 @@ block main
 	.container__catalog-wrap
 		.container__catalog
 			.accordion-wrap
-				ul.accordion__list
-					-var nameAssort = ['Новинки', 'Акционные товары', 'Бумажно-беловые офисные товары', 'Бумажно-беловые школьные товары', 'Ручки и стержни', 'Письменные пренадлежности', 'Конторские принадлежности', 'Школьные товары', 'Офисные принадлежности', 'Глобусы','Папки и регистраторы','Деловая кожгалантерея', 'Товары для праздника', 'Подарки и сувениры', 'Новогодние товары', 'Хозяйствинные товары'];
-					-var nameAssortList = ['Universal', 'Pilot', 'Представительские', 'Перьевые', 'Гелевые', 'Гелевые Crown', 'Шариковые и стержни', 'Parker', 'ErichKrause', 'Союз' ]
-					each item in nameAssort
-						if item == 'Новинки'
-							li.accordion__item
-								a.accordion__link.accordion__link_news(href='#') #{item}
-						else if item == 'Акционные товары'
-							li.accordion__item
-								a.accordion__link.accordion__link_discount(href='#') #{item}
-						else if item == 'Ручки и стержни'
-							li.accordion__item
-								a.accordion__link.accordion__link_active(href='#') #{item}
-								ul.accordion-item__list
-									each i in nameAssortList
-										li.accordion-item__item
-											a.accordion-item__link(href='#') #{i}
-						else
-							li.accordion__item
-								a.accordion__link(href='#') #{item}
+					ul.accordion__list
+						-var nameAssort = ['Новинки', 'Акционные товары', 'Бумажно-беловые офисные товары', 'Бумажно-беловые школьные товары', 'Ручки и стержни', 'Письменные пренадлежности', 'Конторские принадлежности', 'Школьные товары', 'Офисные принадлежности', 'Глобусы','Папки и регистраторы','Деловая кожгалантерея', 'Товары для праздника', 'Подарки и сувениры', 'Новогодние товары', 'Хозяйствинные товары'];
+						-var nameAssortList = ['Universal', 'Pilot', 'Представительские', 'Перьевые', 'Гелевые', 'Гелевые Crown', 'Шариковые и стержни', 'Parker', 'ErichKrause', 'Союз' ]
+						each item in nameAssort
+							if item == 'Новинки'
+								li.accordion__item
+									a.accordion__link.accordion__link_news(href='#') #{item}
+							else if item == 'Акционные товары'
+								li.accordion__item
+									a.accordion__link.accordion__link_discount(href='#') #{item}
+							else if item == 'Ручки и стержни'
+								li.accordion__item
+									a.accordion__link.accordion__link_active(href='#') #{item}
+									ul.accordion-item__list
+										each i in nameAssortList
+											li.accordion-item__item
+												a.accordion-item__link(href='#') #{i}
+							else
+								li.accordion__item
+									a.accordion__link(href='#') #{item}
 			.catalog-content-wrap
 				.breadcrumbs
 					ul.breadcrumbs__list
@@ -30,45 +30,74 @@ block main
 							a.breadcrumbs__link(href='#') Главная
 						li.breadcrumbs__item
 							a.breadcrumbs__link.breadcrumbs__link_active(href='#') Каталог
-				h2.__title Все товары
+				h2.__title.__title_catalog Все товары
+				.sort
+					.sort__group
+						.sort-text Сортировать:
+						ul.grouping__list
+							li.grouping__item
+								input#price.input-radio(type='radio', name='radio')
+								label.radio-label(for='price') по цене
+							li.grouping__item
+								input#name.input-radio(type='radio', name='radio')
+								label.radio-label(for='name') по наименованию
+							li.grouping__item
+								input#proisvod.input-radio(type='radio', name='radio')
+								label.radio-label(for='proisvod') по производителю
+					.sort__news-views
+						ul.news-discount__list
+							li.news-discount__item
+								input#news.input-checkbox(type='checkbox')
+								label.checkbox-label(for='news') Новинки
+							li.news-discount__item
+								input#discount.input-checkbox(type='checkbox')
+								label.checkbox-label(for='discount') Акция
+						.filter-view
+							.sort-text Вид каталога
+							ul.filter-view__list
+								li.filter-view__item
+									a.filter-view__link
+										.filter-view__icon.filter-view-blocks.filter-view-blocks_active
+								li.filter-view__item
+									a.filter-view__link
+										.filter-view__icon.filter-view-line
 				ul.catalog-wrap.catalog-block-style
-					-for (var j=1;j<=7;j++)
-						if j%2==0
-							li.catalog-product-wrap
-								.product-image-wrap
-									img.product-image(src='img/product-images/product1.jpg' alt='Блокнот «Животные»')
-									.product-status.product-status_new Новинка
-								.product-text-wrap
-									a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
-									.product-text  Упаковка: 10 шт.
-								.product-price-line-wrap
-									.product-price-wrap
-										.product-price 100
-										.product-price-per руб./шт.
-									p.product__stock-status.product__stock-status_expected  Ожидается
-								.product-order-wrap
-									form.product__amount
-										span.minus
-										input.input(type='text', value='1')
-										span.plus
-									a.product-add(href='#' alt='Добавить в корзину')| Добавить
-						else
-							li.catalog-product-wrap
-								.product-image-wrap
-									img.product-image(src='img/product-images/product2.jpg' alt='Блокнот «Животные»')
-									.product-status.product-status_discount Акция
-								.product-text-wrap
-									a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
-									.product-text  Упаковка: 10 шт.
-								.product-price-line-wrap
-									.product-price-wrap
-										.product-price 100
-										.product-price-per руб./шт.
-									p.product__stock-status.product__stock-status_available  В наличии
-								.product-order-wrap
-									form.product__amount
-										span.minus
-										input.input(type='text', value='1')
-										span.plus
-									a.product-add(href='#' alt='Добавить в корзину')| Добавить
-
+						-for (var j=1;j<=7;j++)
+							if j%2==0
+								li.catalog-product-wrap
+									.product-image-wrap
+										img.product-image(src='img/product-images/product1.jpg' alt='Блокнот «Животные»')
+										.product-status.product-status_new Новинка
+									.product-text-wrap
+										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
+										.product-text  Упаковка: 10 шт.
+									.product-price-line-wrap
+										.product-price-wrap
+											.product-price 100
+											.product-price-per руб./шт.
+										p.product__stock-status.product__stock-status_expected  Ожидается
+									.product-order-wrap
+										form.product__amount
+											span.minus
+											input.input(type='text', value='1')
+											span.plus
+										a.product-add(href='#' alt='Добавить в корзину')| Добавить
+							else
+								li.catalog-product-wrap
+									.product-image-wrap
+										img.product-image(src='img/product-images/product2.jpg' alt='Блокнот «Животные»')
+										.product-status.product-status_discount Акция
+									.product-text-wrap
+										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
+										.product-text  Упаковка: 10 шт.
+									.product-price-line-wrap
+										.product-price-wrap
+											.product-price 100
+											.product-price-per руб./шт.
+										p.product__stock-status.product__stock-status_available  В наличии
+									.product-order-wrap
+										form.product__amount
+											span.minus
+											input.input(type='text', value='1')
+											span.plus
+										a.product-add(href='#' alt='Добавить в корзину')| Добавить
