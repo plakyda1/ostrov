@@ -27,9 +27,10 @@
 			position: absolute;
 			top: 2px;
 			right: -32px;
-			background: url(../img/icons/arrow_list-down.svg)  no-repeat center center;
+			background: url(../img/icons/arrow_list-down.svg) 50%;
 			width: 17px;
 			height: 10px;
+			background-size: cover;
 		}
 		&_news{
 			color: $blue;
@@ -49,9 +50,10 @@
 			position: absolute;
 			top: 2px;
 			right: -32px;
-			background: url(../img/icons/arrow_list-up.svg) no-repeat center center;
+			background: url(../img/icons/arrow_list-up.svg) 50%;
 			width: 17px;
 			height: 10px;
+			background-size: cover;
 		}
 	}
 	// -----------------------------------------
