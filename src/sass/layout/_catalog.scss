@@ -9,6 +9,10 @@
 	// float:right;
 	margin-left: 250px;
 }
+.__title_catalog{
+	margin-bottom: 4px !important;
+}
+// ------------Стили аккордеона
 .accordion{
 	&__list{
 		@include font-size(14px);
@@ -56,7 +60,7 @@
 			background-size: cover;
 		}
 	}
-	// -----------------------------------------
+	// ---------------------------
 }
 .accordion-item{
 	&__list{
@@ -74,6 +78,237 @@
 	}
 }
 // --------------------------------------------------------
+// ------------------------------------------Стили для сортировки-----------------------
+.sort{
+	@include clearfix;
+	@include font-size(14px);
+	overflow: hidden;
+	padding: 0 20px;
+	height: 50px;
+	background: $header-bg;
+	margin-bottom: 21px;
+	// Запрет выдиления
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+.sort__group{
+	@include vertical-align();
+	float:left;
+}
+.grouping{
+	&__list{
+		display: inline-block;
+	}
+	&__item{
+		display: inline-block;
+		margin-left: 30px;
+	}
+}
+.sort-text{
+	display:inline-block;
+}
+.input-radio, 
+.input-checkbox{
+	display: none;
+}
+.radio-label{
+	position: relative;
+	cursor: pointer;
+}
+input:checked + .radio-label{
+	color:$orange;
+	font-family: 'pt_sansbold';
+}
+input:checked + .radio-label:after{
+		content: '';
+		position: absolute;
+		background: url(../img/icons/arrow_filtr.svg) 50%;
+		background-size:cover;
+		width: 6px;
+		height: 13px;
+		right: -8px;
+		top: 1px;
+}
+// Стили для чекбоксов в сортировке
+.news-discount{
+	&__list{
+		float: left;
+	}
+	&__item{
+		display: inline-block;
+		margin-right: 55px;
+	}
+}
+.checkbox-label{
+	cursor:pointer;
+	position: relative;
+}
+.checkbox-label:before{
+	content:'';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:0;
+	left:-30px;
+	background: url(../img/icons/check.png) 50%;
+	background-size:cover;
+
+}
+.checkbox-label:hover:before{
+	content:'';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:0;
+	left:-30px;
+	opacity: .5;
+	background: url(../img/icons/checked.png) 50%;
+	background-size:cover;
+}
+input:checked + .checkbox-label{
+	font-family: 'pt_sansbold';
+}
+input:checked + .checkbox-label:before{
+	content:'';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top:0;
+	left:-30px;
+	background: url(../img/icons/checked.png) 50%;
+	background-size:cover;
+}	
+.sort__news-views{
+	@include vertical-align();
+	@include clearfix;
+	float:right;
+}
+.filter-view{
+	float:left;
+}
+.filter-view__list{
+	@include clearfix();
+	display:inline-block;
+	vertical-align:middle;
+	font-size:0;
+}
+.filter-view__item{
+	vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    font-size: 14px;
+    width: 20px;
+    height: 20px;
+    margin-left: 30px;
+}
+.filter-view__link{
+	display:block;
+	position:relative;
+	outline:none;
+	width:20px;
+	height:20px;
+	cursor:pointer;
+}
+.filter-view__icon{
+	margin:0 auto;
+	@include vertical-align();
+}
+.filter-view-blocks{
+	background: url(../img/icons/view-blocks.png);
+	width: 20px;
+	height: 20px;
+	&:hover{
+		background: url(../img/icons/view-blocks-hover.png);
+	}
+}
+.filter-view-blocks_active{
+	background: url(../img/icons/view-blocks-hover.png);
+}  
+.filter-view-line{
+	background: url(../img/icons/view-line.png);
+	width: 20px;
+	height: 20px;
+	&:hover{
+		background: url(../img/icons/view-line-hover.png);
+	}
+}
+.filter-view-line_active{
+	background: url(../img/icons/view-line-hover.png);
+} 
+		// ------------------------Медиа для сортировки ----------------------------
+		@include desktop{
+			.sort{
+				height:auto;
+			}
+			.sort__group{
+				top:0;
+				-webkit-transform: none; 
+				transform: none; 
+				float:none;
+				margin: 10px auto;
+				text-align: center;
+			}
+			.sort__news-views{
+				top:0;
+				-webkit-transform: none; 
+				transform: none;
+				float:none; 
+				margin: 10px auto;
+				text-align: center;
+			}
+			.news-discount__list{
+				float: none;
+				display: inline-block;
+			}
+			.filter-view{
+				float: none;
+				display: inline-block;
+			}
+		}
+		@include breakpoint(760px){
+			.news-discount__list{
+				float: none !important;
+				display:block !important;
+				margin-bottom: 15px !important;
+			}
+			.news-discount__item{
+				margin-left: 30px !important;
+				margin-right: 0px !important;
+			}
+			.filter-view{
+				float: none!important;
+				display:block!important;
+				margin-bottom: 15px!important;
+			}
+		}
+		@include breakpoint(682px){
+			.sort-text{
+				margin-bottom: 15px!important;
+			}
+			.grouping__list{
+				display: block!important;
+			}
+			.grouping__item{
+				display: block!important;
+				margin-bottom: 5px !important;
+				margin-left: 0 !important;
+			}
+		}
+		@include breakpoint(500px){
+			.news-discount__item{
+				display: block;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.sort-text{
+				display: block;
+			}
+			.filter-view__item{
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+// ------------------------------------------------------------------------------
 .catalog-wrap {
 	margin: 0;
 	padding: 0;
@@ -85,7 +320,7 @@
 		@include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, 0.1));
 		background: #fff;
 		display: inline-block;
-		width: 220px;
+		// width: 220px;
 		.product-image-wrap{
 			border-bottom: 2px solid #F8F7F7;
 			padding: 15px 10px;

@@ -29,7 +29,37 @@ block main
 						a.breadcrumbs__link(href='#') Главная
 					li.breadcrumbs__item 
 						a.breadcrumbs__link.breadcrumbs__link_active(href='#') Каталог
-			h2.__title Все товары
+			h2.__title.__title_catalog Все товары
+			.sort
+				.sort__group
+					.sort-text Сортировать:
+					ul.grouping__list
+						li.grouping__item
+							input#price.input-radio(type='radio', name='radio')
+							label.radio-label(for='price') по цене	
+						li.grouping__item
+							input#name.input-radio(type='radio', name='radio')
+							label.radio-label(for='name') по наименованию
+						li.grouping__item
+							input#proisvod.input-radio(type='radio', name='radio')
+							label.radio-label(for='proisvod') по производителю
+				.sort__news-views
+					ul.news-discount__list
+						li.news-discount__item
+							input#news.input-checkbox(type='checkbox')
+							label.checkbox-label(for='news') Новинки
+						li.news-discount__item
+							input#discount.input-checkbox(type='checkbox')
+							label.checkbox-label(for='discount') Акция
+					.filter-view
+						.sort-text Вид каталога
+						ul.filter-view__list
+							li.filter-view__item
+								a.filter-view__link
+									.filter-view__icon.filter-view-blocks.filter-view-blocks_active
+							li.filter-view__item
+								a.filter-view__link
+									.filter-view__icon.filter-view-line
 			ul.catalog-wrap.catalog-block-style
 				li.catalog-product-wrap
 					.product-image-wrap
