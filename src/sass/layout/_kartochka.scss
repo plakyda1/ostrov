@@ -198,7 +198,12 @@
 	}
 }
 
-
+.similar-assort-block{
+	background: #f8f7f7;
+	.container{
+		padding: 30px 10px 50px;
+	}
+}
 
 
 
@@ -263,7 +268,7 @@
 }
 @include breakpoint(579px){
 	.product__card-basket{
-		clear: both;	
+		clear: both;
 		width: 300px;
 		float: none;
 		margin: 0 auto;
