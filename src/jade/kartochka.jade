@@ -2,14 +2,16 @@ extends _layout.jade
 block main
 	section.assort__card
 		.container
-			span.assort__card-item__path
-				a(href="")
-					| Главная >
-				a(href="")
-					| Каталог >
-				a(href="")
-					| Ручки и стержни >
-				| Шариковая ручка синяя Erich Krause «R-301»
+			span.breadcrums
+				ul.breadcrums__list
+					li.breadcrums__item
+						a.breadcrums__link(href="#") Главная
+					li.breadcrums__item
+						a.breadcrums__link(href="#") Каталог
+					li.breadcrums__item
+						a.breadcrums__link(href="#") Ручки и стержни
+					li.breadcrums__item
+						a.breadcrums__link.breadcrums__link_active(href="#") Шариковая ручка синяя Erich Krause «R-301»
 			h2.assort__card-item__title
 				| Шариковая ручка синяя Erich Krause «R-301»
 			.assort__card-item__gallery

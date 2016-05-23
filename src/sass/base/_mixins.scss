@@ -118,54 +118,54 @@
 
 // 1600
 @mixin desktop-big {
-  @media only screen and (max-width: 100em) {
+  @media only screen and (max-width: 1600px) {
     @content;
   }
 }
 
 // 1240
 @mixin desktop {
-  @media only screen and (max-width: 77em) {
+  @media only screen and (max-width: 1240px) {
     @content;
   }
 }
 
 // 1040
 @mixin tablets {
-  @media only screen and (max-width: 65em) {
+  @media only screen and (max-width: 1040px) {
     @content;
   }
 }
 
 // 904
 @mixin small-tablets-h {
-  @media only screen and (max-width: 56.5em) {
+  @media only screen and (max-width: 904px) {
     @content;
   }
 }
 // 804
 @mixin small-tablets {
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 804px) {
     @content;
   }
 }
 
 // 600
 @mixin mobile {
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 600px) {
     @content;
   }
 }
 // 360
 @mixin mobile-s {
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 360px) {
     @content;
   }
 }
 
 // Используй это, если нужна индивидуальная ширина. Или лучше всегда эту использовать.
 @mixin breakpoint($width){
-  @media only screen and (max-width: ($width / 16) + em) {
+  @media only screen and (max-width: $width) {
     @content;
   }
 }
