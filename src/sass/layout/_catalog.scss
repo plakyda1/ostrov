@@ -5,10 +5,12 @@
 .catalog-block-style{
 	.catalog-product-wrap {
 		@include border-radius(3px);
-		@include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, 0.1));
+		@include transition(0.8s);
 		background: #fff;
 		display: inline-block;
+		vertical-align: top;
 		width: 220px;
+		padding-bottom: 30px;
 		.product-image-wrap{
 			border-bottom: 2px solid #F8F7F7;
 			padding: 15px 10px;
@@ -17,6 +19,9 @@
 			display: block;
 			margin: 0 auto;
 		}
+	}
+	.catalog-product-wrap:hover {
+		@include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, 0.1));
 	}
 	.product-text-wrap {
 		padding: 25px 10px;
@@ -48,10 +53,10 @@
 		}
 
 	}
-	.product-note {
+	.product-stock {
 		display: inline-block;
 	}
-	.product-note_expected{
+	.product-stock_expected{
 		color: #FFCB83;
 		&:before {
 			display: inline-block;
@@ -63,7 +68,7 @@
 			@include border-radius(50%);
 		}
 	}
-	.product-note_available{
+	.product-stock_available{
 		color: #89c53f;
 		&:before {
 			display: inline-block;
