@@ -1,10 +1,13 @@
 // -------------------------------------Accordion------------------------
 .accordion-wrap{
 	float: left;
-	width: 230px;
-	padding-top: 3px;
-    padding-left: 10px;
 	background: #f9f9f9;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 230px;
+	padding-top: 18px;
+	padding-left: 20px;
 }
 .container__catalog-wrap{
 	background: #fff;
@@ -12,6 +15,7 @@
 .container__catalog {
 	max-width: 1200px;
 	margin: 0 auto;
+	position: relative;
 }
 .catalog-content-wrap{
 	// float:right;
@@ -58,7 +62,7 @@
 	&__link_active{
 		display: block;
 		position: relative;
-		font-family: 'pt_sansbold';
+		font-weight:600;
 		// Стрелка активная
 		&:after{
 			content: "";
