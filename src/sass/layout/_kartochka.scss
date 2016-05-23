@@ -1,18 +1,17 @@
-.breadcrums{
+.breadcrumbs{
 	font-family: 'pt_sansregular', serif;
 	font-size: 14px;
 	@include opacity(.7);
 	margin-bottom: 35px;
-	display: block;
 	margin-top: 5px;
 }
-.breadcrums__list{
+.breadcrumbs__list{
 	display: inline-block;
 }
-.breadcrums__item{
+.breadcrumbs__item{
 	display: inline-block;
 }
-.breadcrums__link{
+.breadcrumbs__link{
 	&:after{
 		content: ">";
 		margin-left: 5px;
