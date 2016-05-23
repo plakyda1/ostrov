@@ -146,7 +146,7 @@
 		&:before{
 			content: "";
 			position: absolute;
-			background: url(../img/icons/cart.png) 0 0 no-repeat;
+			background: url(../img/icons/cart_white.svg) 0 0 no-repeat;
 			width: 13px;
 			height: 11px;
 			top: 13px;
@@ -248,8 +248,28 @@
 	    position: relative;
 	}
 }
-
-
+@media screen and (min-width: 580px) and (max-width: 700px){
+	.product__card-item__gallery{
+		margin-bottom: 25px;
+	}
+	.product__card-about__item{
+		width: 45%;
+		margin-right: 0;
+		margin-top: 0;
+		float: left;
+	}
+	.product__card-basket{
+		width: 300px;
+	}
+}
+@include breakpoint(579px){
+	.product__card-basket{
+		clear: both;	
+		width: 300px;
+		float: none;
+		margin: 0 auto;
+	}
+}
 
 
 
