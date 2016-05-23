@@ -56,3 +56,13 @@ $(document).ready(function() {
         return false;
       });
     });
+// ----------------------------------ACCCORDION-----------------------
+$(".accordion__link").on('click', _accordion); 
+  function _accordion(e){
+    e.preventDefault();
+      $(this)   
+      .toggleClass("accordion__link_active")
+      .siblings('.accordion-item__list')
+      .stop(true, true)
+      .slideToggle();
+  }

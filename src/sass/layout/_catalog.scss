@@ -1,6 +1,81 @@
+// -------------------------------------Accordion------------------------
+.accordion-wrap{
+	float: left;
+	width: 230px;
+	padding-top: 3px;
+    padding-left: 10px;
+}
+.catalog-content-wrap{
+	// float:right;
+	margin-left: 250px;
+}
+.accordion{
+	&__list{
+		@include font-size(14px);
+	}
+	&__item{
+		margin-bottom: 15px;
+		max-width: 170px;
+	}
+	&__link{
+		display: block;
+		position: relative;
+		color: $accordion-text;
+		//------------- Стрелка ---------
+		&:after{
+			content: "";
+			position: absolute;
+			top: 2px;
+			right: -32px;
+			background: url(../img/icons/arrow_list-down.svg)  no-repeat center center;
+			width: 17px;
+			height: 10px;
+		}
+		&_news{
+			color: $blue;
+		}
+		&_discount{
+			color: $orange;
+		}
+	}
+	// Стилизация активного елемента аккордеона
+	&__link_active{
+		display: block;
+		position: relative;
+		font-family: 'pt_sansbold';
+		// Стрелка активная
+		&:after{
+			content: "";
+			position: absolute;
+			top: 2px;
+			right: -32px;
+			background: url(../img/icons/arrow_list-up.svg) no-repeat center center;
+			width: 17px;
+			height: 10px;
+		}
+	}
+	// -----------------------------------------
+}
+.accordion-item{
+	&__list{
+		margin-top: 13px;
+		margin-left: 15px;
+	}
+	&__item{
+		margin-bottom: 15px;
+	}
+	&__link{
+		color: $accordion-text-inner;
+	}
+	&__link:hover{
+		color: $accordion-text;
+	}
+}
+// --------------------------------------------------------
 .catalog-wrap {
 	margin: 0;
 	padding: 0;
+	text-align: justify;
 }
 .catalog-block-style{
 	.catalog-product-wrap {
