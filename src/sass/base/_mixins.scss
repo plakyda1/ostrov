@@ -186,11 +186,11 @@
   }
 }
 @mixin horiz_align_hack {
-  &:after {
-  display: inline-block;
-  content: '';
-  width: 100%;
-  }
+    &:after {
+        display: inline-block;
+        content: '';
+        width: 100%;
+    }
 }
 
 @mixin border-top-radius($radius) {

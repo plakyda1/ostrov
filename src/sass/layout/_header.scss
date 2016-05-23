@@ -280,6 +280,7 @@
 	.product_catalog {
 		float: none !important;
 		display: inline-block;
+		// margin-right: 0px!important;
 	}
 	.shopping-cart{
 		float: none !important;
@@ -303,11 +304,11 @@
 		display: inline-block;
 		margin:0;
 	}
-}
-@include breakpoint(440px){
 	.product_catalog {
 		margin-right: 0 !important;
 	}
+}
+@include breakpoint(440px){
 	.authorization{
 		float: none !important;
 		display: inline-block;

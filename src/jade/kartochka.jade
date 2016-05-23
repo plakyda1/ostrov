@@ -15,13 +15,13 @@ block main
 			h2.__title
 				| Шариковая ручка синяя Erich Krause «R-301»
 			.product__card-item__gallery
-				.product__card-item__gallery-new
-					| Новинка
 				.slider-for
 					a(href="#111")
 						img(src="img/pen.jpg", alt="")
 					a(href="#111")
 						img(src="img/box.jpg", alt="")
+				.product-status.product-status_new
+					| Новинка
 				.slider-nav
 					a(href="#222")
 						img(src="img/pen-sm.jpg", alt="")
@@ -41,17 +41,17 @@ block main
 					| или бумагам. Качественные чернила оставляют
 					| яркий и четкий след.
 			.product__card-basket
-				span.product__card-basket_stock
+				span.product__stock-status.product__stock-status_available
 					| В наличии
 				span.product__card-basket_price
 					span.product__card-basket_price--big 20
 					| руб./шт.
-				form
-					.number
+				.product__card-basket-amount
+					form.product__amount
 						span.minus
 						input.input(type='text', value='60', size='5')
 						span.plus
-				span.product__card-basket_count
-					| (2 уп.) — 1 200 руб.
+					span.product__card-basket_count
+						| (2 уп.) — 1 200 руб.
 				a(href="#").product__card-add__basket--btn
 					| Добавить в корзину

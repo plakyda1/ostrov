@@ -41,26 +41,24 @@ $('.slider-nav').slick({
 
 // ---------------слайдер для товара с миниатюрами----------------
 $(document).ready(function() {
-      $('.minus').click(function () {
+      $('.product__amount .minus').click(function () {
         var $input = $(this).parent().find('input');
         var count = parseInt($input.val()) - 1;
         count = count < 1 ? 1 : count;
         $input.val(count);
-        $input.change();
         return false;
       });
-      $('.plus').click(function () {
+      $('.product__amount .plus').click(function () {
         var $input = $(this).parent().find('input');
         $input.val(parseInt($input.val()) + 1);
-        $input.change();
         return false;
       });
     });
 // ----------------------------------ACCCORDION-----------------------
-$(".accordion__link").on('click', _accordion); 
+$(".accordion__link").on('click', _accordion);
   function _accordion(e){
     e.preventDefault();
-      $(this)   
+      $(this)
       .toggleClass("accordion__link_active")
       .siblings('.accordion-item__list')
       .stop(true, true)

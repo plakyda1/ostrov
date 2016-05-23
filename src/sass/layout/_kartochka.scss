@@ -29,17 +29,25 @@
 		float: left;
 		width: 33%;
 		position: relative;
-		&-new{
-			padding: 6px 10px;
-			background-color: #2dcdfc;
-			display: inline-block;
-			border-radius: 4px;
-			font-family: 'pt_sansbold', sans-serif;
-			font-size: 14px;
-			color: #fff;
-		}
 	}
 }
+.product-status{
+	position: absolute;
+	top:0;
+	padding: 6px 10px;
+	display: inline-block;
+	border-radius: 4px;
+	font-family: 'pt_sansbold', sans-serif;
+	font-size: 14px;
+	color: #fff;
+}
+.product-status_new {
+	background-color: #2dcdfc;
+}
+.product-status_discount {
+	background-color: #f05a28;
+}
+
 .__title{
 	font-size: 34px;
 	font-family: 'pt_sansbold', sans-serif;
@@ -101,21 +109,7 @@
 	min-height: 250px;
 	background: #f9f9f9;
 	float: left;
-	&_stock{
-		font-family: 'pt_sansregular', serif;
-		font-size: 14px;
-		color: #89c53f;
-		position: relative;
-		margin-left: 15px;
-		margin-bottom: 22px;
-		&:before{
-			content: "\2022";
-			position: absolute;
-			left: -11px;
-			font-size: 25px;
-			top: -8px;
-		}
-	}
+
 	&_price{
 		font-family: 'pt_sansregular', serif;
 		font-size: 21px;
@@ -127,11 +121,16 @@
 		}
 	}
 	&_count{
-		display: block;
-		margin-left: 109px;
-		margin-top: 22px;
-		margin-bottom: 35px;
+		display: inline-block;
+		float: right;
 	}
+	.product__stock-status{
+		margin-bottom: 22px;
+	}
+}
+.product__card-basket-amount{
+	margin-bottom: 35px;
+	@include clearfix;
 }
 .product__card-add__basket--btn{
 	@extend .product_catalog;
@@ -158,45 +157,45 @@
 	display: block;
 }
 
-.number{
-	position: relative;
-}
-.minus{
-	position: absolute;
-	top: 10px;
-	background: #f1f1f1 url("../img/icons/minus.svg") no-repeat;
-	background-position: center;
-}
-.input{
-	position: absolute;
-	top: 10px;
-	left: 29px;
-	height: 30px;
-	width: 38px;
-	border: 1px solid #cccdcd;
-	text-align: center;
-	font-family: 'pt_sansbold', sans-serif;
-	font-size: 14px;
-	color: #232832;
-}
-.plus{
-	position: absolute;
-	top: 10px;
-	left: 66px;
-	background: #f1f1f1 url("../img/icons/plus.svg") no-repeat;
-	background-position: center;
-}
-.minus,
-.plus{
+.product__amount{
+	@include clearfix;
 	display: inline-block;
-	width: 30px;
-	height: 30px;
-	// background: #f1f1f1;
-	border: 1px solid #cccdcd;
-	text-align: center;
-	cursor: pointer;
-	color: #c0c0c0;
-	line-height: 28px;
+	.minus{
+		float:left;
+		display: block;
+		background: #f1f1f1 url("../img/icons/minus.svg") no-repeat;
+		background-position: center;
+	}
+	.input{
+		float:left;
+		display: block;
+		height: 30px;
+		width: 38px;
+		border: 1px solid #cccdcd;
+		text-align: center;
+		font-family: 'pt_sansbold', sans-serif;
+		font-size: 14px;
+		color: #232832;
+		outline:none;
+	}
+	.plus{
+		float:left;
+		display: block;
+		background: #f1f1f1 url("../img/icons/plus.svg") no-repeat;
+		background-position: center;
+	}
+	.minus,
+	.plus{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		// background: #f1f1f1;
+		border: 1px solid #cccdcd;
+		text-align: center;
+		cursor: pointer;
+		color: #c0c0c0;
+		line-height: 28px;
+	}
 }
 
 
