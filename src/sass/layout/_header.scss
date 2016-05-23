@@ -246,7 +246,7 @@
 	}
 
 
-@include breakpoint(1230){
+@include breakpoint(1230px){
 	.header__menu-line-wrap {
 		padding-bottom: 5px !important;
 	}
@@ -267,7 +267,7 @@
 	}
 }
 
-@include breakpoint(670){
+@include breakpoint(670px){
 	.header__menu-line-wrap,
 	.header__search-line-wrap{
 		text-align: center;
@@ -288,7 +288,7 @@
 		clear: both;
 	}
 }
-@include breakpoint(520){
+@include breakpoint(520px){
 	.search-form__input{
 		width:90%;
 	}
@@ -304,7 +304,7 @@
 		margin:0;
 	}
 }
-@include breakpoint(440){
+@include breakpoint(440px){
 	.product_catalog {
 		margin-right: 0 !important;
 	}
