@@ -1,0 +1,56 @@
+.payment__delivery{
+	background: #fff;
+}
+.payment__delivery-wrap{
+	float: left;
+	width: 52%;
+	margin-right: 20px;
+}
+.payment__list{
+	line-height: 30px;
+}
+.payment__item{
+	margin-left: 45px;
+	position: relative;
+	&--cash{
+		&:before{
+			content: '';
+			position: absolute;
+			background:  url('../img/icons/wallet-green.svg') no-repeat;
+			width: 20px;
+			height: 20px;
+			left: -27px;
+			top: 5px;
+		}
+	}
+	&--creditcard{
+		&:before{
+			content: '';
+			position: absolute;
+			background:  url('../img/icons/creditcard-green.svg') no-repeat;
+			width: 20px;
+			height: 12px;
+			left: -27px;
+			top: 10px;
+		}
+	}
+	&--transfer{
+		&:before{
+			content: '';
+			position: absolute;
+			background:  url('../img/icons/bank-green.svg') no-repeat;
+			width: 20px;
+			height: 18px;
+			left: -27px;
+			top: 5px;
+		}
+	}
+}
+.delivery__info{
+	font-family: 'pt_sansbold', sans-serif;
+	font-size: 21px;
+	margin: 30px 0 10px 0;
+}
+.delivery-dscr{
+	margin-left: 30px;
+}
