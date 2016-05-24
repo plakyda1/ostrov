@@ -508,10 +508,10 @@ input:checked + .checkbox-label:before{
 
 }
 .description-content-block {
-	margin: 40px 0 70px;
+	padding: 40px 0 70px;
 	text-align: justify;
 	color: #97999c;
 	& p {
-		margin-bottom: 25px;
+		padding-bottom: 25px;
 	}
 }
