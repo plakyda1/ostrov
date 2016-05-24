@@ -64,3 +64,8 @@ $(".accordion__link").on('click', _accordion);
       .stop(true, true)
       .slideToggle();
   }
+  // Lightbox
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })

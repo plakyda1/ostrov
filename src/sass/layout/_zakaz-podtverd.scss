@@ -1,0 +1,29 @@
+.podtverd{
+	max-width: 550px;
+}
+.zakaz-info__item{
+	@include clearfix();
+}
+.definition{
+	float: left;
+	width: 22%;
+	text-align: right;
+
+}
+.value{
+	margin-left:2%;
+	float: right;
+	width: 76%;
+	font-weight:600;
+}
+.value__details{
+	font-weight: normal;
+}
+.podtverd__title{
+	@include font-size(21px);
+	font-family: 'pt_sansbold';
+	margin-bottom: 10px;
+} 
+.zakaz-info__item{
+	margin-bottom: 20px;
+}

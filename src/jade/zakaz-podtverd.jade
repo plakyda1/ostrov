@@ -1,0 +1,34 @@
+extends _layout.jade
+block main
+	section.zakaz-podtverd
+		.container
+			.breadcrumbs.breadcrumbs__single-news
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Корзина
+						li.breadcrumbs__item
+						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Оформление заказа
+			h2.__title.__title_single-news Оформление заказа
+			.podtverd
+				h3.podtverd__title Подтверждение
+				.podtverd__wrap
+					ul.zakaz-info__list
+						li.zakaz-info__item
+							.definition Ваше имя
+							.value Александр
+						li.zakaz-info__item
+							.definition Телефон
+							.value +7 (812) 236-56-44
+						li.zakaz-info__item
+							.definition Email
+							.value info@piramida.ru
+						li.zakaz-info__item
+							.definition Способ доставки
+							.value Заберу самостоятельно: 
+								span.value__details 198099, Санкт-Петербург, Кировский район, ул. Оборонная, д.10
+						li.zakaz-info__item
+							.definition Способ оплаты
+							.value Наличными при получении	
+

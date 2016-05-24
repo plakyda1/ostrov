@@ -1,0 +1,30 @@
+extends _layout.jade
+block main
+	section.all-news
+		.container
+			include ./_includes/_layout/_aside.jade
+			.catalog-content-wrap
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							a.breadcrumbs__link.breadcrumbs__link_active(href="#") Новости
+				h2.__title Новости
+				ul.news__list
+					//- Цыкл со списком новостей
+					- for (var i = 1; i <= 10; i++)
+						li.news__item.news__item_in-page-news
+							.img-news
+								if (i==2 || i==3 || i==7 || i==8)
+									//- Показывает, что при отстсвии картинки верстка не ломается
+								else
+									a(href="odna_novost.html").img-news__link
+										img(src="img/news/news-img#{i}.png", alt="Image-news").img-news__image
+							.content-news
+								.content-news__date 23.09.2015
+								h3.content-news__title Новость #{i}
+								.content-news__text   
+									.box Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там, что. Снова оксмокс ручеек своего образ деревни на берегу страна взобравшись, о которое выйти напоивший вершину, меня коварный курсивных.
+									//- .box нужен для нормального обрезания текста, что выходит за границы блока с контентом
+				
