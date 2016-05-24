@@ -55,3 +55,47 @@ block main
 						| (2 уп.) — 1 200 руб.
 				a(href="#").product__card-add__basket--btn
 					| Добавить в корзину
+		.similar-assort-block
+			.container
+				h2.__title
+					| Похожие товары
+				ul.catalog-wrap.catalog-block-style
+							-for (var j=1;j<=5;j++)
+								if j%2==0
+									li.catalog-product-wrap
+										.product-image-wrap
+											img.product-image(src='img/product-images/product1.jpg' alt='Блокнот «Животные»')
+											.product-status.product-status_new Новинка
+										.product-text-wrap
+											a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
+											.product-text  Упаковка: 10 шт.
+										.product-price-line-wrap
+											.product-price-wrap
+												.product-price 100
+												.product-price-per руб./шт.
+											p.product__stock-status.product__stock-status_expected  Ожидается
+										.product-order-wrap
+											form.product__amount
+												span.minus
+												input.input(type='text', value='1')
+												span.plus
+											a.product-add(href='#' alt='Добавить в корзину')| Добавить
+								else
+									li.catalog-product-wrap
+										.product-image-wrap
+											img.product-image(src='img/product-images/product2.jpg' alt='Блокнот «Животные»')
+											.product-status.product-status_discount Акция
+										.product-text-wrap
+											a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
+											.product-text  Упаковка: 10 шт.
+										.product-price-line-wrap
+											.product-price-wrap
+												.product-price 100
+												.product-price-per руб./шт.
+											p.product__stock-status.product__stock-status_available  В наличии
+										.product-order-wrap
+											form.product__amount
+												span.minus
+												input.input(type='text', value='1')
+												span.plus
+											a.product-add(href='#' alt='Добавить в корзину')| Добавить
