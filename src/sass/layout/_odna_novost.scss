@@ -1,0 +1,49 @@
+// Стили для страницы отображения одной новости 
+section.odna_novost{
+	background: #ffffff;
+}
+.content-news_single{
+	@include font-size(14px);
+}
+.content-news_single p{
+	margin-bottom: 15px;
+}
+.content-news_images{
+	@include clearfix;
+	margin-right: -20px;
+}
+.image-news-preview{
+	-webkit-filter: brightness(100%);
+	@include transition(.5s);
+	width: 100%;
+	position: relative;
+}
+.image-news-preview:hover{
+	-webkit-filter: brightness(65%);
+}
+.link-news-preview{
+	position: relative;
+}
+.link-news-preview:hover:before{
+	content: url("../img/icons/loupe.svg");
+	z-index:1;
+	position: absolute;
+	top:50%;
+	left:50%;
+	width: 20px;
+	height: 20px;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+.link-news-preview{
+	float: left;
+	display: block;
+	width: 138px;
+    margin: 15px 20px 20px 0;
+}
+.__title_single-news{
+	margin-bottom: 5px;
+}
+.breadcrumbs__single-news{
+	padding-top: 5px;
+}

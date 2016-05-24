@@ -32,5 +32,9 @@
 							span.contact-list__additional-text (обслуживание организаций)
 				ul.main-menu
 					each text, index in menu_items
-						li.main-menu__li
-							a.main-menu__a(href="#") #{text}
+						if (text == "Новости")
+							li.main-menu__li
+								a.main-menu__a(href="novosti.html") #{text}
+						else
+							li.main-menu__li
+								a.main-menu__a(href="#") #{text}

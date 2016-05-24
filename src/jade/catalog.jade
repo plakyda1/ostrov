@@ -2,27 +2,7 @@ extends _layout.jade
 block main
 	.container__catalog-wrap
 		.container__catalog
-			.accordion-wrap
-					ul.accordion__list
-						-var nameAssort = ['Новинки', 'Акционные товары', 'Бумажно-беловые офисные товары', 'Бумажно-беловые школьные товары', 'Ручки и стержни', 'Письменные пренадлежности', 'Конторские принадлежности', 'Школьные товары', 'Офисные принадлежности', 'Глобусы','Папки и регистраторы','Деловая кожгалантерея', 'Товары для праздника', 'Подарки и сувениры', 'Новогодние товары', 'Хозяйствинные товары'];
-						-var nameAssortList = ['Universal', 'Pilot', 'Представительские', 'Перьевые', 'Гелевые', 'Гелевые Crown', 'Шариковые и стержни', 'Parker', 'ErichKrause', 'Союз' ]
-						each item in nameAssort
-							if item == 'Новинки'
-								li.accordion__item
-									a.accordion__link.accordion__link_news(href='#') #{item}
-							else if item == 'Акционные товары'
-								li.accordion__item
-									a.accordion__link.accordion__link_discount(href='#') #{item}
-							else if item == 'Ручки и стержни'
-								li.accordion__item
-									a.accordion__link.accordion__link_active(href='#') #{item}
-									ul.accordion-item__list
-										each i in nameAssortList
-											li.accordion-item__item
-												a.accordion-item__link(href='#') #{i}
-							else
-								li.accordion__item
-									a.accordion__link(href='#') #{item}
+			include ./_includes/_layout/_aside.jade
 			.catalog-content-wrap
 				.breadcrumbs
 					ul.breadcrumbs__list
