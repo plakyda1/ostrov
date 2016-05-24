@@ -12,11 +12,19 @@
 	display: inline-block;
 }
 .breadcrumbs__link{
+	&:hover{
+		text-decoration: underline;
+	}
 	&:after{
+		display: block;
+		float: right;
 		content: ">";
 		margin-left: 5px;
 	}
 	&_active{
+		&:hover{
+			text-decoration: none;
+		}
 		&:after{
 			content: "";
 		}
@@ -198,7 +206,12 @@
 	}
 }
 
-
+.similar-assort-block{
+	background: #f8f7f7;
+	.container{
+		padding: 30px 10px 50px;
+	}
+}
 
 
 
@@ -263,7 +276,7 @@
 }
 @include breakpoint(579px){
 	.product__card-basket{
-		clear: both;	
+		clear: both;
 		width: 300px;
 		float: none;
 		margin: 0 auto;
