@@ -12,11 +12,19 @@
 	display: inline-block;
 }
 .breadcrumbs__link{
+	&:hover{
+		text-decoration: underline;
+	}
 	&:after{
+		display: block;
+		float: right;
 		content: ">";
 		margin-left: 5px;
 	}
 	&_active{
+		&:hover{
+			text-decoration: none;
+		}
 		&:after{
 			content: "";
 		}
