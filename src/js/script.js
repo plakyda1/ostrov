@@ -11,7 +11,7 @@ $(document).ready(function(){
 
   });
   $(".carousel-wrap").css({'visibility': 'visible', 'opacity':'1' });
-  // -----------------------------------SOC BAR----------------------------
+  // --------------------------------------------------------SOC BAR-----------------------------------
   (function() {
   if (window.pluso)if (typeof window.pluso.start == "function") return;
   if (window.ifpluso==undefined) { window.ifpluso = 1;
@@ -39,7 +39,7 @@ $('.slider-nav').slick({
 });
 });
 
-// ---------------слайдер для товара с миниатюрами----------------
+// ----------------------------------------слайдер для товара с миниатюрами----------------------------------------
 $(document).ready(function() {
       $('.product__amount .minus').click(function () {
         var $input = $(this).parent().find('input');
@@ -54,18 +54,9 @@ $(document).ready(function() {
         return false;
       });
     });
-// ----------------------------------ACCCORDION-----------------------
-$(".accordion__link").on('click', _accordion);
-  function _accordion(e){
-    e.preventDefault();
-      $(this)
-      .toggleClass("accordion__link_active")
-      .siblings('.accordion-item__list')
-      .stop(true, true)
-      .slideToggle();
-  }
-  // Lightbox
-    lightbox.option({
-      'resizeDuration': 200,
-      'wrapAround': true
-    })
+//------------------------------------------ Lightbox---------------------------------------
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+//----------Cворачивание списка заказов на странице Zakaz-podtverd------------------------

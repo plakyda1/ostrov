@@ -1,8 +1,26 @@
+.zakaz__wrap{
+	margin-bottom: 60px;
+}
+.zakaz-podtverd{
+	background: $white;
+}
+.__title_zakaz-podtverd {
+	margin-bottom: 25px;
+}
 .podtverd{
 	max-width: 550px;
+	margin-bottom: 32px;
+}
+.wrap-zakaz-print{
+	margin-bottom: 10px;
+}
+.zakaz-info__list{
+	@include font-size(14px);
+    padding-left: 31px;
 }
 .zakaz-info__item{
 	@include clearfix();
+	margin-bottom: 12px;
 }
 .definition{
 	float: left;
@@ -24,6 +42,152 @@
 	font-family: 'pt_sansbold';
 	margin-bottom: 10px;
 } 
-.zakaz-info__item{
+
+.zakaz__title{
+	@include font-size(21px);
+	font-family: 'pt_sansbold';
+}
+.zakaz__quick-info{
+	@include font-size(14px);
+	display: inline-block;
+	padding-left: 23px;
+	position: relative;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+.zakaz__quick-info:before{
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 8px;
+	background: url('../img/icons/arrow_list-green.svg');
+	top: 9px;
+    left: 0px;
+}
+.zakaz__quick-info_active:before{
+	content: '';
+	position: absolute;
+	width: 12px;
+	height: 8px;
+	background: url('../img/icons/arrow_list-green_down.svg');
+	top: 9px;
+    left: 0px;
+}
+.zakaz-amount,
+.zakaz-summa{
+	@include font-size(21px);
+	font-family: 'pt_sansbold';
+}
+.zakaz-summa{
+	margin-left: 2px;
+}
+.print-button{
+	@include border-radius(3px);
+	@include font-size(14px);
+	display: inline-block;
+	border:  1px solid $green-button;
+	width: 170px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	position: relative;
+	margin-left: 40px;
+	color: $green-button;
+	transition: .5s;
+}
+.print-button:before{
+	content:"";
+	position: absolute;
+	left: 8px;
+    top: 14px;
+	width: 13px;
+	height: 13px;
+	background: url('../img/icons/print.svg')
+}
+.print-button:hover{
+	color:$white;
+	background: $green-button;
+}
+.print-button:hover:before{
+	content:"";
+	position: absolute;
+	left: 8px;
+    top: 14px;
+	width: 13px;
+	height: 13px;
+	background: url('../img/icons/print-hover.svg')
+}
+// -------------------------Стили таблицы------------------------
+.table-wrap{
 	margin-bottom: 20px;
+}
+.responsive{
+	width: 100%;
+	border-collapse: collapse;
+	@include font-size(14px);
+}
+table th{
+	font-weight:normal !important;
+
+}
+table tr {
+	height: 73px;
+	border-top: 2px solid $table-border;
+	border-bottom: 2px solid $table-border;
+}
+.caption{
+	box-sizing: border-box;
+	background: $table-gray;
+	border-bottom: 20px solid $white;
+}
+.name-product:hover{
+	font-weight:600;
+}
+.price,
+.amount-sht,
+.amount-up,
+.summa-item{
+	font-family: 'pt_sansbold';
+}
+.price-text{
+	margin-left: 5px;
+	@include font-size(14px);
+
+}
+.responsive tr:nth-child(2n-1){
+	background: $table-gray;
+}
+.price,
+.summa-item{
+	@include font-size(21px);
+}
+// Стили после таблицы
+.in-total{
+	text-align: right;
+    padding-right: 45px;
+    margin-bottom: 40px;
+}
+.btn-zakaz{
+	vertical-align: top;
+	@include border-radius(3px);
+    padding: 10px 20px;
+	display: inline-block;
+	min-height: 40px;
+	@include font-size(14px);
+}
+.btn-confirm{
+	background: $green-button;
+	text-transform: uppercase;
+	font-family: 'pt_sansbold';
+	color: $white;
+	transition: .8s;
+}
+.btn-confirm:hover{
+	background: $green-button-hover;
+}
+.btn-cancel{
+	color:$darkgray;
+	text-decoration: underline;
 }
