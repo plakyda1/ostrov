@@ -79,3 +79,20 @@
 .feedback-message{
 	margin-bottom: 15px;
 }
+.thanksgiving__letters-gallery{
+	max-width: 940px;
+	max-height: 250px;
+	float: left;
+	background: $gray;
+	outline: 1px solid #000;
+	@include clearfix();
+	padding: 20px 20px 70px 20px;
+}
+.link-news-preview--large{
+	width: 162px !important;
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+	&:last-child{
+		margin-right: 0 !important; 
+	}
+}
