@@ -2,7 +2,7 @@
 	header.header
 		.header__search-line
 			.header__search-line-wrap
-				a.logo(href='/' alt="Остров")
+				a.logo(href='/' alt="Остров" id='logo')
 					img(src='img/logo.png' alt='Остров')
 				.authorization
 					a.authorization__login-link(href="#" alt='вход') Вход
@@ -35,6 +35,9 @@
 						if (text == "Новости")
 							li.main-menu__li
 								a.main-menu__a(href="novosti.html") #{text}
+						else if (text == "О компании")
+							li.main-menu__li
+								a.main-menu__a(href="about_company.html") #{text}
 						else
 							li.main-menu__li
 								a.main-menu__a(href="#") #{text}

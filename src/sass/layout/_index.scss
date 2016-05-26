@@ -277,8 +277,9 @@
 	color: $darkgray;
 	margin-bottom:70px;
 	transition: .75s;
+	text-decoration: underline;
 	&:hover{
-		text-decoration: underline;
+		text-decoration: none;
 	}
 }
 // ---------------------------------------------Медиа запросы-----------------------------------------

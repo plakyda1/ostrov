@@ -1,18 +1,23 @@
-// base
+/* base*/
 @import "base/variables";
 @import "base/mixins";
 @import "base/base";
 @import "base/typo";
 
-// vendor css
+/* vendor css*/
 @import "vendor/vendor";
-// Стили отдельных блоков/страниц
+/* Стили отдельных блоков/страниц*/
 @import "layout/index";
 @import "layout/catalog";
 @import "layout/_kartochka";
+@import "layout/_formalization_order";
+@import "layout/_about_company";
+@import "layout/_payment__delivery";
+@import "layout/_feedbacks";
 @import "layout/_novosti";
 @import "layout/_odna_novost";
 @import "layout/_zakaz-podtverd";
+@import "layout/_vacancy";
 
-// Your css
+/* Стили header/footer */
 @import "layout/style"
