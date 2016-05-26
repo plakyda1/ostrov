@@ -11,6 +11,26 @@ block main
 						li.breadcrumbs__item
 							a.breadcrumbs__link.breadcrumbs__link_active(href='#') Каталог
 				h2.__title.__title_catalog Все товары
+				form.characteristics-form
+					label(for="product_type")
+						|Тип:
+						select(id='product_type' class='selector' name='product_type')
+							option(selected) Гелевые
+							option Шариковые
+					label(for="product_producer")
+						|Производитель:
+						select(id='product_producer' class='selector' name='product_producer')
+							option(selected) Pilot
+							option Herz
+					label(for="product_color")
+						|Цвет:
+						select(id='product_color' class='selector' name='product_color')
+							option(selected) Все
+							option Оранжевый
+							option Синий
+							option Зеленый
+					button(type='submit' name='subm_charact' class='subm_charact') Показать
+					button(type='reset' name='reset_charact' class='reset_charact') Сбросить
 				.sort
 					.sort__group
 						.sort-text Сортировать:

@@ -83,6 +83,19 @@ $('.slider-nav').slick({
   centerMode: true,
   focusOnSelect: true
 });
+
+// Вызов плагина для селекторов с классом .selector
+$('.selector').chosen({disable_search_threshold: 10});
+// Отображение начальных значений полей select после нажатия сброса параметров любой формы на сайте
+if($('form').find('.selector').size()!=0) {
+  $('form').find('.selector').parents('form').find("*[type='reset']").on('click',function(event){
+    event.preventDefault();
+    form = $(this).parents("form").first();
+    form[0].reset();    // actually reset the form
+    form.find(".selector").trigger("chosen:updated");
+  });
+} ;
+// конец $(document).ready
 });
 // ----------------------------------------------------
 
@@ -191,3 +204,5 @@ function Place(name, latitude, longitude, description){
 }
 //Когда документ загружен полностью - запускаем инициализацию карты.
 google.maps.event.addDomListener(window, 'load', initialize);
+
+

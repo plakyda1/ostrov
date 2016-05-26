@@ -1,10 +1,11 @@
 // -------------------------------------Accordion------------------------
 .accordion-wrap{
-	float: left;
+	// float: left;
 	background: #f9f9f9;
-	position: absolute;
-	top: 0;
-	bottom: 0;
+	// position: absolute;
+	// top: 0;
+	// bottom: 0;
+	display: table-cell;
 	width: 230px;
 	padding-top: 18px;
 	padding-left: 20px;
@@ -16,10 +17,14 @@
 	max-width: 1200px;
 	margin: 0 auto;
 	position: relative;
+	display: table;
 }
 .catalog-content-wrap{
 	// float:right;
-	margin-left: 250px;
+	// margin-left: 250px;
+	padding-left: 20px;
+	display: table-cell;
+	@include clearfix;
 }
 .accordion-wrap{
 }
@@ -535,6 +540,82 @@ input:checked + .checkbox-label:before{
 
 	}
 }
+.characteristics-form{
+	margin-bottom: 19px;
+	label{
+		display: inline-block;
+		margin-right: 14px;
+	}
+	.chosen-container{
+		margin-left: 4px;
+	}
+	.subm_charact {
+		margin-right: 14px;
+	}
+}
+.subm_charact{
+	width: 140px;
+	height: 40px;
+	@include border-radius(2px);
+	background: $buttons-color;
+	color: #fff;
+    font-family: 'pt_sansbold';
+	@include transition(0.8s);
+	&:hover{
+		background: $buttons-color-hover;
+	}
+}
+.reset_charact{
+	color: #a7a8aa;
+	font-size: 14px;
+	&:hover {
+		color: #232832;
+	}
+}
+/* Стилізовані select'и*/
+.chosen-container-active.chosen-with-drop .chosen-single div b {
+		background: url('../img/icons/arrow_list-up.svg') center center no-repeat;
+	}
+.chosen-container {
+	color: #232832;
+	min-width: 140px;
+	font-size: 14px;
+	.chosen-single{
+		background: none;
+		padding: 12px 8px;
+		@include border-radius(2px);
+		border-color: #d3d3d3;
+		line-height: 14px;
+
+	}
+	& .chosen-single div {
+		right: 13px;
+		width: 13px;
+	}
+	.chosen-single div b {
+		background: url('../img/icons/arrow_list-down.svg') center center no-repeat;
+	}
+
+	.chosen-results{
+		border-top: 1px solid #d3d3d3;
+		margin: 0;
+		padding: 0;
+		.active-result{
+			padding:12px 4px 12px 8px;
+			&:hover{
+				background: #f1f1f1;
+				color: #232832;
+
+			}
+		}
+		li.highlighted {
+			background: none;
+			color: inherit;
+		}
+	}
+}
+
+
 
 // Стиль тултипа при заокруглении количества товара
 .tooltip-style{
