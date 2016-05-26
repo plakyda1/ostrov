@@ -1,15 +1,15 @@
-// base
+/* base*/
 @import "base/variables";
 @import "base/mixins";
 @import "base/base";
 @import "base/typo";
 
-// vendor css
+/* vendor css*/
 @import "vendor/vendor";
-// Стили отдельных блоков/страниц
+/* Стили отдельных блоков/страниц*/
 @import "layout/index";
 @import "layout/catalog";
 @import "layout/_kartochka";
 
-// Your css
+/* Your css*/
 @import "layout/style"

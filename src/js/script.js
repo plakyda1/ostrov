@@ -8,9 +8,59 @@ $(document).ready(function(){
   	autoplay:true,
   	responsive: {
   	}
-
   });
+//Кнопка вверх
+  var top_show = 500; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+  var delay = 1000; // Задержка прокрутки
+    $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+      /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+      if ($(this).scrollTop() > top_show) $('#up-button').fadeIn();
+      else $('#up-button').fadeOut();
+    });
+    $('#up-button').click(function () { // При клике по кнопке "Наверх" попадаем в эту функцию
+      /* Плавная прокрутка наверх */
+      $('body, html').animate({
+        scrollTop: 0
+      }, delay);
+    });
+// Скрытие слайдера до полной загрузки страницы
   $(".carousel-wrap").css({'visibility': 'visible', 'opacity':'1' });
+// Тултип при округлении числа товара
+$('.product__amount').find('input[data-tooltip!=""]').qtip({
+    content: {
+        attr: 'data-tooltip' // Tell qTip2 to look inside this attr for its content
+    },
+    position: {
+      my:'left top',
+      at:'center bottom',
+      adjust: {
+            x: -90,
+            y: 20
+        }
+      },
+    style: {
+      def: false,
+      classes: 'tooltip-style',
+        tip: {
+            corner: 'top center',
+            mimic: 'center center'
+        }
+      },
+     hide: {
+       event: false,
+       inactive: 2000
+     },
+     show: false
+}).on('focusout',function(){
+  var val = $(this).val();
+  if (val!==parseInt(val, 10)) {
+    $(this).val(Math.round(val)).qtip('show');
+  }
+
+});
+
+
+
   // -----------------------------------SOC BAR----------------------------
   (function() {
   if (window.pluso)if (typeof window.pluso.start == "function") return;
@@ -21,7 +71,7 @@ $(document).ready(function(){
     var h=d[g]('body')[0];
     h.appendChild(s);
   }})();
-
+// переключатель количества товара
 $('.slider-for').slick({
   slidesToShow: 1,
   slidesToScroll: 1,
