@@ -25,6 +25,7 @@ $(document).ready(function(){
     });
 // Скрытие слайдера до полной загрузки страницы
   $(".carousel-wrap").css({'visibility': 'visible', 'opacity':'1' });
+  // --------------------------------------------------------SOC BAR-----------------------------------
 // Тултип при округлении числа товара
 $('.product__amount').find('input[data-tooltip!=""]').qtip({
     content: {
@@ -98,7 +99,7 @@ if($('form').find('.selector').size()!=0) {
 // конец $(document).ready
 });
 // ----------------------------------------------------
-
+// ----------------------------------------слайдер для товара с миниатюрами----------------------------------------
 $('.thanksgiving__letters-gallery').slick({
   slidesToShow: 3,
   slidesToScroll: 1
@@ -132,6 +133,12 @@ $(document).ready(function() {
     .removeClass("vacancy__accordion-link--active");
   });
     });
+//------------------------------------------ Lightbox---------------------------------------
+lightbox.option({
+  'resizeDuration': 200,
+  'wrapAround': true
+})
+//----------Cворачивание списка заказов на странице Zakaz-podtverd------------------------
 // ----------------------------------ACCCORDION-----------------------
 $(".accordion__link").on('click', _accordion);
   function _accordion(e){
@@ -204,5 +211,4 @@ function Place(name, latitude, longitude, description){
 }
 //Когда документ загружен полностью - запускаем инициализацию карты.
 google.maps.event.addDomListener(window, 'load', initialize);
-
 

@@ -186,7 +186,7 @@ input:checked + .radio-label:after{
 	background-size:cover;
 }
 input:checked + .checkbox-label{
-	font-family: 'pt_sansbold';
+	font-weight: 600;
 }
 input:checked + .checkbox-label:before{
 	content:'';
