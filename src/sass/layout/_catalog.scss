@@ -470,11 +470,11 @@ input:checked + .checkbox-label:before{
 		font-weight: 600;
 		color: #fff;
 		padding: 10px;
-		background: #89c53f;
+		background: $green;
 		@include border-radius(2px);
 		@include transition(1s);
 		&:hover {
-			background: #85da1b;
+			background: $green-hover;
 		}
 	}
 

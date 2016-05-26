@@ -56,6 +56,8 @@
 			}
 			&__input:focus{
 				outline: none;
+				border-color: #8a8c92;
+
 			}
 			&__submit{
 				color: white;
@@ -64,14 +66,13 @@
 				height: 40px;
 				width: 40px;
 				border: none;
-				background: url('../img/search.png') center center $bottons-color no-repeat;
+				background: url('../img/search.png') center center $buttons-color no-repeat;
 				outline: none;
 				@include border-right-radius(3px);
 				@include transition(0.8s);
 			}
 			&__submit:hover {
-				@include box-shadow(inset 0px 0px 50px 1px rgba(0,0,0,0.3));
-
+				background: url('../img/search.png') center center $buttons-color-hover no-repeat;
 			}
 	}
 	.shopping-cart {
@@ -128,11 +129,10 @@
 
 		}
 		&__login-link:hover{
-			text-decoration: none;
-
+			color: #232832;
 		}
 		&__reg-link{
-			background: $bottons-color;
+			background: $buttons-color;
 			padding: 10px 15px;
 			@include border-radius(3px);
 			color: #ffffff;
@@ -141,7 +141,7 @@
 
 		}
 		&__reg-link:hover {
-			@include box-shadow(inset 0px 0px 50px 1px rgba(0,0,0,0.3));
+			background: $buttons-color-hover;
 		}
 	}
 

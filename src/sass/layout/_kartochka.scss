@@ -142,7 +142,6 @@
 }
 .product__card-add__basket--btn{
 	@extend .product_catalog;
-		// display: inline-block !important;
 		font-size: 14px;
 		float: none !important;
 		position: relative;
@@ -173,6 +172,11 @@
 		display: block;
 		background: #f1f1f1 url("../img/icons/minus.svg") no-repeat;
 		background-position: center;
+		&:hover{
+			background: #f1f1f1 url("../img/icons/minus_hover.svg") no-repeat;
+			background-position: center;
+			background-size: 8px;
+		}	
 	}
 	.input{
 		float:left;
@@ -191,13 +195,17 @@
 		display: block;
 		background: #f1f1f1 url("../img/icons/plus.svg") no-repeat;
 		background-position: center;
+		&:hover{
+			background: #f1f1f1 url("../img/icons/plus_hover.svg") no-repeat;
+			background-position: center;
+			background-size: 8px;
+		}	
 	}
 	.minus,
 	.plus{
 		display: inline-block;
 		width: 30px;
 		height: 30px;
-		// background: #f1f1f1;
 		border: 1px solid #cccdcd;
 		text-align: center;
 		cursor: pointer;
