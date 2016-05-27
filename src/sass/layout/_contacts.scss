@@ -1,0 +1,95 @@
+.contacts-wrap{
+	float: left;
+	width: 940px;
+	margin-right: 20px;
+	#map_canvas{
+		width: 940px;
+		height: 360px;
+		float: left;
+	}	
+}
+.contacts__retail-stores{
+	width: 620px;
+	float: left;
+	line-height: 25px;
+	p{
+		font-size: 14px;
+	}
+}
+.catalog-content-wrap{
+	@include clearfix;
+}
+.contacts__adress-wrap{
+	margin-right: 20px;
+	margin-bottom: 20px;
+	padding: 15px;
+	float: left;
+	width: 300px;
+	background: $gray;
+	line-height: 25px;
+	p{
+		margin-bottom: 20px;
+		font-size: 14px;
+		&:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+.contacts-title{
+	font-family: 'pt_sansbold', sans-serif;
+	font-size: 21px;
+	margin-left: 15px;
+	position: relative;
+	&__addr{
+		&:before{
+			content: '';
+			position: absolute;
+			background: url(../img/icons/marker_footer.svg);
+			background-repeat: no-repeat;
+			width: 9px;
+			height: 13px;
+			top: 3px;
+			left: -13px;
+		}
+	}
+	&__phone{
+		&:before{
+			content: '';
+			position: absolute;
+			background: url(../img/icons/phone_footer.svg);
+			background-repeat: no-repeat;
+			width: 12px;
+			height: 12px;
+			top: 5px;
+			left: -16px;
+		}
+	}
+	&__work-time{
+		&:before{
+			content: '';
+			position: absolute;
+			background: url(../img/icons/time_footer.svg);
+			background-repeat: no-repeat;
+			width: 13px;
+			height: 13px;
+			top: 4px;
+			left: -17px;
+		}
+	}
+}
+.contacts-item-title{
+	font-size: 14px;
+	color: $accordion-text;
+	font-family: 'pt_sansbold', sans-serif;
+}
+.contacts-link{
+	display: block;
+	font-size: 14px;
+	@include transition(.8s);
+	&-mb{
+		margin-bottom: 20px;
+	}
+	&:hover{
+		color: grey;
+	}
+}
