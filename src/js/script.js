@@ -29,7 +29,7 @@ $(document).ready(function(){
 // Тултип при округлении числа товара
 $('.product__amount').find('input[data-tooltip!=""]').qtip({
     content: {
-        attr: 'data-tooltip' // Tell qTip2 to look inside this attr for its content
+        text: 'Произошло округление до целого кол-ва упаковок' // Tell qTip2 to look inside this attr for its content
     },
     position: {
       my:'left top',
@@ -56,8 +56,10 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
      show: false
 }).on('focusout',function(){
   var val = $(this).val();
-  if (val!==parseInt(val, 10)) {
-    $(this).val(parseInt(val,10)).qtip('show');
+  if (val!==parseInt(val, 10) && val>0) {
+    $(this).val(parseInt(val,10)).qtip('option','content.text', 'Произошло округление до целого кол-ва упаковок').qtip('show');
+  } else {
+    $(this).val('1').qtip('option','content.text', 'Введено некоректное числовое значение. Исправлено на 1').qtip('show'); // на случай если введено некоректное число товара
   }
 });
   // -----------------------------------SOC BAR----------------------------

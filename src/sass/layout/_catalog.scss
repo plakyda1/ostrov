@@ -166,37 +166,44 @@ input:checked + .radio-label:after{
 .checkbox-label:before{
 	content:'';
 	position: absolute;
-	width: 20px;
-	height: 20px;
+	width: 19px;
+	height: 19px;
+	border-radius: 2px;
+    border: 1px solid #cccccc;
 	top:0;
 	left:-30px;
-	background: url(../img/icons/check.png) 50%;
-	background-size:cover;
+	background: #ffffff;
 
 }
 .checkbox-label:hover:before{
+	@include opacity(.5);
+	background: #2dcdfc;
+
+}
+.checkbox-label:hover:after{
+	@include opacity(.5);
 	content:'';
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	top:0;
-	left:-30px;
-	opacity: .5;
-	background: url(../img/icons/checked.png) 50%;
-	background-size:cover;
+	width: 12.5px;
+	height: 9px;
+	top:5px;
+	left:-26px;
+	background: url('../img/icons/check.svg');
 }
 input:checked + .checkbox-label{
 	font-weight: 600;
 }
 input:checked + .checkbox-label:before{
+	background: #2dcdfc;
+}
+input:checked + .checkbox-label:after{
 	content:'';
 	position: absolute;
-	width: 20px;
-	height: 20px;
-	top:0;
-	left:-30px;
-	background: url(../img/icons/checked.png) 50%;
-	background-size:cover;
+	width: 12.5px;
+	height: 9px;
+	top:5px;
+	left:-26px;
+	background: url('../img/icons/check.svg');
 }
 .sort__news-views{
 	@include vertical-align();
