@@ -51,7 +51,10 @@
 			position: absolute;
 			top: 2px;
 			right: -32px;
-			background: url(../img/icons/arrow_list-down.svg) 50%;
+			background: url(../img/icons/arrow_list-grey.svg) 50%;
+			@include opacity(0.5);
+			@include rotate(180);
+			@include transition(1s);
 			width: 17px;
 			height: 10px;
 			background-size: cover;
@@ -70,14 +73,8 @@
 		font-weight:600;
 		// Стрелка активная
 		&:after{
-			content: "";
-			position: absolute;
-			top: 2px;
-			right: -32px;
-			background: url(../img/icons/arrow_list-up.svg) 50%;
-			width: 17px;
-			height: 10px;
-			background-size: cover;
+			@include rotate(360);
+			@include opacity(1);
 		}
 	}
 	// ---------------------------
@@ -479,20 +476,18 @@ input:checked + .checkbox-label:after{
 	}
 	.product-price-line-wrap {
 		padding: 0 10px;
-		@include clearfix;
+		@include horiz_align_hack;
+		text-align: justify;
 		margin-bottom: 15px;
 	}
 	.product-price-wrap {
 		display: inline-block;
-		vertical-align: top;
 		max-width: 94px;
-		float: left;
 	}
 	.product__stock-status{
-		vertical-align: top;
 		word-wrap: break-word;
 		max-width: 101px;
-		float: right;
+		display: inline-block;
 		padding-left: 13px;
 		&:before{
 			display: block;
@@ -689,7 +684,9 @@ input:checked + .checkbox-label:after{
 
 /* Стилізовані select'и*/
 .chosen-container-active.chosen-with-drop .chosen-single div b {
-		background: url('../img/icons/arrow_list-up.svg') center center no-repeat;
+		background: url('../img/icons/arrow_list-grey.svg') center center no-repeat;
+		@include rotate(360);
+		@include opacity(1);
 	}
 .chosen-container {
 	color: #232832;
@@ -708,7 +705,11 @@ input:checked + .checkbox-label:after{
 		width: 13px;
 	}
 	.chosen-single div b {
-		background: url('../img/icons/arrow_list-down.svg') center center no-repeat;
+		background: url('../img/icons/arrow_list-grey.svg') center center no-repeat;
+		@include opacity(0.5);
+		@include rotate(180);
+		@include transition(1s);
+
 	}
 
 	.chosen-results{

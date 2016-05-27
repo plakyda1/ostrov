@@ -130,15 +130,16 @@
 	}
 	&_count{
 		display: inline-block;
-		float: right;
 	}
 	.product__stock-status{
 		margin-bottom: 22px;
 	}
+	.product__amount{
+		margin-right: 10px;
+	}
 }
 .product__card-basket-amount{
 	margin-bottom: 35px;
-	@include clearfix;
 }
 .product__card-add__basket--btn{
 	@extend .product_catalog;
@@ -167,6 +168,7 @@
 .product__amount{
 	@include clearfix;
 	display: inline-block;
+	vertical-align: middle;
 	.minus{
 		float:left;
 		display: block;
@@ -176,7 +178,7 @@
 			background: #f1f1f1 url("../img/icons/minus_hover.svg") no-repeat;
 			background-position: center;
 			background-size: 8px;
-		}	
+		}
 	}
 	.input{
 		float:left;
@@ -199,7 +201,7 @@
 			background: #f1f1f1 url("../img/icons/plus_hover.svg") no-repeat;
 			background-position: center;
 			background-size: 8px;
-		}	
+		}
 	}
 	.minus,
 	.plus{

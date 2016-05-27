@@ -56,11 +56,12 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
      show: false
 }).on('focusout',function(){
   var val = $(this).val();
-  if (val!==parseInt(val, 10) && val>0) {
+  if (val!=parseInt(val, 10) && val>'0') {
     $(this).val(parseInt(val,10)).qtip('option','content.text', 'Произошло округление до целого кол-ва упаковок').qtip('show');
-  } else {
+  } ;
+  if (val<='0')  {
     $(this).val('1').qtip('option','content.text', 'Введено некоректное числовое значение. Исправлено на 1').qtip('show'); // на случай если введено некоректное число товара
-  }
+  };
 });
   // -----------------------------------SOC BAR----------------------------
   (function() {
