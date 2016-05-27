@@ -382,7 +382,8 @@ input:checked + .checkbox-label:before{
 	font-family: 'pt_sansbold';
 	font-weight: 600;
 	color: #fff;
-	padding: 6px 10px;
+	width: 98px;
+	padding: 6px 8px;
 	text-align: center;
 	font-size: 14px;
 	background: $green;
@@ -402,6 +403,9 @@ input:checked + .checkbox-label:before{
 	}
 	&.added {
 		background: #cecfd1;
+		&:before {
+			background: url('../img/icons/check.svg') no-repeat center center;
+		}
 	}
 }
 
@@ -636,10 +640,11 @@ input:checked + .checkbox-label:before{
 	}
 }
 .characteristics-form{
-	margin-bottom: 19px;
+	margin-bottom: 15px;
 	label{
 		display: inline-block;
-		margin-right: 14px;
+		margin: 0 14px 4px 0;
+
 	}
 	.chosen-container{
 		margin-left: 4px;
@@ -647,26 +652,34 @@ input:checked + .checkbox-label:before{
 	.subm_charact {
 		margin-right: 14px;
 	}
-}
-.subm_charact{
-	width: 140px;
-	height: 40px;
-	@include border-radius(2px);
-	background: $buttons-color;
-	color: #fff;
-    font-family: 'pt_sansbold';
-	@include transition(0.8s);
-	&:hover{
-		background: $buttons-color-hover;
+	#product_type {
+		min-width: 180px;
 	}
 }
-.reset_charact{
-	color: #a7a8aa;
-	font-size: 14px;
-	&:hover {
-		color: #232832;
+
+.form-buttons-wrap {
+	display: inline-block;
+	.subm_charact{
+		width: 140px;
+		height: 40px;
+		@include border-radius(2px);
+		background: $buttons-color;
+		color: #fff;
+	    font-family: 'pt_sansbold';
+		@include transition(0.8s);
+		&:hover{
+			background: $buttons-color-hover;
+		}
+	}
+	.reset_charact{
+		color: #a7a8aa;
+		font-size: 14px;
+		&:hover {
+			color: #232832;
+		}
 	}
 }
+
 /* Стилізовані select'и*/
 .chosen-container-active.chosen-with-drop .chosen-single div b {
 		background: url('../img/icons/arrow_list-up.svg') center center no-repeat;
@@ -709,7 +722,16 @@ input:checked + .checkbox-label:before{
 		}
 	}
 }
+//
+@include breakpoint(1180px){
+	.characteristics-form{
+		text-align: center;
+		&>*{
+		text-align: left;
 
+		}
+	}
+}
 
 
 // Стиль тултипа при заокруглении количества товара

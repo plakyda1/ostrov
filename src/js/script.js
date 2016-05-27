@@ -98,10 +98,15 @@ if($('form').find('.selector').size()!=0) {
     form.find(".selector").trigger("chosen:updated");
   });
 } ;
-
+// Появление класса added при добавлении товара в корзину
 $('.product-add').on('click',function(event){
   event.preventDefault();
   $(this).toggleClass('added');
+  if($(this).hasClass('added')) {
+    $(this).text('В корзине');
+  } else {
+    $(this).text('Добавить');
+  }
 });
 
 

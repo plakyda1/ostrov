@@ -29,8 +29,9 @@ block main
 							option Оранжевый
 							option Синий
 							option Зеленый
-					button(type='submit' name='subm_charact' class='subm_charact') Показать
-					button(type='reset' name='reset_charact' class='reset_charact') Сбросить
+					.form-buttons-wrap
+						button(type='submit' name='subm_charact' class='subm_charact') Показать
+						button(type='reset' name='reset_charact' class='reset_charact') Сбросить
 				.sort
 					.sort__group
 						.sort-text Сортировать:
@@ -81,7 +82,8 @@ block main
 											span.minus
 											input.input(type='text', value='1', data-tooltip='Произошло округление до целого кол-ва упаковок')
 											span.plus
-										a.product-add(href='#' alt='Добавить в корзину')| Добавить
+										a.product-add(href='#' alt='Добавить в корзину')
+											| Добавить
 
 							else
 								li.catalog-product-wrap
