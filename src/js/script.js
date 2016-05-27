@@ -36,7 +36,7 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
       at:'center bottom',
       adjust: {
             x: -90,
-            y: 20
+            y: 12
         }
       },
     style: {
@@ -44,7 +44,9 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
       classes: 'tooltip-style',
         tip: {
             corner: 'top center',
-            mimic: 'center center'
+            mimic: 'center center',
+            height: 8,
+            width: 9
         }
       },
      hide: {
@@ -55,7 +57,7 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
 }).on('focusout',function(){
   var val = $(this).val();
   if (val!==parseInt(val, 10)) {
-    $(this).val(Math.round(val)).qtip('show');
+    $(this).val(parseInt(val,10)).qtip('show');
   }
 });
   // -----------------------------------SOC BAR----------------------------
@@ -96,7 +98,19 @@ if($('form').find('.selector').size()!=0) {
     form.find(".selector").trigger("chosen:updated");
   });
 } ;
+
+$('.product-add').on('click',function(event){
+  event.preventDefault();
+  $(this).toggleClass('added');
+});
+
+
+//
+//
 // конец $(document).ready
+//
+//
+
 });
 // ----------------------------------------------------
 // ----------------------------------------слайдер для товара с миниатюрами----------------------------------------
@@ -138,23 +152,11 @@ lightbox.option({
   'resizeDuration': 200,
   'wrapAround': true
 })
-//----------Cворачивание списка заказов на странице Zakaz-podtverd------------------------
-// ----------------------------------ACCCORDION-----------------------
-$(".accordion__link").on('click', _accordion);
-  function _accordion(e){
-    e.preventDefault();
-      $(this)
-      .toggleClass("accordion__link_active")
-      .siblings('.accordion-item__list')
-      .stop(true, true)
-      .slideToggle();
-  }
   // Lightbox
     lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
     })
-/////////////////////////////////////////////////////////////////////
 //=============================КАРТА==============================//
 function initialize() {
     //получаем наш div куда будем карту добавлять

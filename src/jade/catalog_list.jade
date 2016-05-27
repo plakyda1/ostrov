@@ -57,48 +57,49 @@ block main
 							ul.filter-view__list
 								li.filter-view__item
 									a.filter-view__link(href='catalog.html')
-										.filter-view__icon.filter-view-blocks.filter-view-blocks_active
+										.filter-view__icon.filter-view-blocks
 								li.filter-view__item
 									a.filter-view__link(href='catalog_list.html')
-										.filter-view__icon.filter-view-line
-				ul.catalog-wrap.catalog-block-style
-						-for (var j=1;j<=7;j++)
+										.filter-view__icon.filter-view-line.filter-view-line_active
+				ul.catalog-wrap.catalog-list-style
+						-for (var j=1;j<=9;j++)
 							if j%2==0
 								li.catalog-product-wrap
 									.product-image-wrap
-										img.product-image(src='img/product-images/product1.jpg' alt='Блокнот «Животные»')
-										.product-status.product-status_new Новинка
+										img.product-image(src='img/product-images/product2.jpg' alt='Блокнот «Животные»')
 									.product-text-wrap
-										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
-										.product-text  Упаковка: 10 шт.
+										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Настольный географический глобус MINI (ARIES)
 									.product-price-line-wrap
+										p.product__stock-status.product__stock-status_expected
 										.product-price-wrap
 											.product-price 100
 											.product-price-per руб./шт.
-										p.product__stock-status.product__stock-status_expected  Ожидается
+									.product_package_amount
+										|Упаковка: 10шт.
 									.product-order-wrap
 										form.product__amount
 											span.minus
 											input.input(type='text', value='1', data-tooltip='Произошло округление до целого кол-ва упаковок')
 											span.plus
 										a.product-add(href='#' alt='Добавить в корзину')| Добавить
+
 							else
 								li.catalog-product-wrap
 									.product-image-wrap
 										img.product-image(src='img/product-images/product2.jpg' alt='Блокнот «Животные»')
-										.product-status.product-status_discount Акция
 									.product-text-wrap
-										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
-										.product-text  Упаковка: 10 шт.
+										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Настольный географический глобус COLOMBO (розовый)
 									.product-price-line-wrap
+										p.product__stock-status.product__stock-status_available
 										.product-price-wrap
 											.product-price 100
 											.product-price-per руб./шт.
-										p.product__stock-status.product__stock-status_available  В наличии
+									.product_package_amount
+										|Упаковка: 10шт.
 									.product-order-wrap
 										form.product__amount
 											span.minus
-											input.input(type='text', value='1',data-tooltip='Произошло округление до целого кол-ва упаковок')
+											input.input(type='text', value='1', data-tooltip='Произошло округление до целого кол-ва упаковок')
 											span.plus
 										a.product-add(href='#' alt='Добавить в корзину')| Добавить
 				ul.padination-wrap
