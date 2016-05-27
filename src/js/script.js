@@ -119,11 +119,9 @@ $(document).ready(function() {
         $input.val(parseInt($input.val()) + 1);
         return false;
       });
-
 // -------------------------------аккордион вакансии ---------------------------------------
   $(".vacancy__accordion .vacancy__accordion-title:eq(1)").addClass("vacancy__accordion-link--active");
   $(".vacancy__accordion .vacancy__accordion-info:not(:eq(1))").hide();
-
 
   $(".vacancy__accordion .vacancy__accordion-title").click(function(){
     $(this).next(".vacancy__accordion .vacancy__accordion-info").slideToggle("slow")
@@ -133,6 +131,12 @@ $(document).ready(function() {
     .removeClass("vacancy__accordion-link--active");
   });
     });
+// ----------------------------------------------------------------------------------------
+// var toggle_company_link = $('.about__company-link') // клас стиля ссылки
+//   toggle_company_link.click( function(){
+//    toggle_company_link.removeClass('about__company-link--active')   // клас активной ссылки
+//     $(this).addClass('about__company-link--active')
+//   })
 //------------------------------------------ Lightbox---------------------------------------
 lightbox.option({
   'resizeDuration': 200,
@@ -186,7 +190,7 @@ function initialize() {
             map: map,
             //То что мы увидим при наведении мышкой на маркер
             title: myPlaces[i].name
-        });
+          });
         //Добавим попап, который будет появляться при клике на маркер
         var infowindow = new google.maps.InfoWindow({
             content: '<h5>' + myPlaces[i].name + '</h5><br/>' + myPlaces[i].description
@@ -212,3 +216,8 @@ function Place(name, latitude, longitude, description){
 //Когда документ загружен полностью - запускаем инициализацию карты.
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+
+
+
+/////////////////////////////////////////////////////////////

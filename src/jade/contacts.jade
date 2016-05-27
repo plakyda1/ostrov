@@ -1,0 +1,92 @@
+extends _layout.jade
+block main
+	section.contacts
+		.container__catalog-wrap
+			.container__catalog
+				//- akordion
+				include ./_includes/_layout/_aside.jade
+				.catalog-content-wrap
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link.breadcrumbs__link_active(href="#") О компании
+					.contacts-wrap
+						h1.company-title
+							| Контакты
+						.contacts__adress-wrap
+							h3.contacts-title.contacts-title__addr
+								| Адрес нашего офиса:
+							p 
+								| Санкт-Петербург, Оборонная ул., д. 10
+							ul.contacts-list
+								h3.contacts-title.contacts-title__phone
+									| Телефоны:
+								li.contacts-item
+									span.contacts-item-title
+										| Отдел розничных и корпоративных продаж <br>
+									a(href="tel:+8123808590").contacts-link
+										| тел./факс 380-85-90
+								li.contacts-item 
+									span.contacts-item-title
+										| Отдел региональных продаж <br>
+									a(href="tel:+8123808592").contacts-link
+										| тел./факс 380-85-92 <br>
+									a(href="tel:+8123808596").contacts-link
+										| факс 380-85-96
+								li.contacts-item 
+									span.contacts-item-title
+										| Отдел продаж <br>
+									a(href="tel:+8123808593").contacts-link
+										| тел./факс 380-85-93 <br>
+									a(href="tel:+8123808594").contacts-link
+										| тел./факс 380-85-94
+								li.contacts-item
+									span.contacts-item-title 
+										| Секретарь <br>
+									a(href="tel:+8123808595").contacts-link
+										| тел./факс 380-85-95 <br>
+									a(href="tel:+8123808599").contacts-link.contacts-link-mb
+										| факс 380-85-99
+							h3.contacts-title.contacts-title__work-time
+								| Режим работы: 
+							p 
+								| ПН-ПТ - с 8:30 до 18:00 без обеда
+						.contacts__retail-stores
+							h3.feedback-title
+								| Розничные магазины
+							p
+								| Наша розничная сеть насчитывает 8 магазинов, 
+								| расположенных в разных районах города.
+							p  
+								| Вы можете выбрать ближайший к Вам магазин и 
+								| приобрести бумагу и канцтовары, подарки и сувениры, 
+								| где Вам будет удобнее.
+							p
+								span.contacts-item-title
+									| м. пр. Большевиков, 
+								| Коллонтай ул., 28/1, тел. 303-77-05
+							p
+								span.contacts-item-title
+									| м. Академическая,  
+								| Науки пр., д. 17, корп. 6, тел. 491-00-68
+							p
+								span.contacts-item-title
+									| м. пр. Просвещения, 
+								| Просвещения пр., 62, тел. 591-24-32
+							p
+								span.contacts-item-title
+									| м. пр. Просвещения, 
+								| Энгельса пр., 150, тел. 515-86-40
+							p
+								span.contacts-item-title
+									| м. Старая Деревня, 
+								| Черная речка, Савушкина ул., 127, тел. 344-0521
+							p
+								span.contacts-item-title
+									| м. Чкаловская, 
+								| Чкаловский пр., 19, тел. 235-68-73
+							p
+								| Ленинградская обл., г. Кириши, ул. Ленина, 13, тел. 8 (81368) 290-64
+						#map_canvas
