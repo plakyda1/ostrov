@@ -29,14 +29,14 @@ $(document).ready(function(){
 // Тултип при округлении числа товара
 $('.product__amount').find('input[data-tooltip!=""]').qtip({
     content: {
-        attr: 'data-tooltip' // Tell qTip2 to look inside this attr for its content
+        text: 'Произошло округление до целого кол-ва упаковок' // Tell qTip2 to look inside this attr for its content
     },
     position: {
       my:'left top',
       at:'center bottom',
       adjust: {
             x: -90,
-            y: 20
+            y: 12
         }
       },
     style: {
@@ -44,7 +44,9 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
       classes: 'tooltip-style',
         tip: {
             corner: 'top center',
-            mimic: 'center center'
+            mimic: 'center center',
+            height: 8,
+            width: 9
         }
       },
      hide: {
@@ -54,9 +56,12 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
      show: false
 }).on('focusout',function(){
   var val = $(this).val();
-  if (val!==parseInt(val, 10)) {
-    $(this).val(Math.round(val)).qtip('show');
-  }
+  if (val!=parseInt(val, 10) && val>'0') {
+    $(this).val(parseInt(val,10)).qtip('option','content.text', 'Произошло округление до целого кол-ва упаковок').qtip('show');
+  } ;
+  if (val<='0')  {
+    $(this).val('1').qtip('option','content.text', 'Введено некоректное числовое значение. Исправлено на 1').qtip('show'); // на случай если введено некоректное число товара
+  };
 });
   // -----------------------------------SOC BAR----------------------------
   (function() {
@@ -96,7 +101,24 @@ if($('form').find('.selector').size()!=0) {
     form.find(".selector").trigger("chosen:updated");
   });
 } ;
+// Появление класса added при добавлении товара в корзину
+$('.product-add').on('click',function(event){
+  event.preventDefault();
+  $(this).toggleClass('added');
+  if($(this).hasClass('added')) {
+    $(this).text('В корзине');
+  } else {
+    $(this).text('Добавить');
+  }
+});
+
+
+//
+//
 // конец $(document).ready
+//
+//
+
 });
 // ----------------------------------------------------
 // ----------------------------------------слайдер для товара с миниатюрами----------------------------------------
@@ -142,23 +164,11 @@ lightbox.option({
   'resizeDuration': 200,
   'wrapAround': true
 })
-//----------Cворачивание списка заказов на странице Zakaz-podtverd------------------------
-// ----------------------------------ACCCORDION-----------------------
-$(".accordion__link").on('click', _accordion);
-  function _accordion(e){
-    e.preventDefault();
-      $(this)
-      .toggleClass("accordion__link_active")
-      .siblings('.accordion-item__list')
-      .stop(true, true)
-      .slideToggle();
-  }
   // Lightbox
     lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
     })
-/////////////////////////////////////////////////////////////////////
 //=============================КАРТА==============================//
 function initialize() {
     //получаем наш div куда будем карту добавлять

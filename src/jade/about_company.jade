@@ -3,7 +3,6 @@ block main
 	section.about__company
 		.container__catalog-wrap
 			.container__catalog
-				//- akordion
 				include ./_includes/_layout/_aside.jade
 				.catalog-content-wrap
 					.breadcrumbs
@@ -12,7 +11,8 @@ block main
 								a.breadcrumbs__link(href="#") Главная
 							li.breadcrumbs__item
 								a.breadcrumbs__link.breadcrumbs__link_active(href="#") О компании
-					.about__company-wrap
+					include ./_includes/_layout/_about_company_nav.jade
+					.info__company-wrap
 						h1.company-title
 							| О компании
 						p.__company-dscr
@@ -47,4 +47,3 @@ block main
 							| стоящем здании. Просторный выставочный зал позволяет ознакомиться со
 							| всеми образцами бумаги и канцелярских товаров и при желании приобрести
 							| бумагу и канцтовары оптом.
-					include ./_includes/_layout/_about_company_nav.jade

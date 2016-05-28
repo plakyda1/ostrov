@@ -5,16 +5,17 @@
 	float: left;
 	margin-right: 20px;
 }
+.info__company-wrap{
+	display: block;
+	// width: 52%;
+	margin-right: 320px;
+}
 .about__company{
-	&-wrap{
-		float: left;
-		width: 52%;
-		margin-right: 20px;
-	}
 	&-nav{
+		width: 300px;
 		padding: 6px 18px;
 		background: #f8f7f7;
-		float: left;
+		float: right;
 		font-size: 21px;
 		line-height: 37px;
 		color: $accordion-text-inner;

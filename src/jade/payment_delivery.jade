@@ -1,53 +1,64 @@
 extends _layout.jade
 block main
 	section.payment__delivery
-		.container
-			//- akordion
-			.reserved 
-				| fdf 
-			.breadcrumbs
-				ul.breadcrumbs__list
-					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") Главная
-					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") О компании	
-					li.breadcrumbs__item
-						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Оплата и доставка
-			.payment__delivery-wrap
-				h1.company-title
-					| Оплата и доставка
-				p.__company-dscr
-					| Вы можете оплатить покупку следующими способами:
-					ul.payment__list
-						li.payment__item.payment__item--cash
-							| наличными;
-						li.payment__item.payment__item--creditcard
-							| банковской картой;
-						li.payment__item.payment__item--transfer
-							| банковским переводом по счету.
-					h3.delivery__info
-						| Доставка 
-					.delivery-dscr
-						p.__company-dscr.__company-dscr-mdash
-							| Заказанные оптом бумага и канцтовары будут доставлены 
-							| Вам бесплатно в пределах Санкт-Петербурга и ближайших 
-							| пригородов, если сумма Вашего заказа превышает 6000 рублей.
-						p.__company-dscr.__company-dscr-mdash
-							| При самовывозе бумаги и канцтоваров 
-							| действует дополнительная скидка 1%. 
-						p.__company-dscr.__company-dscr-mdash
-							| В том случае, если Ваш заказ меньше указанной суммы, 
-							| либо Вы находитесь на значительном удалении от Санкт - Петербурга, 
-							| мы также готовы доставить Вам товар нашим транспортом за 
-							| дополнительную плату. Мы производим отгрузку бумаги и 
-							| канелярских товаров оптом в любые точки Российской Федерации: 
-							| железнодорожными вагонами, контейнерами, багажом или автотранспортом.
-					h3.delivery__info
-						| Самовывоз заказов
-					p.__company-dscr
-						| 198099, Санкт-Петербург, Кировский район, 
-						| ул. Оборонная, д.10
-					//- iframe(src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2001.3105214318039!2d30.26777028434799!3d59.893795255755464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469630846635cb9d%3A0xb523011145dadc79!2z0J7QsdC-0YDQvtC90L3QsNGPINGD0LsuLCAxMCwg0KHQsNC90LrRgi3Qn9C10YLQtdGA0LHRg9GA0LMsIDE5ODA5OQ!5e0!3m2!1sru!2sru!4v1464083199504', 
-					//- 	   width='613', height='360', frameborder='0', style='border:0', allowfullscreen='')
-					#map_canvas
-			include ./_includes/_layout/_about_company_nav.jade
+		.container__catalog-wrap
+			.container__catalog
+				//- akordion
+				include ./_includes/_layout/_aside.jade
+				.catalog-content-wrap
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") О компании	
+							li.breadcrumbs__item
+								a.breadcrumbs__link.breadcrumbs__link_active(href="#") Оплата и доставка
+					include ./_includes/_layout/_about_company_nav.jade
+					.info__company-wrap
+						h1.company-title
+							| Оплата и доставка
+						p.__company-dscr
+							| Вы можете оплатить покупку следующими способами:
+							ul.payment__list
+								li.payment__item.payment__item--cash
+									| наличными;
+								li.payment__item.payment__item--creditcard
+									| банковской картой;
+								li.payment__item.payment__item--transfer
+									| банковским переводом по счету.
+							h3.delivery__info
+								| Доставка 
+							.delivery-dscr
+								p.__company-dscr.__company-dscr-mdash
+									| Заказанные оптом бумага и канцтовары будут доставлены 
+									| Вам бесплатно в пределах Санкт-Петербурга и ближайших 
+									| Заказанные оптом бумага и канцтовары будут доставлены
+									| Вам бесплатно в пределах Санкт-Петербурга и ближайших
+									| пригородов, если сумма Вашего заказа превышает 6000 рублей.
+									| Вам бесплатно в пределах Санкт-Петербурга и ближайших
+									| пригородов, если сумма Вашего заказа превышает 6000 рублей.
+								p.__company-dscr.__company-dscr-mdash
+									| При самовывозе бумаги и канцтоваров 
+									| действует дополнительная скидка 1%. 
+									| При самовывозе бумаги и канцтоваров
+									| действует дополнительная скидка 1%.
+								p.__company-dscr.__company-dscr-mdash
+									| В том случае, если Ваш заказ меньше указанной суммы, 
+									| либо Вы находитесь на значительном удалении от Санкт - Петербурга, 
+									| мы также готовы доставить Вам товар нашим транспортом за 
+									| дополнительную плату. Мы производим отгрузку бумаги и 
+									| канелярских товаров оптом в любые точки Российской Федерации: 
+									| В том случае, если Ваш заказ меньше указанной суммы,
+									| либо Вы находитесь на значительном удалении от Санкт - Петербурга,
+									| мы также готовы доставить Вам товар нашим транспортом за
+									| дополнительную плату. Мы производим отгрузку бумаги и
+									| канелярских товаров оптом в любые точки Российской Федерации:
+									| железнодорожными вагонами, контейнерами, багажом или автотранспортом.
+							h3.delivery__info
+								| Самовывоз заказов
+							p.__company-dscr
+								| 198099, Санкт-Петербург, Кировский район, 
+								| ул. Оборонная, д.10
+							#map_canvas
+					include ./_includes/_layout/_about_company_nav.jade

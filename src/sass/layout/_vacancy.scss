@@ -1,24 +1,9 @@
-.vacancy{
-	background: #fff;
-}
-.vacancy-wrap{
-	float: left;
-	width: 52%;
-	margin-right: 20px;
-}
-.vacancy__accordion-link--active{
+.vacancy__accordion-title.vacancy__accordion-link--active{
 	background: #f9f9f9;
 	position: relative;
 	&:before{
-		content: "";
-		position: absolute;
-		background: url("../img/icons/arrow_list-up-green.svg") !important;
-		background-position: center center;
-		background-repeat: no-repeat;
-		width: 13px;
-		height: 8px;
-		top: 27px;
-		left: 26px;		
+		background: url("../img/icons/arrow_list-green.svg");
+		@include rotate(360);
 	}
 }
 .right-title,
@@ -49,13 +34,15 @@
 	&:before{
 		content: "";
 		position: absolute;
-		background: url("../img/icons/arrow_list-down-green.svg");
+		background: url("../img/icons/arrow_list-green.svg");
+		@include rotate(180);
+		@include transition(1s);
 		background-position: center center;
 		background-repeat: no-repeat;
 		width: 13px;
 		height: 8px;
 		top: 21px;
-		left: 26px;		
+		left: 26px;
 	}
 }
 .vacancy__accordion-info{
