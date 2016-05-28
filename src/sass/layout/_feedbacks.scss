@@ -77,9 +77,9 @@
 .gallery-wrap{
 	max-width: 940px;
 	max-height: 285px;
+	margin-bottom: 75px;
 	float: left;
 	background: $gray;
-	outline: 1px solid #000;
 	@include clearfix();
 	padding: 20px 20px 70px 20px;
 }

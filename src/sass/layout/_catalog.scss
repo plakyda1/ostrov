@@ -54,7 +54,7 @@
 			background: url(../img/icons/arrow_list-grey.svg) 50%;
 			@include opacity(0.5);
 			@include rotate(180);
-			@include transition(1s);
+			@include transition(.5s);
 			width: 17px;
 			height: 10px;
 			background-size: cover;
