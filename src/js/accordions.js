@@ -21,10 +21,11 @@ function _accordion(e){
 	.slideToggle();
 }
 function _accordionZakaz(e){
+	// console.log($('.table-wrap'));
 	e.preventDefault();
 	$(this)
 	.toggleClass("zakaz__quick-info_active")
-	.siblings('.table-wrap')
+	$('.table-wrap')
 	.stop(true, true)
 	.slideToggle();
 }

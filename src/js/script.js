@@ -138,17 +138,6 @@ lightbox.option({
   'resizeDuration': 200,
   'wrapAround': true
 })
-//----------Cворачивание списка заказов на странице Zakaz-podtverd------------------------
-// ----------------------------------ACCCORDION-----------------------
-$(".accordion__link").on('click', _accordion);
-  function _accordion(e){
-    e.preventDefault();
-      $(this)
-      .toggleClass("accordion__link_active")
-      .siblings('.accordion-item__list')
-      .stop(true, true)
-      .slideToggle();
-  }
   // Lightbox
     lightbox.option({
       'resizeDuration': 200,
