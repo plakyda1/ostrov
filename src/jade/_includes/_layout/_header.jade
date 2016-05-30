@@ -7,9 +7,8 @@
 				.authorization
 					a.authorization__login-link(href="#" alt='вход') Вход
 					a.authorization__reg-link(href="#" alt='регистрация') Регистрация
-				.shopping-cart
-					a.shopping-cart__link(href='#' alt='Перейти в корзину')
-						img(href='' alt='Перейти в корзину' src='img/icons/cart.svg')
+				a.shopping-cart(href='#' alt='Перейти в корзину')
+					img(href='' alt='Перейти в корзину' src='img/icons/cart.svg' class ='shopping-cart__link')
 					.shopping-cart__calculations-wrap
 						p.shopping-cart__quantity
 							|Всего
@@ -38,6 +37,9 @@
 						else if (text == "О компании")
 							li.main-menu__li
 								a.main-menu__a(href="about_company.html") #{text}
+						else if (text == "Контакты")
+							li.main-menu__li
+								a.main-menu__a(href="contacts.html") #{text}
 						else
 							li.main-menu__li
 								a.main-menu__a(href="#") #{text}

@@ -29,14 +29,14 @@ $(document).ready(function(){
 // Тултип при округлении числа товара
 $('.product__amount').find('input[data-tooltip!=""]').qtip({
     content: {
-        attr: 'data-tooltip' // Tell qTip2 to look inside this attr for its content
+        text: 'Произошло округление до целого кол-ва упаковок' // Tell qTip2 to look inside this attr for its content
     },
     position: {
       my:'left top',
       at:'center bottom',
       adjust: {
             x: -90,
-            y: 20
+            y: 12
         }
       },
     style: {
@@ -44,7 +44,9 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
       classes: 'tooltip-style',
         tip: {
             corner: 'top center',
-            mimic: 'center center'
+            mimic: 'center center',
+            height: 8,
+            width: 9
         }
       },
      hide: {
@@ -54,9 +56,12 @@ $('.product__amount').find('input[data-tooltip!=""]').qtip({
      show: false
 }).on('focusout',function(){
   var val = $(this).val();
-  if (val!==parseInt(val, 10)) {
-    $(this).val(Math.round(val)).qtip('show');
-  }
+  if (val!=parseInt(val, 10) && val>'0') {
+    $(this).val(parseInt(val,10)).qtip('option','content.text', 'Произошло округление до целого кол-ва упаковок').qtip('show');
+  } ;
+  if (val<='0')  {
+    $(this).val('1').qtip('option','content.text', 'Введено некоректное числовое значение. Исправлено на 1').qtip('show'); // на случай если введено некоректное число товара
+  };
 });
   // -----------------------------------SOC BAR----------------------------
   (function() {
@@ -96,7 +101,24 @@ if($('form').find('.selector').size()!=0) {
     form.find(".selector").trigger("chosen:updated");
   });
 } ;
+// Появление класса added при добавлении товара в корзину
+$('.product-add').on('click',function(event){
+  event.preventDefault();
+  $(this).toggleClass('added');
+  if($(this).hasClass('added')) {
+    $(this).text('В корзине');
+  } else {
+    $(this).text('Добавить');
+  }
+});
+
+
+//
+//
 // конец $(document).ready
+//
+//
+
 });
 // ----------------------------------------------------
 // ----------------------------------------слайдер для товара с миниатюрами----------------------------------------
@@ -119,11 +141,9 @@ $(document).ready(function() {
         $input.val(parseInt($input.val()) + 1);
         return false;
       });
-
 // -------------------------------аккордион вакансии ---------------------------------------
   $(".vacancy__accordion .vacancy__accordion-title:eq(1)").addClass("vacancy__accordion-link--active");
   $(".vacancy__accordion .vacancy__accordion-info:not(:eq(1))").hide();
-
 
   $(".vacancy__accordion .vacancy__accordion-title").click(function(){
     $(this).next(".vacancy__accordion .vacancy__accordion-info").slideToggle("slow")
@@ -133,6 +153,12 @@ $(document).ready(function() {
     .removeClass("vacancy__accordion-link--active");
   });
     });
+// ----------------------------------------------------------------------------------------
+// var toggle_company_link = $('.about__company-link') // клас стиля ссылки
+//   toggle_company_link.click( function(){
+//    toggle_company_link.removeClass('about__company-link--active')   // клас активной ссылки
+//     $(this).addClass('about__company-link--active')
+//   })
 //------------------------------------------ Lightbox---------------------------------------
 lightbox.option({
   'resizeDuration': 200,
@@ -143,7 +169,6 @@ lightbox.option({
       'resizeDuration': 200,
       'wrapAround': true
     })
-/////////////////////////////////////////////////////////////////////
 //=============================КАРТА==============================//
 function initialize() {
     //получаем наш div куда будем карту добавлять
@@ -175,7 +200,7 @@ function initialize() {
             map: map,
             //То что мы увидим при наведении мышкой на маркер
             title: myPlaces[i].name
-        });
+          });
         //Добавим попап, который будет появляться при клике на маркер
         var infowindow = new google.maps.InfoWindow({
             content: '<h5>' + myPlaces[i].name + '</h5><br/>' + myPlaces[i].description
@@ -201,3 +226,8 @@ function Place(name, latitude, longitude, description){
 //Когда документ загружен полностью - запускаем инициализацию карты.
 google.maps.event.addDomListener(window, 'load', initialize);
 
+
+
+
+
+/////////////////////////////////////////////////////////////

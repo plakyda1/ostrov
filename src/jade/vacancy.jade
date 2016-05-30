@@ -1,123 +1,148 @@
 extends _layout.jade
 block main
 	section.vacancy
-		.container
-			.reserved 
-				| fdf 
-			.breadcrumbs
-				ul.breadcrumbs__list
-					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") Главная
-					li.breadcrumbs__item
-						a.breadcrumbs__link(href="#") О компании	
-					li.breadcrumbs__item
-						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Вакансии
-			.vacancy-wrap
-				h1.company-title
-					| Вакансии
-				.vacancy__accordion
-					.vacancy__accordion-title
-						.left-title
-							h3.accord-title
-								| Оператор
-						.right-title
-							span.gert
-								| ЗП:
-								h3.accord-title
-									| 30 000 — 40 000
-							span.gert
-								| руб.
-					.vacancy__accordion-info
-						p
-							| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
-							| Условия: 
-						ul
-							li 
-								| Оформление по Трудовому Кодексу
-							li 
-								| Гибкий график
-							li
-								| Еженедельные выплаты
-							li
-								| Возможность дополнительного заработка
-							| Запишитесь на собеседование по телефону 380-85-90
+		.container__catalog-wrap
+			.container__catalog
+				//- akordion
+				include ./_includes/_layout/_aside.jade
+				.catalog-content-wrap
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") О компании	
+							li.breadcrumbs__item
+								a.breadcrumbs__link.breadcrumbs__link_active(href="#") Вакансии
+					.info__company-wrap
+						h1.company-title
+							| Вакансии
+						.vacancy__accordion
+							.vacancy__accordion-title
+								.left-title
+									h3.accord-title
+										| Оператор
+								.right-title
+									span.gert
+										| ЗП:
+										h3.accord-title
+											| 30 000 — 40 000
+									span.gert
+										| руб.
+							.vacancy__accordion-info
+								p
+									| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
+									| Условия: 
+								ul
+									li 
+										| Оформление по Трудовому Кодексу
+									li 
+									| Условия:
+								ul
+									li
+										| Оформление по Трудовому Кодексу
+									li
+										| Гибкий график
+									li
+										| Еженедельные выплаты
+									li
+										| Возможность дополнительного заработка
+									| Запишитесь на собеседование по телефону 380-85-90
 
-					.vacancy__accordion-title
-						.left-title
-							h3.accord-title
-								| Водитель
-						.right-title
-							span.gert
-								| ЗП:
-								h3.accord-title
-									| до 50 000
-							span.gert
-								| руб.
-					.vacancy__accordion-info
-						p
-							| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
-							span.info-bold 
-								| Условия: 
-						ul
-							li 
-								| Оформление по Трудовому Кодексу
-							li 
-								| Гибкий график
-							li
-								| Еженедельные выплаты
-							li
-								| Возможность дополнительного заработка
-							span.info-bold 
-								| Запишитесь на собеседование по телефону 380-85-90
+							.vacancy__accordion-title
+								.left-title
+									h3.accord-title
+										| Водитель
+								.right-title
+									span.gert
+										| ЗП:
+										h3.accord-title
+											| до 50 000
+									span.gert
+										| руб.
+							.vacancy__accordion-info
+								p
+									| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
+									span.info-bold 
+										| Условия: 
+								ul
+									li 
+										| Оформление по Трудовому Кодексу
+									li 
+									span.info-bold
+										| Условия:
+								ul
+									li
+										| Оформление по Трудовому Кодексу
+									li
+										| Гибкий график
+									li
+										| Еженедельные выплаты
+									li
+										| Возможность дополнительного заработка
+									span.info-bold 
+									span.info-bold
+										| Запишитесь на собеседование по телефону 380-85-90
 
-					.vacancy__accordion-title
-						.left-title
-							h3.accord-title
-								| Торговый представитель
-						.right-title
-							span.gert
-								| ЗП:
-								h3.accord-title
-									| 25 000 — 40 000
-							span.gert
-								| руб.
-					.vacancy__accordion-info
-						p
-							| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
-							| Условия: 
-						ul
-							li 
-								| Оформление по Трудовому Кодексу
-							li 
-								| Гибкий график
-							li
-								| Еженедельные выплаты
-							li
-								| Возможность дополнительного заработка
-							| Запишитесь на собеседование по телефону 380-85-90
+							.vacancy__accordion-title
+								.left-title
+									h3.accord-title
+										| Торговый представитель
+								.right-title
+									span.gert
+										| ЗП:
+										h3.accord-title
+											| 25 000 — 40 000
+									span.gert
+										| руб.
+							.vacancy__accordion-info
+								p
+									| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
+									| Условия: 
+								ul
+									li 
+										| Оформление по Трудовому Кодексу
+									li 
+									| Условия:
+								ul
+									li
+										| Оформление по Трудовому Кодексу
+									li
+										| Гибкий график
+									li
+										| Еженедельные выплаты
+									li
+										| Возможность дополнительного заработка
+									| Запишитесь на собеседование по телефону 380-85-90
 
-					.vacancy__accordion-title
-						.left-title
-							h3.accord-title
-								| Офис-менеджер
-						.right-title
-							span.gert
-								| ЗП:
-								h3.accord-title
-									| до 30 000
-							span.gert
-								| руб.
-					.vacancy__accordion-info
-						p
-							| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
-							| Условия: 
-						ul
-							li 
-								| Оформление по Трудовому Кодексу
-							li 
-								| Гибкий график
-							li
-								| Еженедельные выплаты
-							li
-								| Возможность дополнительного заработка
-							| Запишитесь на собеседование по телефону 380-85-90
+							.vacancy__accordion-title
+								.left-title
+									h3.accord-title
+										| Офис-менеджер
+								.right-title
+									span.gert
+										| ЗП:
+										h3.accord-title
+											| до 30 000
+									span.gert
+										| руб.
+							.vacancy__accordion-info
+								p
+									| С нас — постоянный поток заказов, а с вас — готовность их выполнять. <br>
+									| Условия: 
+								ul
+									li 
+										| Оформление по Трудовому Кодексу
+									li 
+									| Условия:
+								ul
+									li
+										| Оформление по Трудовому Кодексу
+									li
+										| Гибкий график
+									li
+										| Еженедельные выплаты
+									li
+										| Возможность дополнительного заработка
+									| Запишитесь на собеседование по телефону 380-85-90
+					include ./_includes/_layout/_about_company_nav.jade
