@@ -142,16 +142,22 @@ $(document).ready(function() {
         return false;
       });
 // -------------------------------аккордион вакансии ---------------------------------------
-  $(".vacancy__accordion .vacancy__accordion-title:eq(1)").addClass("vacancy__accordion-link--active");
-  $(".vacancy__accordion .vacancy__accordion-info:not(:eq(1))").hide();
+  // --------------------------------альтернатива-----------------------------
+  // $(".vacancy__accordion-title:eq(1)").addClass("vacancy__accordion-link--active");
+  // $(".vacancy__accordion-info:not(:eq(1))").hide();
 
-  $(".vacancy__accordion .vacancy__accordion-title").click(function(){
-    $(this).next(".vacancy__accordion .vacancy__accordion-info").slideToggle("slow")
-    .siblings(".vacancy__accordion .vacancy__accordion-info:visible").slideUp("slow");
-    $(this).toggleClass("vacancy__accordion-link--active");
-    $(this).siblings(".vacancy__accordion .vacancy__accordion-title")
-    .removeClass("vacancy__accordion-link--active");
-  });
+  // $(".vacancy__accordion-title").click(function(){
+  //   $(this)
+  //     .next(".vacancy__accordion-info")
+  //     .slideToggle("slow")
+  //     .siblings(".vacancy__accordion-info:visible")
+  //     .slideUp("slow");
+  //   $(this)
+  //     .toggleClass("vacancy__accordion-link--active");
+  //   $(this)
+  //     .siblings(".vacancy__accordion-title")
+  //     .removeClass("vacancy__accordion-link--active");
+  // });
     });
 // ----------------------------------------------------------------------------------------
 // var toggle_company_link = $('.about__company-link') // клас стиля ссылки

@@ -12,6 +12,11 @@
 	font-size: 14px;
 	float: left;
 }
+.right-title{
+	.accord-title{
+		margin: 0 5px 0 5px;
+	}
+}
 .left-title{
 	min-width: 320px;
 }
@@ -45,6 +50,7 @@
 	}
 }
 .vacancy__accordion-info{
+	display: none;
 	padding: 13px 0 13px 45px;
 	line-height: 30px;
 	li{
