@@ -139,8 +139,6 @@ function changeZakazData (parent,itemClass,initClass,doneButton,cancelButton){
       $(this).hide() // прячем нашу ссылку Изменить
       .next().show(); // Показываем блок управления
       var parentObj=$(this).closest('.'+parent);
-      console.log(parentObj);
-
       var currentItem=parentObj.find('.'+itemClass);
       currentItem.hide() // прячем текстовый блок
       .next('input').show().val(currentItem.text());
@@ -168,6 +166,15 @@ function changeZakazData (parent,itemClass,initClass,doneButton,cancelButton){
 };
 
 changeZakazData('zakaz-form__item','value-datails','change_field_link','done_field_link','cancel_field_link');
+changeZakazData('about-user__item','value-name','button-kab_change','button-kab_submit','button-kab_discard');
+// Zakaz смена активного класа
+$('.button-kab_change').on('click', function(event) {
+  /* Act on the event */
+  $('.about-user__item_active').each(function(index, el) {
+      $(this).toggleClass('about-user__item_active');
+  });  
+  $(this).closest('.about-user__item').toggleClass('about-user__item_active');
+});
 
 // Включение инпута при нажатии на нужную позицию input[type=radio]
 $('input[name="subject-type"]').on('click', function(event) {
