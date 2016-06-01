@@ -6,7 +6,7 @@ var myModule = (function () {
 		_setUpListners();
 	};
 
-	// Прослушивает события 
+	// Прослушивает события
 	function _setUpListners () {
 		$(".accordion__link").on('click', _accordion);
 		$(".zakaz__quick-info").on('click', _accordionZakaz);
@@ -30,7 +30,7 @@ function _accordionZakaz(e){
 }
 
 
-	// Возвращаем объект (публичные методы) 
+	// Возвращаем объект (публичные методы)
 	return {
 		init: init
 	};

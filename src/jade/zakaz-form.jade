@@ -1,0 +1,94 @@
+extends _layout.jade
+block main
+	section.zakaz-podtverd
+		.container
+			.breadcrumbs.breadcrumbs__single-news
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Корзина
+					li.breadcrumbs__item
+						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Оформление заказа
+			h2.__title.__title_zakaz-podtverd Оформление заказа
+			form(action='zakaz-podtverd.html' method='GET').zakaz__wrap
+				.zakaz__block
+					h3.block-title Шаг 1 Контактные данные
+					.zakaz__content-wrap
+						ul.zakaz-form__list
+							li.zakaz-form__item
+								.definition Ваше имя
+								.value
+									.value-datails Александр
+									input(class='hidden-input' name='user-name' type=text value='Александр')
+								.edit-column
+									a(href='#' alt='Изменить' class='change_field_link').link-simple Изменить
+									.editing-link_block
+										a(href='#' alt='Изменить' class='done_field_link').link-simple_green Готово
+										a(href='#' alt='Изменить' class='cancel_field_link').link-simple Отменить
+
+							li.zakaz-form__item
+								.definition Телефон
+								.value
+									.value-datails +7 (812) 236-56-44
+									input(class='hidden-input' name='user-tel' type=text value='+7 (812) 236-56-44')
+								.edit-column
+									a(href='#' alt='Изменить' class='change_field_link').link-simple Изменить
+									.editing-link_block
+										a(href='#' alt='Изменить' class='done_field_link').link-simple_green Готово
+										a(href='#' alt='Изменить' class='cancel_field_link').link-simple Отменить
+							li.zakaz-form__item
+								.definition Email
+								.value
+									.value-datails info@piramida.ru
+									input(class='hidden-input' name='user-email' type=text value='info@piramida.ru')
+								.edit-column
+									a(href='#' alt='Изменить' class='change_field_link').link-simple Изменить
+									.editing-link_block
+										a(href='#' alt='Изменить' class='done_field_link').link-simple_green Готово
+										a(href='#' alt='Изменить' class='cancel_field_link').link-simple Отменить
+				.zakaz__block
+					h3.block-title Шаг 2 Оплата и доставка
+					.zakaz__content-wrap
+						.subject Способ доставки:
+						.subject-content
+							.radio-wrap
+								label.radio-input
+									input(type='radio' name='delivery-type' value='self' checked)
+									p
+										span Заберу самостоятельно
+								label.radio-input
+									input(type='radio' name='delivery-type' value='coureer')
+									p
+										span Заказать доставку
+							.details-wrap.delivery_myself
+								.defination
+									| по адресу:
+								.details 198099, Санкт-Петербург, Кировский район, ул. Оборонная, д.10
+							ul.details-wrap.delivery_coureer
+								li
+									.definition Адрес доставки:
+									.value
+										select(class='selector zakaz-select' name='user-addres' type='text')
+											option(selected) 198504, г.Санкт-Петербург, ул. Никольская, д.30/А
+											option 198504, г.Санкт-Петербург, ул. Ленина 40, д.2
+								li
+									.definition Комментарий:
+									.value
+										textarea(class='zakaz-textarea' name='user-comment' type=text val='+7 (812) 236-56-44')
+					.zakaz__content-wrap
+						.subject Способ оплаты:
+						.subject-content
+							label.radio-input
+								input(type='radio' name='payment-type' value='наличка' checked)
+								p
+									span Наличными при получении
+							label.radio-input
+								input(type='radio' name='payment-type' value='безналичка')
+								p
+									span Безналичная оплата согласно договора
+
+
+				.zakaz__btn-group
+					button(name='continue' type='submit').btn-zakaz.btn-confirm Далее
+					a(href='basket.html').btn-zakaz.btn-cancel Назад

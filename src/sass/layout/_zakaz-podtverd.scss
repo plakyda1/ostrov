@@ -17,31 +17,31 @@
 .zakaz-info__list{
 	@include font-size(14px);
     padding-left: 31px;
-}
-.zakaz-info__item{
-	@include clearfix();
-	margin-bottom: 12px;
-}
-.definition{
-	float: left;
-	width: 22%;
-	text-align: right;
+	.zakaz-info__item{
+		@include clearfix();
+		margin-bottom: 12px;
+	}
+	.definition{
+		float: left;
+		width: 22%;
+		text-align: right;
 
-}
-.value{
-	margin-left:2%;
-	float: right;
-	width: 76%;
-	font-weight:600;
-}
-.value__details{
-	font-weight: normal;
+	}
+	.value{
+		margin-left:2%;
+		float: right;
+		width: 76%;
+		font-weight:600;
+	}
+	.value__details{
+		font-weight: normal;
+	}
 }
 .podtverd__title{
 	@include font-size(21px);
 	font-family: 'pt_sansbold';
 	margin-bottom: 10px;
-} 
+}
 
 .zakaz__title{
 	@include font-size(21px);
@@ -128,19 +128,20 @@
 	border-collapse: collapse;
 	@include font-size(14px);
 }
-table th{
+.zakaz-table th{
 	font-weight:normal !important;
 
 }
-table tr {
+.zakaz-table tr {
 	height: 73px;
 	border-top: 2px solid $table-border;
 	border-bottom: 2px solid $table-border;
 }
-.caption{
+.zakaz-table .caption{
 	box-sizing: border-box;
 	background: $table-gray;
 	border-bottom: 20px solid $white;
+	height: 50px !important;
 }
 .name-product:hover{
 	font-weight:600;
@@ -156,7 +157,7 @@ table tr {
 	@include font-size(14px);
 
 }
-.responsive tr:nth-child(2n-1){
+.zakaz-table tr:nth-child(2n-1){
 	background: $table-gray;
 }
 .price,
@@ -172,7 +173,8 @@ table tr {
 .btn-zakaz{
 	vertical-align: top;
 	@include border-radius(3px);
-    padding: 10px 20px;
+    padding: 12px 20px;
+    line-height: 16px;
 	display: inline-block;
 	min-height: 40px;
 	@include font-size(14px);
