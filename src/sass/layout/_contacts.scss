@@ -1,15 +1,17 @@
 .contacts-wrap{
 	float: left;
 	max-width: 940px;
+}
+.catalog-content-wrap{
 	#map_canvas{
-		// width: 940px;
+		max-width: 940px;
 		width: 100%;
 		height: 360px;
 		float: left;
 	}	
 }
 .contacts__retail-stores{
-	width: 620px;
+	max-width: 610px;
 	float: left;
 	line-height: 25px;
 	p{
@@ -24,7 +26,7 @@
 	margin-bottom: 20px;
 	padding: 15px;
 	float: left;
-	width: 300px;
+	max-width: 300px;
 	background: $gray;
 	line-height: 25px;
 	p{

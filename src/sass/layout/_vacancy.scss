@@ -27,6 +27,7 @@
 	line-height: 43px;
 }
 .vacancy__accordion-title{
+	margin-bottom: 5px;
 	padding: 5px 0  5px 45px;
 	@include clearfix;
 	vertical-align: middle;
@@ -69,4 +70,31 @@
 }
 .info-bold {
 	font-weight: 600;
+}
+
+@include breakpoint(1100px){
+	.vacancy__accordion{
+		float: none;
+		margin: 0 auto;
+		max-width: 600px;
+	}
+}
+@include breakpoint(870px){
+	.vacancy__accordion-title{
+		padding: 0;
+		position: relative;
+		&:before{
+			content: '';
+			top: 41px;
+			left: 10px;
+		}
+	}
+	.vacancy__accordion{
+		float: left;
+	}
+	.left-title, 
+	.right-title{
+		width: 100%;
+		text-align: center;
+	}
 }

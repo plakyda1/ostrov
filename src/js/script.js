@@ -9,6 +9,17 @@ $(document).ready(function(){
   	responsive: {
   	}
   });
+  $('.thanksgiving__letters-gallery').owlCarousel({
+    items: 5,
+    nav: true,
+    navText: [],
+    loop: true,
+    // autoplay:true,
+    navigation: true,
+    pagination: true,
+    responsive: {
+    }
+  });
 //Кнопка вверх
   var top_show = 1000; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
   var delay = 1000; // Задержка прокрутки
@@ -198,11 +209,14 @@ $('.authorization__login-link').on('click', function(event) {
 
 });
 // ----------------------------------------------------
-// ----------------------------------------слайдер для товара с миниатюрами----------------------------------------
-$('.thanksgiving__letters-gallery').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1
-});
+// ----------------------------------------слайдер для листов----------------------------------------
+// $('.thanksgiving__letters-gallery').slick({
+//   // infinite: true,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000
+// });
 
 // ---------------кнопки + - для товара ----------------
 $(document).ready(function() {

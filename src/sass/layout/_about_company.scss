@@ -7,7 +7,7 @@
 }
 .info__company-wrap{
 	display: block;
-	// width: 52%;
+
 	margin-right: 320px;
 	@include clearfix();
 }
@@ -17,7 +17,6 @@
 		padding: 6px 18px;
 		background: #f8f7f7;
 		float: right;
-		// font-size: 21px;
 		@include font-size(21px);
 		line-height: 37px;
 		color: $accordion-text-inner;
@@ -48,7 +47,6 @@
 .company-title{
 	font-family: 'pt_sansbold', sans-serif;
 	margin-bottom: 15px;
-	// font-size: 35px;
 	@include font-size(35px);
 }
 .__company-dscr{
@@ -66,6 +64,7 @@
 		padding-right: 20px;
 	}
 	.about__company-nav{
+		display: block !important;
 		width: 100%;
 		float: none;
 		text-align: center;
@@ -73,6 +72,5 @@
 	}
 	.info__company-wrap{
 		margin-right: 0;
-
 	}
 }
