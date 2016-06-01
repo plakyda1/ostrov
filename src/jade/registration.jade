@@ -1,0 +1,62 @@
+extends _layout.jade
+block main
+	section.registration-wrap
+		.container__catalog
+			include ./_includes/_layout/_aside.jade
+			.catalog-content-wrap
+				.breadcrumbs
+					ul.breadcrumbs__list
+						li.breadcrumbs__item
+							a.breadcrumbs__link(href="#") Главная
+						li.breadcrumbs__item
+							a.breadcrumbs__link.breadcrumbs__link_active(href="#") Новости
+				h2.__title Регистрация
+				form.reg-form
+					.reg-titles Основные данные
+					ul.reg-list
+						li.reg-list__li
+							.details.important Имя, Отчество
+							.defination
+								input.input-main-theme(type='text' name='user-name' value='Екатерина Николаевна')
+						li.reg-list__li
+							.details.important Фамилия:
+							.defination
+								input.input-main-theme(type='text' name='user-surname' value='Александрова')
+						li.reg-list__li
+							.details.important Компания:
+							.defination
+								input.input-main-theme(type='text' name='user-company' value='«Смарт Финанс»')
+						li.reg-list__li
+							.details.important Email:
+							.defination
+								input.input-main-theme(type='text' name='user-email')
+						li.reg-list__li
+							.details.important Телефон:
+							.defination
+								input.input-main-theme(type='text' name='user-tel')
+						li.reg-list__li
+							.details Факс:
+							.defination
+								input.input-main-theme(type='text' name='user-fax')
+						li.reg-list__li
+							.details Цель закупки:
+							.defination
+								input.input-main-theme(type='text' name='user-fax' )
+					.reg-titles Адрес
+					ul.reg-list
+						li.reg-list__li
+							.details.important Имя, Отчество
+							.defination
+								input.input-main-theme(type='text' name='user-name' value='Екатерина Николаевна')
+						li.reg-list__li
+							.details.important Фамилия:
+							.defination
+								input.input-main-theme(type='text' name='user-surname' value='Александрова')
+						li.reg-list__li
+							.details.important Компания:
+							.defination
+								input.input-main-theme(type='text' name='user-company' value='«Смарт Финанс»')
+						li.reg-list__li
+							.details.important Email:
+							.defination
+								input.input-main-theme(type='text' name='user-email')

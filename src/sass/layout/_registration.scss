@@ -1,0 +1,46 @@
+.reg-titles {
+    font-family: 'pt_sansbold';
+    font-size: 21px;
+    font-weight: 600;
+}
+.reg-list{
+	font-size: 14px;
+	li {
+		@include clearfix;
+	}
+	.input-main-theme {
+		width: 285px;
+	}
+}
+.details {
+	float: left;
+	width: 140px;
+	text-align: right;
+	margin: 0 10px;
+	&:before{
+		content:' ';
+		color: #f05a28;
+		display: inline;
+		font-size: 21px;
+	}
+	&.important:before{
+		content:'*';
+		color: #f05a28;
+		display: inline;
+		font-size: 21px;
+	}
+}
+.defination {
+	float: left;
+	margin: 0 10px;
+}
+.input-main-theme{
+	height: 40px;
+	border: 1px solid rgb(222,225,228);
+	padding: 0 15px ;
+	@include border-radius(3px);
+	&:focus{
+		outline: none;
+		border-color: #8a8c92;
+	}
+}
