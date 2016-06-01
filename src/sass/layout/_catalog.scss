@@ -28,6 +28,7 @@
 	padding-right: 20px; // chick
 	display: table-cell;
 	@include clearfix;
+	width: 100%;
 }
 .accordion-wrap{
 }
