@@ -15,6 +15,7 @@ var gulp = require('gulp'),
 //Собираем Jade ( html )
 gulp.task('jade-templates', function() {
   return gulp.src(['./src/jade/*.jade','!./src/jade/_*.jade'])
+    // .pipe(changed('./build/', {extension: '.html'}))
     .pipe(plumber())
     .pipe(jade({
        pretty: true
@@ -29,7 +30,7 @@ gulp.task('sass-dev', function() {
   return gulp.src('src/sass/**/*.scss')
     .pipe(plumber())
     // .pipe(sourcemaps.init())
-    
+
     .pipe(sass({
       style: 'compressed',
       errLogToConsole: true,
@@ -103,7 +104,7 @@ gulp.task('default', ['jade-templates','sass-dev','img','js-vendor','js','favico
     watch(["./src/sass/**/*.scss",'./src/sass/_*.scss'], function() {
       gulp.start('sass-dev');
     });
-    
+
     watch('./src/js/*.js', function() {
       gulp.start('js');
     });

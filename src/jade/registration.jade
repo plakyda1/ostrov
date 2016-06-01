@@ -17,46 +17,86 @@ block main
 						li.reg-list__li
 							.details.important Имя, Отчество
 							.defination
-								input.input-main-theme(type='text' name='user-name' value='Екатерина Николаевна')
+								input.input-main-theme.big(type='text' name='user-name' value='Екатерина Николаевна')
 						li.reg-list__li
 							.details.important Фамилия:
 							.defination
-								input.input-main-theme(type='text' name='user-surname' value='Александрова')
+								input.input-main-theme.big.big(type='text' name='user-surname' value='Александрова')
 						li.reg-list__li
 							.details.important Компания:
 							.defination
-								input.input-main-theme(type='text' name='user-company' value='«Смарт Финанс»')
+								input.input-main-theme.big(type='text' name='user-company' value='«Смарт Финанс»')
 						li.reg-list__li
 							.details.important Email:
 							.defination
-								input.input-main-theme(type='text' name='user-email')
+								input.input-main-theme.big(type='text' name='user-email')
 						li.reg-list__li
 							.details.important Телефон:
 							.defination
-								input.input-main-theme(type='text' name='user-tel')
+								input.input-main-theme.big(type='text' name='user-tel')
 						li.reg-list__li
 							.details Факс:
 							.defination
-								input.input-main-theme(type='text' name='user-fax')
+								input.input-main-theme.big(type='text' name='user-fax')
 						li.reg-list__li
 							.details Цель закупки:
-							.defination
-								input.input-main-theme(type='text' name='user-fax' )
+							.defination.defination_mtop
+								label.radio-input
+									input(type='radio' name='purpose-type' value='self' checked)
+									p
+										span закупка товара целыми заводскими упаковками для дальнейшей продажи
+								label.radio-input
+									input(type='radio' name='purpose-type' value='zavod')
+									p
+										span закупка для собственных нужд
 					.reg-titles Адрес
 					ul.reg-list
 						li.reg-list__li
-							.details.important Имя, Отчество
+							.details.important Улица:
 							.defination
-								input.input-main-theme(type='text' name='user-name' value='Екатерина Николаевна')
+								input.input-main-theme.big(type='text' name='addr_street' )
 						li.reg-list__li
-							.details.important Фамилия:
-							.defination
-								input.input-main-theme(type='text' name='user-surname' value='Александрова')
+							.details.important Дом:
+							.defination.clearfix
+								input.input-main-theme.small(type='text' name='addr_house' )
+								label.small-inp Корпус:
+									input.input-main-theme.small(type='text' name='addr_korpus' )
 						li.reg-list__li
-							.details.important Компания:
+							.details.important Город:
 							.defination
-								input.input-main-theme(type='text' name='user-company' value='«Смарт Финанс»')
+								input.input-main-theme.big(type='text' name='addr_town')
 						li.reg-list__li
-							.details.important Email:
+							.details.important Субъект Федерации:
+							.defination.defination_mtop
+								label.radio-input
+									input(type='radio' name='subject-type' value='default' checked)
+									p
+										span Санкт-Петербург
+								label.radio-input
+									input(type='radio' name='subject-type' value='other')
+									p
+										span Другой
+								input.input-main-theme.big.disabled(type='text' name='addr_fed_subg' disabled)
+					.reg-titles Пароль
+					ul.reg-list
+						li.reg-list__li
+							.details.important Пароль:
 							.defination
-								input.input-main-theme(type='text' name='user-email')
+								input.input-main-theme.big(type='password' name='user_pass' )
+						li.reg-list__li
+							.details.important Повторите пароль:
+							.defination
+								input.input-main-theme.big(type='password' name='user_pass_copy' )
+						li.reg-list__li
+							.defination.shifted
+								label.checkbox-input
+									input(type='checkbox' name='subject-type')
+									p.bold
+										span.important Я прочитал Политику Безопасности и согласен с условиями
+								label.checkbox-input
+									input(type='checkbox' name='subject-type')
+									p
+										span Подписаться на рассылку новостей
+								button.button-main-theme(type='submit') Зарегистрироваться
+
+

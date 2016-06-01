@@ -22,10 +22,7 @@
 	width: 100%;
 }
 .catalog-content-wrap{
-	// float:right;
-	// margin-left: 250px;
 	padding-left: 20px;
-	padding-right: 20px; // chick
 	display: table-cell;
 	@include clearfix;
 	width: 100%;
@@ -636,7 +633,8 @@ input:checked + .checkbox-label:after{
 	background: url('../img/icons/to_up.svg') center center no-repeat;
 	width: 43px;
 	height: 43px;
-	position: absolute;
+	position: fixed;
+	z-index: 9;
 	bottom: 75px;
 	left: 150px;
 	@include transition(0.8s);

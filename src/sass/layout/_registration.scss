@@ -1,3 +1,6 @@
+.registration-wrap{
+	background: $white;
+}
 .reg-titles {
     font-family: 'pt_sansbold';
     font-size: 21px;
@@ -5,15 +8,30 @@
 }
 .reg-list{
 	font-size: 14px;
-	li {
-		@include clearfix;
+	&__li {
+		margin: 4px 0;
+
 	}
-	.input-main-theme {
+	.input-main-theme.big {
 		width: 285px;
+	}
+	.input-main-theme.small {
+		width: 90px;
+	}
+	label.small-inp>.input-main-theme.small{
+		margin-left: 10px;
+	}
+	.radio-input {
+		display: block;
+		margin-bottom: 10px;
+	}
+	.small-inp {
+		float: right;
 	}
 }
 .details {
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 	width: 140px;
 	text-align: right;
 	margin: 0 10px;
@@ -22,25 +40,111 @@
 		color: #f05a28;
 		display: inline;
 		font-size: 21px;
+		line-height: 40px;
 	}
 	&.important:before{
 		content:'*';
 		color: #f05a28;
+		margin-right: 4px;
 		display: inline;
 		font-size: 21px;
 	}
 }
 .defination {
-	float: left;
+	display: inline-block;
+	vertical-align: top;
+	width: 285px;
 	margin: 0 10px;
+	&:before{
+		content:' ';
+		color: #f05a28;
+		display: inline;
+		font-size: 21px;
+		line-height: 40px;
+		vertical-align: top;
+	}
+	&_mtop {
+		padding-top: 12px;
+	}
+	&.shifted{
+		margin-left: 173px;
+		margin-top: 20px;
+		&>.button-main-theme{
+		margin: 40px 0 60px;
+	}
+}
 }
 .input-main-theme{
 	height: 40px;
 	border: 1px solid rgb(222,225,228);
 	padding: 0 15px ;
-	@include border-radius(3px);
+	@include border-radius(2px);
 	&:focus{
 		outline: none;
 		border-color: #8a8c92;
+	}
+	&:disabled {
+		background: #f9f9f9;
+	}
+}
+.clearfix {
+  &:before, &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+.button-main-theme {
+	vertical-align: top;
+    border-radius: 3px;
+    background-clip: padding-box;
+    padding: 12px 20px;
+    line-height: 16px;
+    display: inline-block;
+    min-height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'pt_sansbold';
+    background: #f05a28;
+    color: $white;
+}
+
+.log-in-wrap{
+	width: 340px;
+	display: none;
+	@include border-radius(3px);
+	background: $white;
+	padding: 38px 20px;
+	.__title {
+		display: inline-block;
+		margin-right: 20px;
+		margin-bottom: 0;
+	}
+	.button-main-theme[type='submit']{
+		margin-right: 20px;
+		vertical-align: middle;
+	}
+	.log-in-form{
+		border-bottom: 2px solid #f8f7f7;
+		padding-bottom: 20px;
+		margin-bottom: 20px;
+	}
+
+}
+.log-in-form{
+	.log-in-form__label{
+		margin: 7px 0;
+		span {
+			display: block;
+			margin: 7px 0;
+		}
+	}
+	.input-main-theme {
+		width: 100%;
+	}
+	.button-wrap {
+		margin-top: 20px;
 	}
 }

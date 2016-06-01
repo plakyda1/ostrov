@@ -10,7 +10,7 @@ $(document).ready(function(){
   	}
   });
 //Кнопка вверх
-  var top_show = 500; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+  var top_show = 1000; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
   var delay = 1000; // Задержка прокрутки
     $(window).scroll(function () { // При прокрутке попадаем в эту функцию
       /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
@@ -168,6 +168,28 @@ function changeZakazData (parent,itemClass,initClass,doneButton,cancelButton){
 };
 
 changeZakazData('zakaz-form__item','value-datails','change_field_link','done_field_link','cancel_field_link');
+
+// Включение инпута при нажатии на нужную позицию input[type=radio]
+$('input[name="subject-type"]').on('click', function(event) {
+  var curVal=$(this).val();
+    if(curVal=='other') {
+      $(this).parent('label').siblings('.disabled').prop('disabled', false).focus();
+    }
+    else {
+      $(this).parent('label').siblings('.disabled').prop('disabled', true);
+    }
+});
+// Форма входа в PopUp
+$('.authorization__login-link').on('click', function(event) {
+  event.preventDefault();
+  $('.log-in-wrap').bPopup({
+    zIndex: 2
+
+  });
+  /* Act on the event */
+});
+
+
 //
 //
 // конец $(document).ready
