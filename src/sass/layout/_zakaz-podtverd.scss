@@ -127,7 +127,7 @@
 .table-wrap{
 	margin-bottom: 20px;
 }
-.zakaz-table{
+.table{
 	width: 100%;
 	border-collapse: collapse;
 	@include font-size(14px);
@@ -161,7 +161,10 @@
 	@include font-size(14px);
 
 }
-.zakaz-table tr:nth-child(2n-1){
+.table tr:nth-child(2n){
+	background: $white;
+}
+.table tr:nth-child(2n-1){
 	background: $table-gray;
 }
 .price,
