@@ -62,18 +62,22 @@
 	position: absolute;
 	width: 12px;
 	height: 8px;
-	background: url('../img/icons/arrow_list-green.svg');
 	top: 9px;
     left: 0px;
+	background: url('../img/icons/arrow_list-green.svg');
+	@include rotate(180);
+	@include transition(.5s);
 }
 .zakaz__quick-info_active:before{
 	content: '';
 	position: absolute;
 	width: 12px;
 	height: 8px;
-	background: url('../img/icons/arrow_list-green_down.svg');
 	top: 9px;
     left: 0px;
+	background: url('../img/icons/arrow_list-green_down.svg');
+	@include rotate(360);
+	@include opacity(1);
 }
 .zakaz-amount,
 .zakaz-summa{
@@ -123,7 +127,7 @@
 .table-wrap{
 	margin-bottom: 20px;
 }
-.responsive{
+.table{
 	width: 100%;
 	border-collapse: collapse;
 	@include font-size(14px);
@@ -156,7 +160,10 @@ table tr {
 	@include font-size(14px);
 
 }
-.responsive tr:nth-child(2n-1){
+.table tr:nth-child(2n){
+	background: $white;
+}
+.table tr:nth-child(2n-1){
 	background: $table-gray;
 }
 .price,

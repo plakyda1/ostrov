@@ -34,14 +34,14 @@ block main
 			.zakaz__wrap
 				.zakaz__title Заказ
 				.wrap-zakaz-print
-					.zakaz__quick-info Всего 
+					.zakaz__quick-info.zakaz__quick-info_active Всего 
 						span.zakaz-amount 12
 						|на сумму
 						span.zakaz-summa 2 950 
 							span.price-text руб
 					a(href="#").print-button Распечатать заказ
 				.table-wrap 
-					table.responsive
+					table.responsive.table
 						tr.caption
 							th Наменование
 							th Цена
@@ -181,9 +181,9 @@ block main
 								span.summa-item
 									|63 900
 								span.price-text руб
-				.in-total Итого
-					span.zakaz-summa 2 950 
-						span.price-text руб
+					.in-total Итого
+						span.zakaz-summa 2 950 
+							span.price-text руб
 				.zakaz__btn-group
 					a(href="#").btn-zakaz.btn-confirm Подтверждаю
 					a(href="#").btn-zakaz.btn-cancel Назад

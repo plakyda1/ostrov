@@ -1,0 +1,26 @@
+extends _layout.jade
+block main
+	section.kabinet
+		.container__catalog-wrap
+			.container__catalog
+				include ./_includes/_layout/_aside.jade
+				.catalog-content-wrap
+					.breadcrumbs
+						ul.breadcrumbs__list
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") Главная
+							li.breadcrumbs__item
+								a.breadcrumbs__link(href="#") Личный кабинет
+							li.breadcrumbs__item
+								a.breadcrumbs__link.breadcrumbs__link_active(href="#") История заказов
+					h2.__title История заказов
+					.tab-and-nav__wrap
+						.tab__wrap
+							ul.tab-zakaz__list
+								li.tab-zakaz__item
+									a.tab-zakaz__link.tab-zakaz__link_active Текущие	
+								li.tab-zakaz__item
+									a.tab-zakaz__link Выполненые
+								li.tab-zakaz__item
+									a.tab-zakaz__link Все
+						.kabinet-nav__wrap
