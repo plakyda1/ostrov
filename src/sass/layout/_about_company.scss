@@ -9,6 +9,7 @@
 	display: block;
 	// width: 52%;
 	margin-right: 320px;
+	@include clearfix();
 }
 .about__company{
 	&-nav{
@@ -16,12 +17,18 @@
 		padding: 6px 18px;
 		background: #f8f7f7;
 		float: right;
-		font-size: 21px;
+		// font-size: 21px;
+		@include font-size(21px);
 		line-height: 37px;
 		color: $accordion-text-inner;
 	}
 	&-link{
 		margin-left: 13px;
+		@include transition(.8s);
+		transition: .25s;	
+		&:hover{
+			color: #232832;
+		}
 		&--main{
 			margin-left: 0;
 		}
@@ -41,7 +48,8 @@
 .company-title{
 	font-family: 'pt_sansbold', sans-serif;
 	margin-bottom: 15px;
-	font-size: 35px;
+	// font-size: 35px;
+	@include font-size(35px);
 }
 .__company-dscr{
 	&-mdash{
@@ -51,5 +59,20 @@
 			position: absolute;
 			left: -20px;
 		}
+	}
+}
+@include breakpoint(1100px){
+	.catalog-content-wrap{
+		padding-right: 20px;
+	}
+	.about__company-nav{
+		width: 100%;
+		float: none;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.info__company-wrap{
+		margin-right: 0;
+
 	}
 }

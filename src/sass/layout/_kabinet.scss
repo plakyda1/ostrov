@@ -1,0 +1,251 @@
+.about-user-wrap{
+	@include clearfix();
+}
+.about-user{
+	float: left;
+	@include font-size(14px);
+	margin-right: 80px;
+}
+.kabinet-nav__wrap{
+	float: right;
+	width: 300px;
+	padding: 6px 18px;
+    background: #f8f7f7;
+    @include font-size(21px);
+    line-height: 37px;
+}
+.about-user__list{
+	margin-bottom: 5px;
+}
+.about-user__item{
+	@include clearfix();
+	height: 40px;
+}
+.about-user__item_active{
+	background: $gray;
+	height: 50px;
+}
+.about-user__item > div{
+	@include vertical-align ();
+}
+.definition_kabinet{
+	float: left;
+	width: 160px;
+	text-align: right;
+}
+.value_kabinet {
+	float: left;
+	width: 220px;
+	margin-left:20px;
+	font-family: 'pt_sansbold';
+}
+.buttons_kabinet{
+	float: right;
+	width: 140px;
+	margin-left: 20px;
+}
+.button-kab{
+	display: inline-block;
+	margin-right: 20px;
+	text-decoration: underline;
+	color:$darkgray;
+}
+.button-kab:hover{
+	text-decoration: none;
+	color: $orange;
+	font-weight: 600;
+}
+.button-kab_submit{
+	color: $green;
+}
+.button-kab_submit:hover{
+	color: $green-hover;
+}
+.kabinet-nav__link{
+	margin-left: 13px;
+}
+.kabinet-nav__link_active{
+	margin-left: 0px;
+	font-weight: 600;
+}
+.add-adress{
+	text-align: center;
+	margin-bottom: 40px;
+}
+.add-adress__text{
+	color:$darkgray;
+	position: relative;
+	cursor: pointer;
+	text-decoration: underline;
+}
+.add-adress__text:hover{
+	text-decoration: none;
+	color: $black;
+}
+.add-adress__text:before{
+	content: "";
+	position: absolute;
+	background: url(../img/icons/plus.svg) no-repeat;
+	background-size:cover;
+	width: 12px;
+	height: 12px;
+	top:3px;
+	left: -15px;
+
+}
+.add-adress__text:hover:before{
+	content: "";
+	position: absolute;
+	background: url(../img/icons/plus_hover.svg) no-repeat;
+}
+.discount-wrap{
+	max-width: 620px;
+	padding: 20px;
+	margin-bottom: 70px;
+	background: $table-gray;
+}
+.discount__title{
+	margin-bottom: 15px;
+	color : $green;
+	@include font-size(21px);
+}
+.discount__size{
+	margin-left: 3px;
+}
+// Текущие заказы
+.zakazy__list{
+	margin-bottom: 20px;
+}
+.zakazy__item{
+	padding-top: 15px; 
+	padding-bottom: 0px;
+	cursor: pointer;
+	position: relative;
+	transition: .25s;
+}
+.zakazy__item:before{
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 8px;
+    top: 23px;
+    left: 20px;
+	background: url('../img/icons/arrow_list-green.svg') no-repeat;
+	background-size : cover;
+	@include rotate(0);
+	@include transition(.5s);
+}
+.zakazy__item:hover{
+	border-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.1)
+}
+.zakaz-info{
+	@include clearfix();
+	padding-left:43px;
+	padding-right: 60px;
+	height: 35px;
+	font-family: 'pt_sansregular';
+	&__number{
+		float: left;
+		margin-right: 85px;
+	}
+	&__comment{
+		float: left;
+		margin-right: 45px;
+		@include font-size(14px);
+	}
+	&__repeat{
+		float: left;
+		@include font-size(14px);
+	}
+	&__summa{
+		float: right;
+	}
+}
+.number__text,
+.comment{
+	color:$accordion-text;
+}
+.comment,
+.repeat-link{
+	text-decoration: underline;
+	
+}
+.repeat-link{
+	color: $green;
+}
+.repeat-link:hover{
+	color:$green-hover;
+}
+.comment{
+	position: relative;
+}
+.comment:hover{
+	color: $darkgray;
+	text-decoration: none;
+}
+.comment:before{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 12px;
+	background: url('../img/icons/comment.svg') no-repeat;
+	background-size : cover;
+	top:5px;
+	left:-25px;
+}
+.number__numeric {
+	font-family: 'pt_sansbold';
+	margin-left: 4px;
+}
+.summa__text{
+	margin-right: 8px;
+}
+.summa__number,
+.summa__text_big{
+	@include font-size(21px);
+	font-family: 'pt_sansbold';
+}
+.summa__text_big{
+	margin-left: 7px;
+}
+// Стилизация активного заказа в списке акордеона 
+.zakazy__item_active{
+	background: $active-zakaz-item;
+}
+.zakazy__item_active:before{
+	content: '';
+	position: absolute;
+	width: 14px;
+	height: 8px;
+    top: 23px;
+    left: 20px;
+	background: url('../img/icons/arrow_list-green.svg') no-repeat;
+	background-size : cover;
+	@include rotate(180);
+	@include transition(.5s);
+}
+.naming{
+	width: 61.54%;
+}
+.amounting{
+	width: 16.03%;
+}
+.summing{
+	width: 18.12%;
+}
+.more-link_zakazy{
+	display: block;
+	margin-bottom: 60px;
+	padding-left: 20px;
+}
+//---------------------------------------------- Для JS
+.zakas-details{
+	display: none;
+}
+.buttons_kabinet-change{
+	display: none;
+}
+.hidden-input{
+	display: none;
+}

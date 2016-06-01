@@ -10,6 +10,7 @@ var myModule = (function () {
 	function _setUpListners () {
 		$(".accordion__link").on('click', _accordion);
 		$(".zakaz__quick-info").on('click', _accordionZakaz);
+		$(".zakazy__item").on('click', _accordionZakazDetails);
 		$(".vacancy__accordion-title").on('click', _accordionVacancy);
 	};
 
@@ -23,10 +24,19 @@ function _accordion(e){
 	.slideToggle();
 }
 function _accordionZakaz(e){
+	// console.log($('.table-wrap'));
 	e.preventDefault();
 	$(this)
 	.toggleClass("zakaz__quick-info_active")
-	.siblings('.table-wrap')
+	$('.table-wrap')
+	.stop(true, true)
+	.slideToggle();
+}
+function _accordionZakazDetails(e){
+	e.preventDefault();
+	$(this)
+	.toggleClass("zakazy__item_active")
+	.children('.zakas-details')
 	.stop(true, true)
 	.slideToggle();
 }

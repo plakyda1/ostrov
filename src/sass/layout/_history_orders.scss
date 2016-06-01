@@ -1,0 +1,15 @@
+.tab__wrap{
+	float: left;
+}
+.tab-zakaz{
+	&__list{
+
+	}
+	&__item{
+		display: inline-block;
+		margin-right: 30px;
+	}
+	&__link{
+		@include font-size(14px);
+	}
+}
