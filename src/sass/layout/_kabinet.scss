@@ -8,7 +8,7 @@
 }
 .kabinet-nav__wrap{
 	float: right;
-	width: 300px;
+	width: 290px;
 	padding: 6px 18px;
     background: #f8f7f7;
     @include font-size(21px);
@@ -65,8 +65,10 @@
 	margin-left: 13px;
 }
 .kabinet-nav__link_active{
-	margin-left: 0px;
 	font-weight: 600;
+}
+.kabinet-nav__link_head{
+	margin-left: 0px;
 }
 .add-adress{
 	text-align: center;
@@ -239,6 +241,9 @@
 	margin-bottom: 60px;
 	padding-left: 20px;
 }
+.title-nav-wrap{
+	float: left;
+}
 //---------------------------------------------- Для JS
 .zakas-details{
 	display: none;
@@ -249,3 +254,88 @@
 .hidden-input{
 	display: none;
 }
+.tooltip{
+	display: none;
+	border: 1px solid #d0d1d1;
+	@include border-radius(3px);
+}
+.tooltip-comment{
+	border: 1px solid $gray;
+	background-color: $white;
+	color: $darkgray;
+	.tooltip__title{
+		text-align: center;
+		@include font-size(14px);
+		position: relative;
+		height: 40px;
+		padding-top: 15px;
+		background: $gray;
+		margin-bottom: 10px;
+		color: $black;
+		&:before{
+			content: '';
+			position: absolute;
+			width: 15px;
+			height: 12px;
+			background: url(../img/icons/comment_gray.svg) no-repeat;
+			background-size: cover;
+			top: 15px;
+			left: 10px;
+		}
+	}
+	.inputs__wrap{
+		padding-left: 10px;
+	    padding-bottom: 5px;
+	}
+	.tooltip__label{
+		display: block;
+		@include font-size(14px);
+		margin-bottom: 20px;
+	}
+	.tooltip__input{
+		outline: none;
+		border-top:none;
+		border-left:none;
+		border-right:none;
+	    border-bottom: 1px solid $gray;
+	    width: 100%;
+	    height: 30px;
+	    margin-bottom: 10px;
+	}
+	.btn_tooltip{
+		vertical-align: top;
+		border-radius: 3px;
+		background-clip: padding-box;
+		padding: 12px 20px;
+		line-height: 16px;
+		display: inline-block;
+		min-height: 40px;
+		font-size: 14px;
+		font-size: .875rem;
+		transition: .25s;
+	}
+	.add_comment{
+		border: 1px solid $green;
+    	color: $green;
+	}
+	.add_comment:hover{
+		color: $white;
+		background: $green-hover;
+	}
+	.cancel_comment{
+		text-decoration: underline;
+	}
+	.cancel_comment:hover{
+		text-decoration: none;
+	}
+	.qtip-content{
+		padding: 0;
+	}
+	.qtip-tip{
+		border-color: #d0d1d1;
+	}
+}
+
+	.qtip{
+		max-width: 360px !important;
+	}

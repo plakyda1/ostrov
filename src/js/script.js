@@ -292,3 +292,46 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 /////////////////////////////////////////////////////////////
+
+// ----------qTip2 для таблицы заказов чтобы отобразить отзывы-------------
+// Плагин qTip 2 http://qtip2.com/
+// Можно подключить AJAX http://jsfiddle.net/qTip2/zok1Lyzo/
+
+ $(document).ready(function()
+ {
+     // MAKE SURE YOUR SELECTOR MATCHES SOMETHING IN YOUR HTML!!!
+     $('.comment').each(function() {
+         $(this).qtip({
+            show: 'click',
+            hide: 'click',
+             content: {
+                 text: $(this).next('.tooltip')
+             },
+              position: {
+                my:'center left',
+                at:'top right',
+                adjust:{
+                  y:10
+                }
+              },
+              style: {
+                classes: 'tooltip-comment',
+                width: 360, 
+                tip: {
+                  corner: 'left center',
+                  mimic: 'center center',
+                  height: 10,
+                  width: 10
+                },
+              }
+         }).on('click', function(event) {
+           event.stopPropagation();
+           /* Act on the event */
+           $(this).toggleClass('activated-comment');
+         });;
+     });
+     $('.add_comment').add('.cancel_comment').on('click', function(event) {
+         event.preventDefault();
+         $('.activated-comment').toggleClass('activated-comment').qtip('hide');    
+     });
+ });

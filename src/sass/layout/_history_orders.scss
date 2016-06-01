@@ -1,5 +1,6 @@
-.tab__wrap{
-	float: left;
+.tab-and-nav__wrap{
+	@include clearfix();
+	margin-bottom:20px;
 }
 .tab-zakaz{
 	&__list{
@@ -11,5 +12,16 @@
 	}
 	&__link{
 		@include font-size(14px);
+		border-bottom: 2px $darkgray dotted;
+		transition: .5s;
+		color: $darkgray;
+	}
+	&__link:hover{
+		color: $black;
+	}
+	&__link_active{
+		font-weight: 600;
+		border:none;
+		color: $black;
 	}
 }
