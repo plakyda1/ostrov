@@ -9,8 +9,13 @@
 .right-title,
 .left-title{
 	color: #232832;
-	font-size: 14px;
+	@include font-size(14px);
 	float: left;
+}
+.right-title{
+	.accord-title{
+		margin: 0 5px 0 5px;
+	}
 }
 .left-title{
 	min-width: 320px;
@@ -18,11 +23,11 @@
 .accord-title{
 	display: inline-block;
 	font-family: pt_sansbold,sans-serif;
-	font-size: 21px;
+	@include font-size(21px);
 	line-height: 43px;
 }
 .vacancy__accordion-title{
-	padding: 5px 0  5px 45px;
+	padding: 5px 48px  5px 45px;
 	@include clearfix;
 	vertical-align: middle;
 	cursor: pointer;
@@ -45,6 +50,7 @@
 	}
 }
 .vacancy__accordion-info{
+	display: none;
 	padding: 13px 0 13px 45px;
 	line-height: 30px;
 	li{

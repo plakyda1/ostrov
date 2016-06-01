@@ -7,7 +7,7 @@
 				.authorization
 					a.authorization__login-link(href="#" alt='вход') Вход
 					a.authorization__reg-link(href="#" alt='регистрация') Регистрация
-				a.shopping-cart(href='#' alt='Перейти в корзину')
+				a.shopping-cart(href='basket.html' alt='Перейти в корзину')
 					img(href='' alt='Перейти в корзину' src='img/icons/cart.svg' class ='shopping-cart__link')
 					.shopping-cart__calculations-wrap
 						p.shopping-cart__quantity
@@ -21,7 +21,7 @@
 					button(type='submit' name='submit_search_request').search-form__submit
 		.header__menu-line
 			.header__menu-line-wrap
-				a.product_catalog(href="/catalog.html" alt='Каталог продукции') Каталог продукции
+				a.product_catalog(href="catalog.html" alt='Каталог продукции') Каталог продукции
 				.contact-list__phone-wrap
 					a(href="tel:+78123808588").contact-list__phone
 						|+7 (812) 380-85-88
@@ -42,4 +42,4 @@
 								a.main-menu__a(href="contacts.html") #{text}
 						else
 							li.main-menu__li
-								a.main-menu__a(href="#") #{text}
+								a.main-menu__a(href="payment_delivery.html") #{text}

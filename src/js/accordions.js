@@ -6,12 +6,14 @@ var myModule = (function () {
 		_setUpListners();
 	};
 
-	// Прослушивает события 
+	// Прослушивает события
 	function _setUpListners () {
 		$(".accordion__link").on('click', _accordion);
 		$(".zakaz__quick-info").on('click', _accordionZakaz);
 		$(".zakazy__item").on('click', _accordionZakazDetails);
+		$(".vacancy__accordion-title").on('click', _accordionVacancy);
 	};
+
 // ------------------------------------------------ACCCORDION-----------------------------------------
 function _accordion(e){
 	e.preventDefault();
@@ -38,7 +40,16 @@ function _accordionZakazDetails(e){
 	.stop(true, true)
 	.slideToggle();
 }
-	// Возвращаем объект (публичные методы) 
+function _accordionVacancy(e){
+	e.preventDefault();
+	$(this)
+	.toggleClass("vacancy__accordion-link--active")
+	.next()
+	.stop(true, true)
+	.slideToggle();
+}
+
+	// Возвращаем объект (публичные методы)
 	return {
 		init: init
 	};

@@ -239,26 +239,26 @@ input:checked + .checkbox-label:after{
 	@include vertical-align();
 }
 .filter-view-blocks{
-	background: url(../img/icons/view-blocks.png);
+	background: url(../img/icons/view-blocks.svg);
 	width: 20px;
 	height: 20px;
 	&:hover{
-		background: url(../img/icons/view-blocks-hover.png);
+		background: url(../img/icons/view-blocks-hover.svg);
 	}
 }
 .filter-view-blocks_active{
-	background: url(../img/icons/view-blocks-hover.png);
+	background: url(../img/icons/view-blocks-hover.svg);
 }
 .filter-view-line{
-	background: url(../img/icons/view-line.png);
+	background: url(../img/icons/view-list.svg);
 	width: 20px;
 	height: 20px;
 	&:hover{
-		background: url(../img/icons/view-line-hover.png);
+		background: url(../img/icons/view-list-hover.svg);
 	}
 }
 .filter-view-line_active{
-	background: url(../img/icons/view-line-hover.png);
+	background: url(../img/icons/view-list-hover.svg);
 }
 		// ------------------------Медиа для сортировки ----------------------------
 		@include desktop{

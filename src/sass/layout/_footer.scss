@@ -3,7 +3,8 @@
 	padding: 15px 20px 0;
 	background: #f1f1f1;
 	min-width: 100%;
-	font-size: 16px;
+	// font-size: 16px;
+	@include font-size(16px);
 	font-family: 'pt_sansregular', serif;
 }
 .footer__logo-contacts{
@@ -15,6 +16,7 @@
 }
 .footer__contacts-wrap{
 	float: left;
+	margin-top: -3px;
 }
 .contact-list__phone-wrap{
 	text-align: left;
@@ -82,8 +84,6 @@
 	display: block;
 	margin-bottom: 9px;
 }
-
-
 .contact-list__addr{
 	position: relative;
 	&:before{
@@ -129,8 +129,6 @@
 	bottom: 11px;
 	right: 11px;
 }	
-
-
 @include desktop{
 	.footer__nav-wrap{
 		float: none;
@@ -178,7 +176,7 @@
 }
 @include mobile{
 	.footer__contacts-wrap{
-		font-size: 15px;
+		@include font-size(15px);
 	}
 	.footer__nav-item{
 		margin-bottom: 15px;

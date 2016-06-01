@@ -112,7 +112,62 @@ $('.product-add').on('click',function(event){
   }
 });
 
+// Смена блоков в оформлении заказов - ДОСТАВКА
+if($("input[name='delivery-type']")) {
+  var deliveryVal=$("input[name='delivery-type']").val();
+      if (deliveryVal=='self') {
+      $('.delivery_coureer').hide();
+    } else {
+      $('.delivery_myself').hide();
+    }
+  $("input[name='delivery-type']").on('click',function(){
+    if ($(this).val() == 'self') {
+      $('.delivery_coureer').hide();
+      $('.delivery_myself').show();
+    } else {
+      $('.delivery_myself').hide();
+      $('.delivery_coureer').show();
+    }
+  })
+}
 
+// Смена данных,при клике
+  $('.editing-link_block')
+function changeZakazData (parent,itemClass,initClass,doneButton,cancelButton){
+  $('.'+initClass).on('click',function(){
+      event.preventDefault();
+      $(this).hide() // прячем нашу ссылку Изменить
+      .next().show(); // Показываем блок управления
+      var parentObj=$(this).closest('.'+parent);
+      console.log(parentObj);
+
+      var currentItem=parentObj.find('.'+itemClass);
+      currentItem.hide() // прячем текстовый блок
+      .next('input').show().val(currentItem.text());
+  });
+  $('.'+cancelButton).on('click',function(){
+      event.preventDefault();
+      var parentObj=$(this).closest('.'+parent);
+      var input=parentObj.find('.hidden-input');
+      input.hide().val(''); // прячем и чистим инпут
+      parentObj.find('.'+itemClass).show();
+      $(this).parent().hide() // прячем блок управления
+      .prev().show(); // показываем ссылку Инита
+    // Можно прописать Ajax запрос здесь
+  });
+  $('.'+doneButton).on('click',function(){
+      event.preventDefault();
+      var parentObj=$(this).closest('.'+parent);
+      var input=parentObj.find('.hidden-input');
+      input.hide();
+      parentObj.find('.'+itemClass).text(input.val()).show();
+      $(this).parent().hide() // прячем блок управления
+      .prev().show(); // показываем ссылку Инита
+    // Можно прописать Ajax запрос здесь
+  });
+};
+
+changeZakazData('zakaz-form__item','value-datails','change_field_link','done_field_link','cancel_field_link');
 //
 //
 // конец $(document).ready
@@ -142,16 +197,22 @@ $(document).ready(function() {
         return false;
       });
 // -------------------------------аккордион вакансии ---------------------------------------
-  $(".vacancy__accordion .vacancy__accordion-title:eq(1)").addClass("vacancy__accordion-link--active");
-  $(".vacancy__accordion .vacancy__accordion-info:not(:eq(1))").hide();
+  // --------------------------------альтернатива-----------------------------
+  // $(".vacancy__accordion-title:eq(1)").addClass("vacancy__accordion-link--active");
+  // $(".vacancy__accordion-info:not(:eq(1))").hide();
 
-  $(".vacancy__accordion .vacancy__accordion-title").click(function(){
-    $(this).next(".vacancy__accordion .vacancy__accordion-info").slideToggle("slow")
-    .siblings(".vacancy__accordion .vacancy__accordion-info:visible").slideUp("slow");
-    $(this).toggleClass("vacancy__accordion-link--active");
-    $(this).siblings(".vacancy__accordion .vacancy__accordion-title")
-    .removeClass("vacancy__accordion-link--active");
-  });
+  // $(".vacancy__accordion-title").click(function(){
+  //   $(this)
+  //     .next(".vacancy__accordion-info")
+  //     .slideToggle("slow")
+  //     .siblings(".vacancy__accordion-info:visible")
+  //     .slideUp("slow");
+  //   $(this)
+  //     .toggleClass("vacancy__accordion-link--active");
+  //   $(this)
+  //     .siblings(".vacancy__accordion-title")
+  //     .removeClass("vacancy__accordion-link--active");
+  // });
     });
 // ----------------------------------------------------------------------------------------
 // var toggle_company_link = $('.about__company-link') // клас стиля ссылки

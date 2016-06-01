@@ -66,13 +66,20 @@
 				height: 40px;
 				width: 40px;
 				border: none;
-				background: url('../img/search.png') center center $buttons-color no-repeat;
+				background: $buttons-color;
 				outline: none;
 				@include border-right-radius(3px);
 				@include transition(0.8s);
 			}
 			&__submit:hover {
-				background: url('../img/search.png') center center $buttons-color-hover no-repeat;
+				background: $buttons-color-hover;
+			}
+			&__submit:before{
+				content: '';
+				background: url('../img/icons/search.svg');
+				display: inline-block;
+				width: 20px;
+				height: 20px;
 			}
 	}
 	.shopping-cart {

@@ -14,6 +14,7 @@ block main
 								a.breadcrumbs__link(href="#") О компании	
 							li.breadcrumbs__item
 								a.breadcrumbs__link.breadcrumbs__link_active(href="#") Вакансии
+					include ./_includes/_layout/_about_company_nav.jade
 					.info__company-wrap
 						h1.company-title
 							| Вакансии
@@ -25,8 +26,11 @@ block main
 								.right-title
 									span.gert
 										| ЗП:
-										h3.accord-title
-											| 30 000 — 40 000
+									h3.accord-title
+										span
+											| 30 000 - 
+										span
+											| 40 000
 									span.gert
 										| руб.
 							.vacancy__accordion-info
@@ -56,8 +60,10 @@ block main
 								.right-title
 									span.gert
 										| ЗП:
-										h3.accord-title
-											| до 50 000
+									h3.accord-title
+										| до 
+										span 
+											| 50 000
 									span.gert
 										| руб.
 							.vacancy__accordion-info
@@ -91,8 +97,11 @@ block main
 								.right-title
 									span.gert
 										| ЗП:
-										h3.accord-title
-											| 25 000 — 40 000
+									h3.accord-title
+										span
+											| 25 000 — 
+										span 
+											| 40 000
 									span.gert
 										| руб.
 							.vacancy__accordion-info
@@ -122,8 +131,10 @@ block main
 								.right-title
 									span.gert
 										| ЗП:
-										h3.accord-title
-											| до 30 000
+									h3.accord-title
+										| до 
+										span
+											| 30 000
 									span.gert
 										| руб.
 							.vacancy__accordion-info
@@ -145,4 +156,3 @@ block main
 									li
 										| Возможность дополнительного заработка
 									| Запишитесь на собеседование по телефону 380-85-90
-					include ./_includes/_layout/_about_company_nav.jade
