@@ -159,6 +159,7 @@
 		}
 	}
 }
+
 .subject,
 .subject-content {
 	vertical-align: top;
@@ -217,4 +218,92 @@
 	resize: none;
 	outline: none;
 
+}
+
+.checkbox-input {
+	display: inline-block;
+	font-size: 14px;
+
+	&:hover p{
+		&:before{
+			@include opacity(0.5);
+			background: #f05a28;
+		}
+		&:after{
+			@include opacity(0.5);
+			display: block;
+		}
+
+	}
+
+	p {
+		display: inline-block;
+		position: relative;
+		padding-left: 30px;
+		min-height: 20px;
+		span {
+			color: #939598;
+		}
+		&:before {
+			content: '';
+			position: absolute;
+			display: block;
+			@include transition(0.5s);
+			top: 0;
+			left: 0;
+			width: 18px;
+			height: 18px;
+			background: #ffffff;
+			border: 1px solid #cfcfcf;
+			@include border-radius(2px);
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 4.5px;
+			display: none;
+			@include transition(0.5s);
+			width: 12.5px;
+			height: 9px;
+			background: url('../img/icons/check.svg');
+		}
+	}
+	p.bold>span{
+		font-family: 'pt_sansbold';
+		font-weight: 600;
+	    color: $black !important;
+	}
+	p.bold>.important:before{
+		content:'*';
+		color: #f05a28;
+		margin-right: 4px;
+		display: inline;
+	}
+	input {
+		display: none;
+		&:checked + p{
+			@include opacity(1);
+		    &>span{
+		    	font-family: 'pt_sansbold';
+			    font-weight: 600;
+			    color: #000000;
+			}
+			&:before {
+				background: #f05a28;
+			}
+			&:after{
+				display: block;
+			}
+		}
+		&:checked + p:hover{
+			&:before {
+				@include opacity(1);
+			}
+			&:after{
+				@include opacity(1);
+			}
+		}
+	}
 }
