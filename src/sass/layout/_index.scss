@@ -106,7 +106,7 @@
 	}
 }
 
-@include breakpoint(800){
+@include breakpoint(800px){
 	.slider-content-wrap{
 		background: url('../img/slider_main_page_tablet.jpg') cover !important;
 		height: auto !important;
@@ -118,7 +118,7 @@
 		}
 	}
 }
-@include breakpoint(550){
+@include breakpoint(550px){
 	.slider-content-wrap{
 		background: url('../img/slider_main_page_mobile.jpg') cover !important;
 	}
