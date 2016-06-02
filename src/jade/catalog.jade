@@ -49,18 +49,18 @@ block main
 						ul.news-discount__list
 							li.news-discount__item
 								input#news.input-checkbox(type='checkbox')
-								label.checkbox-label(for='news') Новинки
+								label.checkbox-label.ch-box_blue(for='news') Новинки
 							li.news-discount__item
 								input#discount.input-checkbox(type='checkbox')
-								label.checkbox-label(for='discount') Акция
+								label.checkbox-label.ch-box_orange(for='discount') Акция
 						.filter-view
 							.sort-text Вид каталога
 							ul.filter-view__list
 								li.filter-view__item
-									a.filter-view__link(href='catalog.html')
+									a.filter-view__link(href='#' data-mode='block')
 										.filter-view__icon.filter-view-blocks.filter-view-blocks_active
 								li.filter-view__item
-									a.filter-view__link(href='catalog_list.html')
+									a.filter-view__link(href='#' data-mode='list')
 										.filter-view__icon.filter-view-line
 				ul.catalog-wrap.catalog-block-style
 						-for (var j=1;j<=7;j++)
@@ -70,13 +70,16 @@ block main
 										img.product-image(src='img/product-images/product1.jpg' alt='Блокнот «Животные»')
 										.product-status.product-status_new Новинка
 									.product-text-wrap
-										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
-										.product-text  Упаковка: 10 шт.
+										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Настольный географический глобус MINI (ARIES)
+										.product_package_amount Упаковка: 10 шт.
 									.product-price-line-wrap
+										p.product__stock-status.product__stock-status_expected
+											span Ожидается
 										.product-price-wrap
 											.product-price 100
 											.product-price-per руб./шт.
-										p.product__stock-status.product__stock-status_expected  Ожидается
+									.product_package_amount
+										|Упаковка: 10шт.
 									form.product-order-wrap
 										.product__amount
 											span.minus
@@ -90,12 +93,15 @@ block main
 										.product-status.product-status_discount Акция
 									.product-text-wrap
 										a.product-title(href='kartochka.html' alt='Блокнот «Животные»') Блокнот «Животные»
-										.product-text  Упаковка: 10 шт.
+										.product_package_amount  Упаковка: 10 шт.
 									.product-price-line-wrap
+										p.product__stock-status.product__stock-status_available
+											span В наличии
 										.product-price-wrap
 											.product-price 100
 											.product-price-per руб./шт.
-										p.product__stock-status.product__stock-status_available  В наличии
+									.product_package_amount
+										|Упаковка: 10шт.
 									form.product-order-wrap
 										.product__amount
 											span.minus

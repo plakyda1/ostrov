@@ -109,7 +109,12 @@
     font-family: 'pt_sansbold';
     background: #f05a28;
     color: $white;
+    @include transition(0.25s);
+    &:hover {
+	    background: #f82c0b;
+    }
 }
+
 
 .log-in-wrap{
 	width: 340px;
