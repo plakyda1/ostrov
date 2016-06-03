@@ -1,0 +1,27 @@
+extends _layout.jade
+block main
+	section.formalization__order
+		.container
+			.breadcrumbs
+				ul.breadcrumbs__list
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Главная
+					li.breadcrumbs__item
+						a.breadcrumbs__link(href="#") Корзина
+					li.breadcrumbs__item
+						a.breadcrumbs__link.breadcrumbs__link_active(href="#") Оформление заказа
+			.formalization__wrap
+				h1.formalization__order-title
+					| Ваш заказ оформлен!
+				.formalization__number-wrap
+					p.formalization__title
+						| Номер заказа:
+					p.formalization__title
+						| Стоимость:
+				.formalization__cost-wrap
+					p.formalization__number
+						| 352412
+					p.formalization__number
+						| 31 188 руб.
+			a(href="history_orders.html").link-simple
+				| Перейти к заказам

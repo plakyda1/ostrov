@@ -175,9 +175,14 @@ input:checked + .radio-label:after{
 }
 .checkbox-label:hover:before{
 	@include opacity(.5);
-	background: #2dcdfc;
-
 }
+.ch-box_blue:hover:before{
+	background: #2dcdfc;
+}
+.ch-box_orange:hover:before{
+	background: #f05a28;
+}
+
 .checkbox-label:hover:after{
 	@include opacity(.5);
 	content:'';
@@ -191,8 +196,11 @@ input:checked + .radio-label:after{
 input:checked + .checkbox-label{
 	font-weight: 600;
 }
-input:checked + .checkbox-label:before{
+input:checked + .ch-box_blue:before{
 	background: #2dcdfc;
+}
+input:checked + .ch-box_orange:before{
+	background: #f05a28;
 }
 input:checked + .checkbox-label:after{
 	content:'';
@@ -344,8 +352,9 @@ input:checked + .checkbox-label:after{
 	display: inline-block;
 	font-weight: 600;
 	color: #000;
+	min-height: 36px;
 }
-.product-text {
+.product_package_amount {
 	color: #7e8084;
 }
 .product__stock-status {
@@ -360,16 +369,7 @@ input:checked + .checkbox-label:after{
 		@include border-radius(50%);
 	}
 }
-.product__stock-status{
-		&:before {
-			display: inline-block;
-			content: ' ';
-			width: 9px;
-			height: 9px;
-			background: #FFCB83;
-			@include border-radius(50%);
-		}
-	}
+
 .product__stock-status_expected{
 	color: #FFCB83;
 	&:before {
@@ -393,7 +393,7 @@ input:checked + .checkbox-label:after{
 	font-size: 14px;
 	background: $green;
 	@include border-radius(2px);
-	@include transition(1s);
+	@include transition(0.25s);
 	&:before{
 		content: ' ';
 		display: inline-block;
@@ -431,6 +431,9 @@ input:checked + .checkbox-label:after{
 	}
 
 }
+.catalog-product-wrap{
+	@include transition(0.25s);
+}
 .catalog-product-wrap:hover {
 	@include box-shadow(0px 0px 10px 0px rgba(0, 0, 0, 0.1));
 }
@@ -444,7 +447,6 @@ input:checked + .checkbox-label:after{
 	margin: 0 0 0 -20px;
 	.catalog-product-wrap {
 		@include border-radius(3px);
-		@include transition(0.8s);
 		background: #fff;
 		float: left;
 		margin-left: 20px;
@@ -474,21 +476,30 @@ input:checked + .checkbox-label:after{
 		.product-title {
 			margin-bottom: 5px;
 		}
+		.product_package_amount {
+			display: block;
+		}
+	}
+	.product_package_amount {
+		display: none;
 	}
 	.product-price-line-wrap {
 		padding: 0 10px;
-		@include horiz_align_hack;
-		text-align: justify;
 		margin-bottom: 15px;
+		@include clearfix;
 	}
 	.product-price-wrap {
 		display: inline-block;
+		float: left;
 		max-width: 94px;
 	}
 	.product__stock-status{
 		word-wrap: break-word;
 		max-width: 101px;
 		display: inline-block;
+		float: right;
+		margin-top: 5px;
+		line-height: 20px;
 		padding-left: 13px;
 		&:before{
 			display: block;
@@ -541,6 +552,7 @@ input:checked + .checkbox-label:after{
 		margin: 0 12px 0 14px;
 		.product-status {
 			margin: 15px 0 0 10px;
+			display: none;
 		}
 	}
 	.product-image {
@@ -550,8 +562,12 @@ input:checked + .checkbox-label:after{
 	.product-text-wrap {
 		float: left;
 		max-width: 220px;
+		width: 220px;
 		margin: 0 10px 0 12px;
 		padding-top:5px;
+		.product_package_amount {
+			display: none;
+		}
 	}
 	.product-price-line-wrap {
 		float: left;
@@ -561,6 +577,9 @@ input:checked + .checkbox-label:after{
 			width:60px;
 			margin: 0 10px;
 			text-align: center;
+			span {
+				display: none;
+			}
 		}
 
 	}
@@ -583,7 +602,12 @@ input:checked + .checkbox-label:after{
 	.product__amount,
 	.product-add{
 		vertical-align: top;
+	}
+	.product__amount{
 		margin: 0 10px;
+	}
+	.product-add{
+		margin-left: 10px;
 	}
 }
 
@@ -670,7 +694,7 @@ input:checked + .checkbox-label:after{
 		background: $buttons-color;
 		color: #fff;
 	    font-family: 'pt_sansbold';
-		@include transition(0.8s);
+		@include transition(0.25s);
 		&:hover{
 			background: $buttons-color-hover;
 		}

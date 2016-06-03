@@ -1,4 +1,4 @@
-// Стили для страницы отображения одной новости 
+// Стили для страницы отображения одной новости
 section.odna_novost{
 	background: #ffffff;
 }
@@ -46,4 +46,35 @@ section.odna_novost{
 }
 .breadcrumbs__single-news{
 	padding-top: 5px;
+}
+
+.news_navigation{
+	font-size: 14px;
+	.prev_link,
+	.next_link{
+		display: inline-block;
+	}
+	.prev_link{
+		margin-right: 40px;
+	}
+	.prev_link:before{
+		content: '';
+		display: inline-block;
+		width: 13px;
+		height: 8px;
+		background: url('../img/icons/arrow_list-grey.svg') center center no-repeat;
+		@include rotate(-90);
+		margin-right: 8px;
+		@include opacity(0.5);
+	}
+	.next_link:after{
+		content: '';
+		display: inline-block;
+		width: 13px;
+		height: 8px;
+		background: url('../img/icons/arrow_list-grey.svg') center center no-repeat;
+		@include rotate(90);
+		margin-left: 8px;
+		@include opacity(0.5);
+	}
 }

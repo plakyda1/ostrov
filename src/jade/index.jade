@@ -32,14 +32,14 @@ block main
 						//- условие для отображения маленких картинон (модификатор '.assort__item_small')
 						if (j==1 || j==3 || j==6 || j==8 || j==9 || j==11 || j==13 )
 							li.assort__item.assort__item_small
-								a(href="#" class="assort__link") 
+								a(href="#" class="assort__link")
 									span.assort-dscr #{nameAssort[j]}
 									img(src="img/assort/#{assort[j]}.jpg", alt="#{assort[j]}").assort__image
 						else
 							//- большие картинки
 							li.assort__item
 								a(href="#" class="assort__link")
-									span.assort-dscr #{nameAssort[j]}
+									span.assort-dscr.white #{nameAssort[j]}
 									img(src="img/assort/#{assort[j]}.jpg", alt="#{assort[j]}").assort__image
 
 	section.news
@@ -58,9 +58,11 @@ block main
 										img(src="img/news/news-img#{i}.png", alt="Image-news").img-news__image
 							.content-news
 								.content-news__date 23.09.2015
-								h3.content-news__title Новость #{i}
-								.content-news__text   
+								h3.content-news__title
+									a(href="odna_novost.html").content-news__title_link
+										| Новость #{i}
+								.content-news__text
 									.box Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Там, что. Снова оксмокс ручеек своего образ деревни на берегу страна взобравшись, о которое выйти напоивший вершину, меня коварный курсивных.
 									//- .box нужен для нормального обрезания текста, что выходит за границы блока с контентом
-			a(href="#").more-link Все новости
+			a(href="novosti.html").more-link Все новости
 
