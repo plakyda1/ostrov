@@ -252,7 +252,10 @@ var validForm = (function () {
     function _processForm (form) {
       var inputsGroup = $(form).find('.rfield');
       inputsGroup.each(function() {
-        if ( $(this).val() === '' || !$(this).prop("checked")) {
+        if (
+            $(this).val() === '' ||
+            ($(this).prop("type")==('checkbox' || 'radio') && !$(this).prop("checked"))
+          ) {
         if ($(this).prop("disabled")) {
           return true; // проход дальше если поле неактивно
         }
