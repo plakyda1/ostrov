@@ -1,0 +1,449 @@
+// Catalog - Media
+// ------------------------Медиа для сортировки ----------------------------
+		@include desktop{
+			.sort{
+				height:auto;
+			}
+			.sort__group{
+				top:0;
+				-webkit-transform: none;
+				transform: none;
+				float:none;
+				margin: 10px auto;
+				text-align: center;
+			}
+			.sort__news-views{
+				top:0;
+				-webkit-transform: none;
+				transform: none;
+				float:none;
+				margin: 10px auto;
+				text-align: center;
+			}
+			.news-discount__list{
+				float: none;
+				display: inline-block;
+			}
+			.filter-view{
+				float: none;
+				display: inline-block;
+			}
+		}
+		@include breakpoint(760px){
+			.news-discount__list{
+				float: none !important;
+				display:block !important;
+				margin-bottom: 15px !important;
+			}
+			.news-discount__item{
+				margin-left: 30px !important;
+				margin-right: 0px !important;
+			}
+			.filter-view{
+				float: none!important;
+				display:block!important;
+				margin-bottom: 15px!important;
+			}
+		}
+		@include breakpoint(682px){
+			.sort-text{
+				margin-bottom: 15px!important;
+			}
+			.grouping__list{
+				display: block!important;
+			}
+			.grouping__item{
+				display: block!important;
+				margin-bottom: 5px !important;
+				margin-left: 0 !important;
+			}
+		}
+		@include breakpoint(500px){
+			.news-discount__item{
+				display: block;
+				text-align: center;
+				margin-bottom: 15px;
+			}
+			.sort-text{
+				display: block;
+			}
+			.filter-view__item{
+				display: block;
+				margin-bottom: 20px;
+			}
+		}
+//
+@include breakpoint(1180px){
+	.characteristics-form{
+		text-align: center;
+		&>*{
+		text-align: left;
+
+		}
+	}
+}
+
+
+// ------------------------------------------------------------------------------
+// Media для таблицы заказов с аккордеоном
+@include breakpoint (1200px){
+	.kabinet-nav__wrap_media{
+		width: 100% !important;
+		text-align: center;
+		margin: 20px 0 !important;
+	}
+}
+@include breakpoint (1024px){
+	.zakaz-info__summa{
+		display: inline-block !important;
+		margin-top: 20px;
+		float: none;
+	}
+	.zakaz-info__repeat{
+		float:right !important ;
+	}
+}
+@include breakpoint (848px){
+	.zakaz-info__repeat{
+		float:none !important;
+		display: inline-block;
+	}
+	.zakaz-info__comment{
+		display: inline-block;
+	}
+	.kabinet-nav__wrap{
+		width: 100% !important;
+		text-align: center;
+		margin-top: 20px !important;
+	}
+	.zakaz-info__summa{
+		margin-bottom: 15px;
+	}
+}
+@include breakpoint(1100px){
+	.catalog-content-wrap{
+		padding-right: 20px;
+	}
+	.about__company-nav{
+		display: block !important;
+		width: 100%;
+		float: none;
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	.info__company-wrap{
+		margin-right: 0;
+	}
+}
+// Feedbecks ------------------------
+@include breakpoint(1210px){
+	.about__company-nav{
+		display: none;
+	}
+	.info__company-wrap{
+		margin-right: 0;
+	}
+	.catalog-content-wrap{
+		padding-right: 20px;
+	}
+	.gallery-wrap{
+		max-width: 600px;
+	}
+	.feedback-form{
+		margin: 0 auto;
+	}
+}
+@include breakpoint(900px){
+	.feedback-form{
+		width: 100%;
+		max-width: 500px;
+	}
+	.message-are,
+	.name-are,
+	.company-are,
+	.capture,
+	.submit-btn{
+		margin: 0 auto;
+	}
+	.name-are,
+	.company-are,
+	.submit-btn{
+		display: block;
+	}
+	.message-are{
+		display: block;
+	}
+	.message-are,
+	.name-are,
+	.company-are,
+	.capture{
+		margin-bottom: 10px;
+		width: 100% !important;
+	}
+	.gallery-wrap{
+		display: none;
+	}
+}
+@include breakpoint(590px){
+	.company-title{
+		@include font-size(25px);
+	}
+	.message-are,
+	.name-are,
+	.company-are,
+	.capture,
+	.submit-btn{
+		width: 100%;
+	}
+}
+// Footer--------------
+@include desktop{
+	.footer__nav-wrap{
+		float: none;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.footer__nav-soc{
+		width: 100%;
+		text-align: center;
+		margin-left: 0;
+		margin-bottom: 50px;
+		&:before{
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+	.footer_soc-wrap{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	.footer__logo-contacts{
+		width: 100%;
+		text-align: center;
+		&:before{
+			content: '';
+			display: inline-block;
+			height: 100%;
+			vertical-align: middle;
+		}
+	}
+	.footer__logo-contacts-wrap{
+		display: inline-block;
+		vertical-align: middle;
+		margin-bottom: 30px;
+	}
+	.producted__by{
+		float: left;
+		left: 50%;
+		width: 50px;
+		position: absolute;
+		margin-left: -25px;
+	}
+}
+@include mobile{
+	.footer__contacts-wrap{
+		@include font-size(15px);
+	}
+	.footer__nav-item{
+		margin-bottom: 15px;
+		width: 100%;
+	}
+	.footer__nav-item:last-of-type{
+		margin-bottom: 0;
+	}
+
+	.footer__nav-wrap{
+		margin-bottom: 25px;
+	}
+	.footer__logo-wrap{
+		margin-bottom: 20px;
+		margin-right: 0;
+		float: none;
+	}
+	.soc__like, 
+	.soc__yt{
+		width: 100%;
+	}
+	.soc__yt{
+		margin-bottom: 7px;
+	}
+}
+// Header
+@include breakpoint(1230px){
+	.header__menu-line-wrap {
+		padding-bottom: 5px !important;
+	}
+	.main-menu{
+		width:100%;
+		text-align: center;
+		margin: 5px 0;
+	}
+
+	.search-form{
+		width: 100%;
+		text-align: center;
+		margin-top:5px;
+		margin-right: 0!important;
+	}
+	.header__search-line-wrap{
+		padding: 20px 10px 10px !important;
+	}
+}
+
+@include breakpoint(670px){
+	.header__menu-line-wrap,
+	.header__search-line-wrap{
+		text-align: center;
+	}
+	.contact-list__phone-wrap{
+		float: none !important;
+		display: inline-block;
+		text-align: left;
+	}
+	.product_catalog {
+		float: none !important;
+		display: inline-block;
+		// margin-right: 0px!important;
+	}
+	.shopping-cart{
+		float: none !important;
+		display: inline-block;
+		text-align: left;
+		clear: both;
+	}
+}
+@include breakpoint(520px){
+	.search-form__input{
+		width:90%;
+	}
+	.search-form__submit{
+		width: 10%;
+	}
+	.shopping-cart {
+		vertical-align: middle;
+	}
+	.logo{
+		float: none !important;
+		display: inline-block;
+		margin:0;
+	}
+	.product_catalog {
+		margin-right: 0 !important;
+	}
+}
+@include breakpoint(440px){
+	.authorization{
+		float: none !important;
+		display: inline-block;
+		&__login-link {
+			margin-left: 0 !important;
+		}
+	}
+}
+// Kartochka
+
+@include breakpoint(1200px){
+	.product__card-add__basket--btn{
+		float: left !important;
+	}
+	.product__card-about__item{
+		width: 50%;
+		float: right;
+		margin-bottom: 30px;
+	}
+	.product__card-basket{
+		float: right;
+		margin-right: 20px;
+		width: 300px;
+	}
+}
+@include breakpoint(804px){
+	.product__card-gallery{
+		width: 100%;
+	}
+	.slick-slide{
+		img{
+			margin: 0 auto;
+		}
+	}
+	.product__card-about__item{
+		width: 50%;
+		float: right;
+	}
+}
+@include breakpoint(700px){
+	.product__card-about__item{
+		width: 100%;
+		margin-right: 0;
+		margin-top: 20px;
+	}
+	.product__card-basket{
+		width: 100%;
+		margin-right: 0;
+	}
+	.product__card-item__gallery {
+	    float: left;
+	    width: 100%;
+	    position: relative;
+	}
+}
+@media screen and (min-width: 580px) and (max-width: 700px){
+	.product__card-item__gallery{
+		margin-bottom: 25px;
+	}
+	.product__card-about__item{
+		width: 45%;
+		margin-right: 0;
+		margin-top: 0;
+		float: left;
+	}
+	.product__card-basket{
+		width: 300px;
+	}
+}
+@include breakpoint(579px){
+	.product__card-basket{
+		clear: both;
+		width: 300px;
+		float: none;
+		margin: 0 auto;
+	}
+}
+// Media для страницы новостей
+@include breakpoint(700px){
+	.img-news{
+		display: none !important;
+	}
+}
+// Vacancy
+@include breakpoint(1100px){
+	.vacancy__accordion{
+		float: none;
+		margin: 0 auto;
+		max-width: 600px;
+	}
+}
+@include breakpoint(870px){
+	.vacancy__accordion-title{
+		padding: 0;
+		position: relative;
+		&:before{
+			content: '';
+			top: 41px;
+			left: 10px;
+		}
+	}
+	.vacancy__accordion{
+		float: left;
+	}
+	.left-title, 
+	.right-title{
+		width: 100%;
+		text-align: center;
+	}
+}
+
+
+

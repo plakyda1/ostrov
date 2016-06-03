@@ -28,18 +28,19 @@ block main
 					-var assort = ['news', 'pen', 'discount', 'pencil', 'paper', 'notes', 'skrepki', 'sumki', 'calc', 'globus', 'papki', 'portmone', 'balls', 'watch', 'box', 'muskul' ];
 					//- Массив с Контентом на картинках
 					-var nameAssort = ['Новинки', 'Ручки и стержни', 'Акционные товары', 'Письменные пренадлежности', 'Бумажно-беловые офисные товары', 'Бумажно-беловые школьные товары', 'Конторские принадлежности', 'Школьные товары', 'Офисные принадлежности', 'Глобусы','Папки и регистраторы','Деловая кожгалантерея', 'Товары для праздника', 'Подарки и сувениры', 'Новогодние товары', 'Хозяйствинные товары'];
+					-var colorAssort = ['white','','white','','','','','','','','','','','','',''];
 					-for (var j = 0; j < assort.length; j++)
 						//- условие для отображения маленких картинон (модификатор '.assort__item_small')
 						if (j==1 || j==3 || j==6 || j==8 || j==9 || j==11 || j==13 )
 							li.assort__item.assort__item_small
 								a(href="#" class="assort__link")
-									span.assort-dscr #{nameAssort[j]}
+									span.assort-dscr(class="#{colorAssort[j]=='white'? 'white': ''}") #{nameAssort[j]}
 									img(src="img/assort/#{assort[j]}.jpg", alt="#{assort[j]}").assort__image
 						else
 							//- большие картинки
 							li.assort__item
 								a(href="#" class="assort__link")
-									span.assort-dscr.white #{nameAssort[j]}
+									span.assort-dscr(class="#{colorAssort[j]=='white'? 'white': ''}") #{nameAssort[j]}
 									img(src="img/assort/#{assort[j]}.jpg", alt="#{assort[j]}").assort__image
 
 	section.news

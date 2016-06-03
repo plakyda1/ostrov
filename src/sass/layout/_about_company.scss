@@ -57,18 +57,3 @@
 		}
 	}
 }
-@include breakpoint(1100px){
-	.catalog-content-wrap{
-		padding-right: 20px;
-	}
-	.about__company-nav{
-		display: block !important;
-		width: 100%;
-		float: none;
-		text-align: center;
-		margin-bottom: 20px;
-	}
-	.info__company-wrap{
-		margin-right: 0;
-	}
-}

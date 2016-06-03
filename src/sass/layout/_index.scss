@@ -106,30 +106,6 @@
 	}
 }
 
-@include breakpoint(800px){
-	.slider-content-wrap{
-		background: url('../img/slider_main_page_tablet.jpg') cover !important;
-		height: auto !important;
-		.pre-slider-title{
-			font-size: 40px !important;
-		}
-		.slider-title{
-			font-size: 60px !important;
-		}
-	}
-}
-@include breakpoint(550px){
-	.slider-content-wrap{
-		background: url('../img/slider_main_page_mobile.jpg') cover !important;
-	}
-	.pre-slider-title{
-		font-size: 30px !important;
-	}
-	.slider-title{
-		font-size: 45px !important;
-	}
-}
-
 // ------------------------------------------Блок с ассортиментом товаров на сайте-----------------------
 .assort{
 	background: $gray;
@@ -290,65 +266,5 @@
 	text-decoration: underline;
 	&:hover{
 		text-decoration: none;
-	}
-}
-// ---------------------------------------------Медиа запросы-----------------------------------------
-@include small-tablets-h{;
-	// Схлоппывание блока новостей
-	.news__item{
-		width: 100%!important;
-
-	}
-	// ---------------------------
-	.assort__item{
-		height: 200px!important;
-		width: 48% !important;
-		&_small{
-
-		}
-	.assort__link{
-    	max-height: 200px;
-	}
-	.assort__link_small{
-    	max-height: 200px;
-	}
-	}
-}
-@include small-tablets{
-	// Шрифт
-	.assort-dscr{
-		@include font-size(18px);
-	}
-	.assort__item{
-		height: 150px!important;
-		width: 48% !important;
-	}
-	.assort__link{
-		max-height: 150px !important;
-	}
-
-}
-@include mobile{
-	.assort-dscr{
-		@include font-size(16px);
-	}
-	.assort__item{
-		height: 100px!important;
-		width: 48% !important;
-	}
-	.assort__link{
-		max-height: 100px !important ;
-	}
-}
-@include breakpoint(400px){
-	.assort-dscr{
-		@include font-size(18px);
-	}
-	.assort__item{
-		height: 80px!important;
-		width: 100% !important;
-	}
-	.assort__link{
-		max-height: 80px !important ;
 	}
 }

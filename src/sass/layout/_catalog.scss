@@ -15,11 +15,11 @@
 	background: #fff;
 }
 .container__catalog {
-	max-width: 1200px;
+	min-width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	display: table;
-	width: 100%;
+	width: 1200px;
 }
 .catalog-content-wrap{
 	padding-left: 20px;
@@ -268,80 +268,7 @@ input:checked + .checkbox-label:after{
 .filter-view-line_active{
 	background: url(../img/icons/view-list-hover.svg);
 }
-		// ------------------------Медиа для сортировки ----------------------------
-		@include desktop{
-			.sort{
-				height:auto;
-			}
-			.sort__group{
-				top:0;
-				-webkit-transform: none;
-				transform: none;
-				float:none;
-				margin: 10px auto;
-				text-align: center;
-			}
-			.sort__news-views{
-				top:0;
-				-webkit-transform: none;
-				transform: none;
-				float:none;
-				margin: 10px auto;
-				text-align: center;
-			}
-			.news-discount__list{
-				float: none;
-				display: inline-block;
-			}
-			.filter-view{
-				float: none;
-				display: inline-block;
-			}
-		}
-		@include breakpoint(760px){
-			.news-discount__list{
-				float: none !important;
-				display:block !important;
-				margin-bottom: 15px !important;
-			}
-			.news-discount__item{
-				margin-left: 30px !important;
-				margin-right: 0px !important;
-			}
-			.filter-view{
-				float: none!important;
-				display:block!important;
-				margin-bottom: 15px!important;
-			}
-		}
-		@include breakpoint(682px){
-			.sort-text{
-				margin-bottom: 15px!important;
-			}
-			.grouping__list{
-				display: block!important;
-			}
-			.grouping__item{
-				display: block!important;
-				margin-bottom: 5px !important;
-				margin-left: 0 !important;
-			}
-		}
-		@include breakpoint(500px){
-			.news-discount__item{
-				display: block;
-				text-align: center;
-				margin-bottom: 15px;
-			}
-			.sort-text{
-				display: block;
-			}
-			.filter-view__item{
-				display: block;
-				margin-bottom: 20px;
-			}
-		}
-// ------------------------------------------------------------------------------
+		
 .catalog-wrap {
 	margin: 0;
 	padding: 0;
@@ -447,9 +374,10 @@ input:checked + .checkbox-label:after{
 	margin: 0 0 0 -20px;
 	.catalog-product-wrap {
 		@include border-radius(3px);
+		display: inline-block;
+		vertical-align: top;
 		background: #fff;
-		float: left;
-		margin-left: 20px;
+		margin-left: 19px;
 		width: 220px;
 		padding-bottom: 30px;
 		margin-bottom: 20px;
@@ -756,22 +684,10 @@ input:checked + .checkbox-label:after{
 		}
 	}
 }
-//
-@include breakpoint(1180px){
-	.characteristics-form{
-		text-align: center;
-		&>*{
-		text-align: left;
-
-		}
-	}
-}
-
-
 // Стиль тултипа при заокруглении количества товара
 .tooltip-style{
     border-color: #fff;
-    background-color: #f05a28;
+    background-color: rgb(240,90,40);
     border: none;
     color: white;
     width: 182px;

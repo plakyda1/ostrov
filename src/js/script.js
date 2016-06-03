@@ -1,13 +1,13 @@
 $(document).ready(function(){
   // Сладер на главной странице
   $(".carousel-main").owlCarousel({
-  	items: 1,
-  	nav: true,
-  	navText: [],
+    items: 1,
+    nav: true,
+    navText: [],
     loop: true,
-  	autoplay:true,
-  	responsive: {
-  	}
+    autoplay:true,
+    responsive: {
+    }
   });
   $('.thanksgiving__letters-gallery').owlCarousel({
     items: 5,
@@ -186,7 +186,10 @@ $('.button-kab_change').on('click', function(event) {
   });
   $(this).closest('.about-user__item').toggleClass('about-user__item_active');
 });
-
+$('.button-active').on('click', function(event) {
+  event.preventDefault();
+  $(this).closest('.about-user__item_active').toggleClass('about-user__item_active');
+});
 // Включение инпута при нажатии на нужную позицию input[type=radio]
 $('input[name="subject-type"]').on('click', function(event) {
   var curVal=$(this).val();

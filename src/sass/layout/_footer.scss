@@ -129,76 +129,88 @@
 	bottom: 11px;
 	right: 11px;
 }	
-@include desktop{
-	.footer__nav-wrap{
-		float: none;
-		text-align: center;
-		margin-bottom: 50px;
-	}
-	.footer__nav-soc{
-		width: 100%;
-		text-align: center;
-		margin-left: 0;
-		margin-bottom: 50px;
-		&:before{
-			content: '';
-			display: inline-block;
-			height: 100%;
-			vertical-align: middle;
+// Index Media
+
+@include breakpoint(800px){
+	.slider-content-wrap{
+		background: url('../img/slider_main_page_tablet.jpg') cover !important;
+		height: auto !important;
+		.pre-slider-title{
+			font-size: 40px !important;
 		}
-	}
-	.footer_soc-wrap{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	.footer__logo-contacts{
-		width: 100%;
-		text-align: center;
-		&:before{
-			content: '';
-			display: inline-block;
-			height: 100%;
-			vertical-align: middle;
+		.slider-title{
+			font-size: 60px !important;
 		}
-	}
-	.footer__logo-contacts-wrap{
-		display: inline-block;
-		vertical-align: middle;
-		margin-bottom: 30px;
-	}
-	.producted__by{
-		float: left;
-		left: 50%;
-		width: 50px;
-		position: absolute;
-		margin-left: -25px;
 	}
 }
-@include mobile{
-	.footer__contacts-wrap{
-		@include font-size(15px);
+@include breakpoint(550px){
+	.slider-content-wrap{
+		background: url('../img/slider_main_page_mobile.jpg') cover !important;
 	}
-	.footer__nav-item{
-		margin-bottom: 15px;
-		width: 100%;
+	.pre-slider-title{
+		font-size: 30px !important;
 	}
-	.footer__nav-item:last-of-type{
-		margin-bottom: 0;
+	.slider-title{
+		font-size: 45px !important;
+	}
+}
+// ---------------------------------------------Медиа запросы-----------------------------------------
+@include small-tablets-h{;
+	// Схлоппывание блока новостей
+	.news__item{
+		width: 100%!important;
+
+	}
+	// ---------------------------
+	.assort__item{
+		height: 200px!important;
+		width: 48% !important;
+		&_small{
+
+		}
+	.assort__link{
+    	max-height: 200px;
+	}
+	.assort__link_small{
+    	max-height: 200px;
+	}
+	}
+}
+@include small-tablets{
+	// Шрифт
+	.assort-dscr{
+		@include font-size(18px);
+	}
+	.assort__item{
+		height: 150px!important;
+		width: 48% !important;
+	}
+	.assort__link{
+		max-height: 150px !important;
 	}
 
-	.footer__nav-wrap{
-		margin-bottom: 25px;
+}
+@include mobile{
+	.assort-dscr{
+		@include font-size(16px);
 	}
-	.footer__logo-wrap{
-		margin-bottom: 20px;
-		margin-right: 0;
-		float: none;
+	.assort__item{
+		height: 100px!important;
+		width: 48% !important;
 	}
-	.soc__like, 
-	.soc__yt{
-		width: 100%;
+	.assort__link{
+		max-height: 100px !important ;
 	}
-	.soc__yt{
-		margin-bottom: 7px;
+}
+@include breakpoint(400px){
+	.assort-dscr{
+		@include font-size(18px);
+	}
+	.assort__item{
+		height: 80px!important;
+		width: 100% !important;
+	}
+	.assort__link{
+		max-height: 80px !important ;
 	}
 }
