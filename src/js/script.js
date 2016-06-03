@@ -482,17 +482,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
                  text: $(this).next('.tooltip')
              },
               position: {
-                my:'center left',
+                my:'top left',
                 at:'top right',
                 adjust:{
-                  y:10
-                }
+                  y:-22
+                },
               },
               style: {
                 classes: 'tooltip-comment',
                 width: 360,
                 tip: {
-                  corner: 'left center',
+                  corner: 'left top',
                   mimic: 'center center',
                   height: 10,
                   width: 10

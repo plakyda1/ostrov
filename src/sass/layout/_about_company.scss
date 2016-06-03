@@ -6,8 +6,8 @@
 	margin-right: 20px;
 }
 .info__company-wrap{
-	display: block;
-
+	display: block;	
+	line-height: 24px;
 	margin-right: 320px;
 	@include clearfix();
 }
@@ -24,7 +24,6 @@
 	&-link{
 		margin-left: 13px;
 		@include transition(.8s);
-		transition: .25s;	
 		&:hover{
 			color: #232832;
 		}
@@ -39,7 +38,6 @@
 }	
 .__company-dscr{
 	margin-bottom: 13px;
-	line-height: 21px;
 }
 .__company-dscr-l{
 	margin-left: 15px;

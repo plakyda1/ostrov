@@ -32,12 +32,16 @@
 	float: left;
 	width: 160px;
 	text-align: right;
+	&:after{
+		content: ':';
+	}
 }
 .value_kabinet {
 	float: left;
 	width: 220px;
 	margin-left:20px;
 	font-family: 'pt_sansbold';
+	font-weight: 600;
 }
 .buttons_kabinet{
 	float: right;
@@ -63,15 +67,20 @@
 }
 .kabinet-nav__link{
 	margin-left: 13px;
+	@include transition(.8s);
+	color: #7b7d81;
+	&:hover{
+		color: #232832;
+	}
 }
 .kabinet-nav__link_active{
 	font-weight: 600;
 }
 .kabinet-nav__link_head{
 	margin-left: 0px;
+	color: #232832;
 }
 .add-adress{
-	text-align: center;
 	margin-bottom: 40px;
 }
 .add-adress__text{
@@ -79,6 +88,7 @@
 	position: relative;
 	cursor: pointer;
 	text-decoration: underline;
+	margin-left: 195px;
 }
 .add-adress__text:hover{
 	text-decoration: none;
@@ -260,8 +270,9 @@
 }
 .tooltip{
 	display: none;
-	border: 1px solid #d0d1d1;
+	border: 1px solid rgb(172, 173, 173);
 	@include border-radius(3px);
+    background-color: #f05a28;
 }
 .tooltip-comment{
 	border: 1px solid $gray;
@@ -336,7 +347,9 @@
 		padding: 0;
 	}
 	.qtip-tip{
-		border-color: #d0d1d1;
+		margin-top: 22px !important;
+		border: rgb(172, 173, 173);
+		left: -11px !important;
 	}
 }
 
