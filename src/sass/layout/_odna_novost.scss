@@ -14,7 +14,7 @@ section.odna_novost{
 }
 .image-news-preview{
 	-webkit-filter: brightness(100%);
-	@include transition(.5s);
+	@include transition(.25s);
 	width: 100%;
 	position: relative;
 }

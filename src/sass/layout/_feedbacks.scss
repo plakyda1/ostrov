@@ -46,12 +46,13 @@
 	line-height: 68px;
 }
 .submit-btn{
+	cursor: pointer;
 	float: right;
 	background: none;
 	border: 1px solid #89c53f;
 	padding: 10px 20px;
 	color: #89c53f;
-	@include transition(.8s);
+	@include transition(.25s);
 	@include border-radius(2px);
 	font-family: 'pt_sansbold', sans-serif;
 	&:hover{
@@ -123,7 +124,7 @@
 	margin-top: 0 !important;
 	margin-bottom: 0 !important;
 	&:last-child{
-		margin-right: 0 !important; 
+		margin-right: 0 !important;
 	}
 }
 

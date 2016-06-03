@@ -72,7 +72,7 @@
     left: 0px;
 	background: url('../img/icons/arrow_list-green.svg');
 	@include rotate(180);
-	@include transition(.5s);
+	@include transition(.25s);
 }
 .zakaz__quick-info_active:before{
 	content: '';

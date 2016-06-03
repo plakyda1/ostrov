@@ -74,7 +74,7 @@
 }
 .kabinet-nav__link{
 	margin-left: 13px;
-	@include transition(.8s);
+	@include transition(.25s);
 	color: #7b7d81;
 	&:hover{
 		color: #232832;
@@ -152,7 +152,7 @@
 	background: url('../img/icons/arrow_list-green.svg') no-repeat;
 	background-size : cover;
 	@include rotate(0);
-	@include transition(.5s);
+	@include transition(.25s);
 }
 .zakazy__item:hover{
 	border-color: #fff;
@@ -246,7 +246,7 @@
 	background: url('../img/icons/arrow_list-green.svg') no-repeat;
 	background-size : cover;
 	@include rotate(180);
-	@include transition(.5s);
+	@include transition(.25s);
 }
 .naming{
 	width: 61.54%;

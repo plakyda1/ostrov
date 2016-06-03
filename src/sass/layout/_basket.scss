@@ -15,6 +15,7 @@
 }
 .dissable-product{
 	display: block;
+	padding: 15px 10px;
 	text-align: center;
 	span {
 		display: inline-block;
@@ -26,7 +27,10 @@
 		width: 14px;
 		height: 14px;
 		@include transition(0.5s);
-		&:hover{
+
+	}
+	&:hover {
+		#del_button {
 			fill: #f05a28 !important;
 		}
 	}
@@ -34,7 +38,9 @@
 }
 .basket {
 	tr:not([class='caption']):hover{
-	    background: #F3E7E7;
         border-bottom: 2px solid #f05a28;
+        .name-product{
+        	font-weight: 600;
+        }
 	}
 }

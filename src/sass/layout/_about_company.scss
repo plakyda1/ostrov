@@ -6,7 +6,7 @@
 	margin-right: 20px;
 }
 .info__company-wrap{
-	display: block;	
+	display: block;
 	line-height: 24px;
 	margin-right: 320px;
 	@include clearfix();
@@ -23,7 +23,7 @@
 	}
 	&-link{
 		margin-left: 13px;
-		@include transition(.8s);
+		@include transition(.25s);
 		&:hover{
 			color: #232832;
 		}
@@ -35,7 +35,7 @@
 			color: $accordion-text;
 		}
 	}
-}	
+}
 .__company-dscr{
 	margin-bottom: 13px;
 }
