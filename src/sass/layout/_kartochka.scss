@@ -131,6 +131,9 @@
 	}
 	.product__stock-status{
 		margin-bottom: 22px;
+		&:before {
+			margin-right: 4px;
+		}
 	}
 	.product__amount{
 		margin-right: 10px;

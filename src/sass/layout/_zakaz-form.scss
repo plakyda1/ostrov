@@ -68,7 +68,13 @@
 		vertical-align: top;
 		margin: 0 10px;
 	}
-
+	&.contacts {
+		.value,
+		.definition,
+		.edit-column{
+			vertical-align: middle;
+		}
+	}
 }
 .zakaz__wrap {
 	.block-title {
@@ -176,7 +182,6 @@
 		display: inline-block;
 	}
 	.defination {
-		width: 140px;
 		padding-left: 30px;
 	    font-family: 'pt_sansbold';
 	    font-weight: 600;

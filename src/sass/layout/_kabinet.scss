@@ -32,12 +32,16 @@
 	float: left;
 	width: 160px;
 	text-align: right;
+	&:after{
+		content: ':';
+	}
 }
 .value_kabinet {
 	float: left;
 	width: 220px;
 	margin-left:20px;
 	font-family: 'pt_sansbold';
+	font-weight: 600;
 }
 .buttons_kabinet{
 	float: right;
@@ -77,7 +81,6 @@
 	color: #232832;
 }
 .add-adress{
-	text-align: center;
 	margin-bottom: 40px;
 }
 .add-adress__text{
@@ -85,6 +88,7 @@
 	position: relative;
 	cursor: pointer;
 	text-decoration: underline;
+	margin-left: 195px;
 }
 .add-adress__text:hover{
 	text-decoration: none;
@@ -151,7 +155,7 @@
 	@include clearfix();
 	padding-left:43px;
 	padding-right: 60px;
-	height: 35px;
+	min-height: 35px;
 	font-family: 'pt_sansregular';
 	&__number{
 		float: left;
@@ -161,6 +165,7 @@
 		float: left;
 		margin-right: 45px;
 		@include font-size(14px);
+
 	}
 	&__repeat{
 		float: left;
@@ -262,8 +267,9 @@
 }
 .tooltip{
 	display: none;
-	border: 1px solid #d0d1d1;
+	border: 1px solid rgb(172, 173, 173);
 	@include border-radius(3px);
+    background-color: #f05a28;
 }
 .tooltip-comment{
 	border: 1px solid $gray;
@@ -338,10 +344,47 @@
 		padding: 0;
 	}
 	.qtip-tip{
-		border-color: #d0d1d1;
+		margin-top: 22px !important;
+		border: rgb(172, 173, 173);
+		left: -11px !important;
 	}
 }
 
 	.qtip{
 		max-width: 360px !important;
 	}
+// Media для таблицы заказов с аккордеоном
+@include breakpoint (1200px){
+	.kabinet-nav__wrap_media{
+		width: 100% !important;
+		text-align: center;
+		margin: 20px 0 !important;
+	}
+}
+@include breakpoint (1024px){
+	.zakaz-info__summa{
+		display: inline-block !important;
+		margin-top: 20px;
+		float: none;
+	}
+	.zakaz-info__repeat{
+		float:right !important ;
+	}
+}
+@include breakpoint (848px){
+	.zakaz-info__repeat{
+		float:none !important;
+		display: inline-block;
+	}
+	.zakaz-info__comment{
+		display: inline-block;
+	}
+	.kabinet-nav__wrap{
+		width: 100% !important;
+		text-align: center;
+		margin-top: 20px !important;
+	}
+	.zakaz-info__summa{
+		margin-bottom: 15px;
+	}
+}

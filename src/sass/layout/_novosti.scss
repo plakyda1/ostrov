@@ -5,3 +5,9 @@ section.all-news{
 .news__item_in-page-news{
 	width: 100%;
 }
+// Media для страницы новостей
+@include breakpoint(700px){
+	.img-news{
+		display: none !important;
+	}
+}

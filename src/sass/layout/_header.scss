@@ -1,7 +1,7 @@
 // ------------------------------------Стили Хедера----------------------------------
 .container{
 	@include clearfix();
-	max-width:1200px;
+	width:1200px;
 	margin:0 auto;
 	padding:10px;
 	position: relative;
@@ -22,7 +22,7 @@
 		.header__search-line-wrap,
 		.header__menu-line-wrap	{
 			@include clearfix;
-			max-width: 1200px;
+			width: 1200px;
 
 			margin: 0 auto;
 			min-height: 80px;
@@ -33,11 +33,16 @@
 		.header__menu-line-wrap	{
 			padding: 5px 10px 0px;
 		}
+		.logo{
+			margin-right: 40px;
+			margin-top:6px;
+			float: left;
+		}
 	}
 	.logo{
-		margin-right: 40px;
-		margin-top:6px;
-		float: left;
+		display: block;
+		width: 220px;
+		height: 29px;
 	}
 	.search-form {
 		margin-right: 110px;

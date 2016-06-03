@@ -11,12 +11,12 @@ block main
 			h2.__title.__title_basket Корзина
 			.zakaz__wrap
 				.table-wrap
-					table.responsive.zakaz-table
+					table.responsive.zakaz-table.table
 						tr.caption
 							th Наименование
 							th Цена
-							th Количество (шт)
-							th Количество (уп)
+							th Количество (шт.)
+							th Количество (уп.)
 							th Сума
 							th
 						-for (var j=1;j<=7;j++)
@@ -29,7 +29,7 @@ block main
 									td
 										span.price
 											|1 599
-										span.price-text руб/шт
+										span.price-text руб./шт.
 									td
 										.product__amount
 											span.minus
@@ -41,7 +41,7 @@ block main
 									td
 										span.summa-item
 											|63 900
-										span.price-text руб
+										span.price-text руб.
 									td
 										a.dissable-product(href='')
 											svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='13.922px', height='13.922px', viewbox='0 0 13.922 13.922', enable-background='new 0 0 13.922 13.922', xml:space='preserve')
@@ -57,7 +57,7 @@ block main
 									td
 										span.price
 											|1599
-										span.price-text руб/шт
+										span.price-text руб./шт.
 									td
 										.product__amount
 											span.minus
@@ -69,7 +69,7 @@ block main
 									td
 										span.summa-item
 											|63 900
-										span.price-text руб
+										span.price-text руб.
 									td
 										a.dissable-product(href='')
 											svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='13.922px', height='13.922px', viewbox='0 0 13.922 13.922', enable-background='new 0 0 13.922 13.922', xml:space='preserve')
@@ -77,6 +77,6 @@ block main
 													path#del_button(fill='#CECED0', d="M13.594,12L12,13.594c-0.211,0.211-0.504,0.328-0.797,0.328s-0.586-0.117-0.797-0.328l-3.445-3.445l-3.445,3.445c-0.211,0.211-0.504,0.328-0.797,0.328s-0.586-0.117-0.797-0.328L0.328,12C0.117,11.789,0,11.496,0,11.203s0.117-0.586,0.328-0.797l3.445-3.445L0.328,3.516C0.117,3.305,0,3.012,0,2.719s0.117-0.586,0.328-0.797l1.594-1.594C2.133,0.117,2.426,0,2.719,0s0.586,0.117,0.797,0.328l3.445,3.445l3.445-3.445C10.617,0.117,10.91,0,11.203,0S11.789,0.117,12,0.328l1.594,1.594c0.211,0.211,0.328,0.504,0.328,0.797s-0.117,0.586-0.328,0.797l-3.445,3.445l3.445,3.445c0.211,0.211,0.328,0.504,0.328,0.797S13.805,11.789,13.594,12z")
 				.basket__total Итого:
 					span.zakaz-summa 222 950
-						span.price-text руб
+						span.price-text руб.
 				.basket__btn-group
 					a(href="zakaz-form.html").btn-zakaz.btn-confirm Оформить заказ

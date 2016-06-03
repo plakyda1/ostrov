@@ -1,12 +1,12 @@
 //--------------------------------------Cлайдер главной страницы-------------------------------------------
 
 .carousel-wrap {
-	max-width: 1240px;
+	width: 1240px;
 	max-height: 400px;
 	margin: 0 auto;
 	position: relative;
     margin-bottom: 60px;
-    visibility: hidden; 
+    visibility: hidden;
     @include opacity(0);
     @include transition(3s);
 	.owl-nav{
@@ -106,7 +106,7 @@
 	}
 }
 
-@include breakpoint(800){
+@include breakpoint(800px){
 	.slider-content-wrap{
 		background: url('../img/slider_main_page_tablet.jpg') cover !important;
 		height: auto !important;
@@ -118,7 +118,7 @@
 		}
 	}
 }
-@include breakpoint(550){
+@include breakpoint(550px){
 	.slider-content-wrap{
 		background: url('../img/slider_main_page_mobile.jpg') cover !important;
 	}
@@ -172,7 +172,7 @@
 		@include transition(.50s);
 	}
 	&__link img{
-		
+
 		width: 100%;
 		height: auto;
 	}
@@ -181,19 +181,23 @@
 		display: block;
 	}
 	&-dscr{
+
 		position: absolute;
 		left:20px;
 		top:50%;
-		@include transform(translateY(-50%));	
+		@include transform(translateY(-50%));
 		max-width: 175px;
 		@include font-size(21px);
 		font-family: 'pt_sansbold';
 		text-align: left;
 		z-index: 2;
+		&.white {
+			color: #fff;
+		}
 
 	}
 	//----------------- Анимация при наведении на Название асортимента-------------------------------------
-	&-dscr:hover + .assort__image{
+	&__link:hover > .assort__image{
 		@include transform(scale(1.1));
 	}
 }
@@ -258,6 +262,12 @@
 		white-space: nowrap;
 		overflow: hidden;
 		text-overflow: ellipsis;
+    }
+    &__title_link{
+    	@include transition(0.25s);
+    }
+    &__title_link:hover{
+    	color: $orange;
     }
     &__text{
     	font-family: 'pt_sansregular';

@@ -183,7 +183,7 @@ $('.button-kab_change').on('click', function(event) {
   /* Act on the event */
   $('.about-user__item_active').each(function(index, el) {
       $(this).toggleClass('about-user__item_active');
-  });  
+  });
   $(this).closest('.about-user__item').toggleClass('about-user__item_active');
 });
 
@@ -206,6 +206,37 @@ $('.authorization__login-link').on('click', function(event) {
   });
   /* Act on the event */
 });
+
+// Вызов переключателя
+      $('.filter-view__list').on('click','.filter-view__link',function(event){
+        event.preventDefault ? event.preventDefault() : (event.returnValue=false);
+        displayMode($(this));
+      })
+
+          // ПЕРЕКЛЮЧАТЕЛЬ DISPLAY MODE
+    function displayMode(currentModeLink) {
+      var currentMode=currentModeLink.attr('data-mode'),
+        productWrap=$('.catalog-wrap');
+      var modes = {
+        'list': 'catalog-list-style',
+        'block':'catalog-block-style'
+      };
+      productWrap.attr('class','catalog-wrap');
+      $('.filter-view-line_active').removeClass('filter-view-line_active');
+      $('.filter-view-blocks_active').removeClass('filter-view-blocks_active');
+      switch (currentMode){
+        case 'list':
+               productWrap.addClass(modes.list);
+               currentModeLink.find('.filter-view__icon').addClass('filter-view-line_active');
+               break;
+         case 'block':
+               productWrap.addClass(modes.block);
+               currentModeLink.find('.filter-view__icon').addClass('filter-view-blocks_active');
+               break;
+      }
+    }
+
+
 
 
 //
@@ -351,17 +382,17 @@ google.maps.event.addDomListener(window, 'load', initialize);
                  text: $(this).next('.tooltip')
              },
               position: {
-                my:'center left',
+                my:'top left',
                 at:'top right',
                 adjust:{
-                  y:10
-                }
+                  y:-22
+                },
               },
               style: {
                 classes: 'tooltip-comment',
-                width: 360, 
+                width: 360,
                 tip: {
-                  corner: 'left center',
+                  corner: 'left top',
                   mimic: 'center center',
                   height: 10,
                   width: 10
@@ -375,6 +406,6 @@ google.maps.event.addDomListener(window, 'load', initialize);
      });
      $('.add_comment').add('.cancel_comment').on('click', function(event) {
          event.preventDefault();
-         $('.activated-comment').toggleClass('activated-comment').qtip('hide');    
+         $('.activated-comment').toggleClass('activated-comment').qtip('hide');
      });
  });

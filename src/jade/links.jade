@@ -1,0 +1,38 @@
+extends _layout.jade
+block main
+	section.all-news
+		.container__catalog-wrap
+			.container__catalog
+				include ./_includes/_layout/_aside.jade
+				.catalog-content-wrap
+					h2.__title Доступные страницы
+					.availible-links
+						.reg-titles Основные
+						a(href='index.html').link-simple Главная
+						a(href='catalog.html').link-simple Каталог
+						a(href='kartochka.html').link-simple Карточка товара
+
+						.reg-titles Новости
+						a(href='novosti.html').link-simple Новости
+						a(href='odna_novost.html').link-simple Страница новости
+
+						.reg-titles Компания
+						a(href='about_company.html').link-simple Об компание
+						a(href='contacts.html').link-simple Контакты
+						a(href='feedbacks.html').link-simple Наши клиенты и отзывы
+						a(href='payment_delivery.html').link-simple Оплата и доставка
+						a(href='vacancy.html').link-simple Вакансии
+
+						.reg-titles Пользователь
+						a(href='kabinet.html').link-simple Кабинет
+						a(href='registration.html').link-simple Регистрация
+
+						.reg-titles Все звязанное с заказами
+						a(href='basket.html').link-simple Корзина
+						a(href='zakaz-form.html').link-simple Форма заказа
+						a(href='zakaz-podtverd.html').link-simple Подтверджение заказа
+						a(href='formalization_order.html').link-simple Офорление заказа
+						a(href='history_orders.html').link-simple История заказов
+
+
+

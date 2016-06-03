@@ -15,13 +15,27 @@ var myModule = (function () {
 	};
 
 // ------------------------------------------------ACCCORDION-----------------------------------------
+// function _accordion(e){
+// 	e.preventDefault();
+// 	$(this)
+// 	.toggleClass("accordion__link_active")
+// 	.siblings('.accordion-item__list')
+// 	.stop(true, true)
+// 	.slideToggle();
+// }
 function _accordion(e){
+	var allLink = $('.accordion__link');
+	var allAccordionItem = $('.accordion-item__list')
 	e.preventDefault();
-	$(this)
-	.toggleClass("accordion__link_active")
-	.siblings('.accordion-item__list')
-	.stop(true, true)
-	.slideToggle();
+	if ($(this).hasClass('accordion__link_active')) {
+		$(this).removeClass('accordion__link_active');
+		$(this).next().stop(true, true).slideUp('slow')
+	}else{
+		allAccordionItem.stop(true, true).slideUp('slow');
+		allLink.removeClass('accordion__link_active');
+		$(this).addClass('accordion__link_active');
+		$(this).next().stop(true, true).slideDown('slow');
+	}
 }
 function _accordionZakaz(e){
 	// console.log($('.table-wrap'));
