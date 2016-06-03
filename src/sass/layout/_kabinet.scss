@@ -26,11 +26,21 @@
 	transition: .25s;
 	background: $gray;
 	min-height: 50px;
+
+}
+.about-user__item{
+	.hidden-input {
+		margin-top: -5px;
+	}
+
 }
 .about-user__item_active{
 	.definition_kabinet,
 	.buttons_kabinet{
 		margin-top: 15px;
+	}
+	.hidden-input {
+		margin-top: 5px;
 	}
 }
 .about-user__item > div{

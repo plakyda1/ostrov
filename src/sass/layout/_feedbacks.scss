@@ -128,3 +128,44 @@
 	}
 }
 
+.thanksgiving__letters-gallery{
+		margin-bottom: 50px;
+		.owl-nav{
+		position: absolute;
+		bottom:-52px;
+		right: 20px;
+		width: 100%;
+		text-align: right;
+	}
+
+	.owl-prev{
+		display: inline-block;
+		background: url('../img/icons/arrow_left-gr.svg');
+		width: 30px;
+		height: 30px;
+
+	}
+	.owl-next{
+		display: inline-block;
+		margin-left: 20px;
+		background: url('../img/icons/arrow_right-gr.svg');
+		width: 30px;
+		height: 30px;
+
+	}
+	.owl-next,
+	.owl-prev{
+		@include opacity(1);
+	}
+	.owl-next:hover,
+	.owl-prev:hover{
+		@include transition(.25s);
+	}
+	.owl-next:hover{
+		background: url('../img/icons/arrow_right-or.svg');
+	}
+	.owl-prev:hover{
+		background: url('../img/icons/arrow_left-or.svg');
+	}
+}
+
