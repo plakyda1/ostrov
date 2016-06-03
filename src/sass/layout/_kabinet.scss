@@ -38,6 +38,7 @@
 	width: 220px;
 	margin-left:20px;
 	font-family: 'pt_sansbold';
+	font-weight: 600;
 }
 .buttons_kabinet{
 	float: right;
@@ -71,7 +72,6 @@
 	margin-left: 0px;
 }
 .add-adress{
-	text-align: center;
 	margin-bottom: 40px;
 }
 .add-adress__text{
@@ -79,6 +79,7 @@
 	position: relative;
 	cursor: pointer;
 	text-decoration: underline;
+	margin-left: 195px;
 }
 .add-adress__text:hover{
 	text-decoration: none;
@@ -257,8 +258,9 @@
 }
 .tooltip{
 	display: none;
-	border: 1px solid #d0d1d1;
+	border: 1px solid rgb(172, 173, 173);
 	@include border-radius(3px);
+    background-color: #f05a28;
 }
 .tooltip-comment{
 	border: 1px solid $gray;
@@ -333,7 +335,9 @@
 		padding: 0;
 	}
 	.qtip-tip{
-		border-color: #d0d1d1;
+		margin-top: 22px !important;
+		border: rgb(172, 173, 173);
+		left: -11px !important;
 	}
 }
 
