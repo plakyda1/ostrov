@@ -32,6 +32,9 @@
 	float: left;
 	width: 160px;
 	text-align: right;
+	&:after{
+		content: ':';
+	}
 }
 .value_kabinet {
 	float: left;

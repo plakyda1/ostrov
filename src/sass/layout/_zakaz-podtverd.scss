@@ -25,8 +25,11 @@
 		float: left;
 		width: 22%;
 		text-align: right;
-
+		&:after{
+			content : ':';
+		}
 	}
+
 	.value{
 		margin-left:2%;
 		float: right;
@@ -35,6 +38,9 @@
 	}
 	.value__details{
 		font-weight: normal;
+	}
+	.value__dostavka{
+		margin-right: 5px;
 	}
 }
 .podtverd__title{
@@ -83,6 +89,9 @@
 .zakaz-summa{
 	@include font-size(21px);
 	font-family: 'pt_sansbold';
+}
+.zakaz-amount{
+	margin: 0 4px;
 }
 .zakaz-summa{
 	margin-left: 2px;
