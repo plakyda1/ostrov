@@ -253,7 +253,9 @@ var validForm = (function () {
       var inputsGroup = $(form).find('.rfield');
       inputsGroup.each(function() {
         if ( $(this).val() === '' || !$(this).prop("checked")) {
-
+        if ($(this).prop("disabled")) {
+          return true; // проход дальше если поле неактивно
+        }
           var
             thisElem = $(this),
             myPos = 'left',
