@@ -129,12 +129,12 @@
 		&:after {
 			content: '';
 			position: absolute;
-			top: 5px;
-			left: 5px;
+			top: 6px;
+			left: 6px;
 			display: none;
 			@include transition(0.5s);
-			width: 10px;
-			height: 10px;
+			width: 8px;
+			height: 8px;
 			background: #ffffff;
 			@include border-radius(50%);
 		}
@@ -275,13 +275,9 @@
 			background: url('../img/icons/check.svg');
 		}
 	}
-	p.bold>span{
-		font-family: 'pt_sansbold';
-		font-weight: 600;
-	    color: $black !important;
-	}
 	p.bold>.important:before{
 		content:'*';
+		font-weight: 600;
 		color: #f05a28;
 		margin-right: 4px;
 		display: inline;

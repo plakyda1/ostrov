@@ -32,3 +32,9 @@
 	}
 
 }
+.basket {
+	tr:not([class='caption']):hover{
+	    background: #F3E7E7;
+        border-bottom: 2px solid #f05a28;
+	}
+}

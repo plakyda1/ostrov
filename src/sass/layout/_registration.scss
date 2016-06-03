@@ -153,3 +153,11 @@
 		margin-top: 20px;
 	}
 }
+.field-error {
+	border-color: $orange !important;
+}
+.reg-list {
+	.checkbox-input {
+		width: 285px;
+	}
+}

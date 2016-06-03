@@ -11,29 +11,29 @@ block main
 						li.breadcrumbs__item
 							a.breadcrumbs__link.breadcrumbs__link_active(href="#") Новости
 				h2.__title Регистрация
-				form.reg-form
+				form.reg-form.rf
 					.reg-titles Основные данные
 					ul.reg-list
 						li.reg-list__li
 							.details.important Имя, Отчество
 							.defination
-								input.input-main-theme.big(type='text' name='user-name' value='Екатерина Николаевна')
+								input.input-main-theme.big.rfield(type='text' name='user-name' value='Екатерина Николаевна' data-tooltip='Введите имя отчество' data-position='right')
 						li.reg-list__li
 							.details.important Фамилия:
 							.defination
-								input.input-main-theme.big.big(type='text' name='user-surname' value='Александрова')
+								input.input-main-theme.big.big.rfield(type='text' name='user-surname' value='Александрова' data-tooltip='Введите фамилию' data-position='right')
 						li.reg-list__li
 							.details.important Компания:
 							.defination
-								input.input-main-theme.big(type='text' name='user-company' value='«Смарт Финанс»')
+								input.input-main-theme.big.rfield(type='text' name='user-company' value='«Смарт Финанс»' data-tooltip='Введите название компании' data-position='right')
 						li.reg-list__li
 							.details.important Email:
 							.defination
-								input.input-main-theme.big(type='text' name='user-email')
+								input.input-main-theme.big.rfield(type='text' name='user-email' data-tooltip='Введите e-mail' data-position='right')
 						li.reg-list__li
 							.details.important Телефон:
 							.defination
-								input.input-main-theme.big(type='text' name='user-tel')
+								input.input-main-theme.big.rfield(type='text' name='user-tel' data-tooltip='Введите телефон' data-position='right')
 						li.reg-list__li
 							.details Факс:
 							.defination
@@ -54,17 +54,17 @@ block main
 						li.reg-list__li
 							.details.important Улица:
 							.defination
-								input.input-main-theme.big(type='text' name='addr_street' )
+								input.input-main-theme.big.rfield(type='text' name='addr_street' data-tooltip='Введите улицу' data-position='right')
 						li.reg-list__li
 							.details.important Дом:
 							.defination.clearfix
-								input.input-main-theme.small(type='text' name='addr_house' )
+								input.input-main-theme.small.rfield(type='text' name='addr_house' data-tooltip='Введите имя отчество' data-position='left')
 								label.small-inp Корпус:
-									input.input-main-theme.small(type='text' name='addr_korpus' )
+									input.input-main-theme.small.rfield(type='text' name='addr_korpus' data-tooltip='Введите имя отчество' data-position='right' )
 						li.reg-list__li
 							.details.important Город:
 							.defination
-								input.input-main-theme.big(type='text' name='addr_town')
+								input.input-main-theme.big.rfield(type='text' name='addr_town' data-tooltip='Введите город' data-position='right')
 						li.reg-list__li
 							.details.important Субъект Федерации:
 							.defination.defination_mtop
@@ -73,30 +73,31 @@ block main
 									p
 										span Санкт-Петербург
 								label.radio-input
-									input(type='radio' name='subject-type' value='other')
+									input(type='radio' name='subject-type' value='other' )
 									p
 										span Другой
-								input.input-main-theme.big.disabled(type='text' name='addr_fed_subg' disabled)
+								input.input-main-theme.big.disabled.rfield(type='text' name='addr_fed_subg' disabled data-tooltip='Введите другой субьект федерации' data-position='right')
 					.reg-titles Пароль
 					ul.reg-list
 						li.reg-list__li
 							.details.important Пароль:
 							.defination
-								input.input-main-theme.big(type='password' name='user_pass' )
+								input.input-main-theme.big.rfield(type='password' name='user_pass' data-tooltip='Введите пароль' data-position='right')
 						li.reg-list__li
 							.details.important Повторите пароль:
 							.defination
-								input.input-main-theme.big(type='password' name='user_pass_copy' )
+								input.input-main-theme.big.rfield(type='password' name='user_pass_copy' data-tooltip='Повторите пароль' data-position='right')
 						li.reg-list__li
 							.defination.shifted
-								label.checkbox-input
-									input(type='checkbox' name='subject-type')
-									p
+								label.checkbox-input(data-tooltip='Обьязательное поле' data-position='left')
+									input.rfield(type='checkbox' name='subject-type' )
+									p.bold
 										span.important Я прочитал Политику Безопасности и согласен с условиями
 								label.checkbox-input
 									input(type='checkbox' name='subject-type' checked)
 									p
 										span Подписаться на рассылку новостей
-								button.button-main-theme(type='submit') Зарегистрироваться
+								button.button-main-theme.send(type='submit')
+									| Зарегистрироваться
 
 

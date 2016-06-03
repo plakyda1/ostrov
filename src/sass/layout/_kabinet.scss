@@ -119,7 +119,7 @@
 	margin-bottom: 20px;
 }
 .zakazy__item{
-	padding-top: 15px; 
+	padding-top: 15px;
 	padding-bottom: 0px;
 	cursor: pointer;
 	position: relative;
@@ -172,7 +172,7 @@
 .comment,
 .repeat-link{
 	text-decoration: underline;
-	
+
 }
 .repeat-link{
 	color: $green;
@@ -182,6 +182,8 @@
 }
 .comment{
 	position: relative;
+	display: inline-block;
+	padding-left: 25px;
 }
 .comment:hover{
 	color: $darkgray;
@@ -193,9 +195,10 @@
 	width: 15px;
 	height: 12px;
 	background: url('../img/icons/comment.svg') no-repeat;
+	@include opacity(0.7);
 	background-size : cover;
 	top:5px;
-	left:-25px;
+	left:0;
 }
 .number__numeric {
 	font-family: 'pt_sansbold';
@@ -212,7 +215,7 @@
 .summa__text_big{
 	margin-left: 7px;
 }
-// Стилизация активного заказа в списке акордеона 
+// Стилизация активного заказа в списке акордеона
 .zakazy__item_active{
 	background: $active-zakaz-item;
 }

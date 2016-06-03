@@ -236,6 +236,106 @@ $('.authorization__login-link').on('click', function(event) {
       }
     }
 
+//Валидация формы регистрации
+
+// Объявление модуля
+var validForm = (function () {
+
+    function attachEvents(){
+      // Inits form processing on submit
+      $('.rf').on('submit', function (e) {
+          e.preventDefault();
+          _processForm(this);
+      });
+    };
+
+    function _processForm (form) {
+      var inputsGroup = $(form).find('.rfield');
+      inputsGroup.each(function() {
+        if ( $(this).val() === '' || !$(this).prop("checked")) {
+
+          var
+            thisElem = $(this),
+            myPos = 'left',
+            adjustX = 10,
+            checkbox=false;
+          if ($(this).prop("type")==('checkbox' || "radio")) {
+            thisElem=thisElem.closest('.checkbox-input');
+            console.log(thisElem);
+            adjustX=150;
+          } else {
+            checkbox=true;
+          }
+            var atPos = $(this).attr('data-position');
+
+          if (atPos == 'left') {
+            myPos = 'right';
+            adjustX=adjustX*(-1);
+          }
+          if(checkbox) {
+            thisElem.addClass('field-error');
+          }
+          // Calling qTip2
+          thisElem.qtip({
+              content: {
+                  attr: 'data-tooltip' // Tell qTip2 to look inside this attr for its content
+              },
+              position: {
+                at:atPos + ' center',
+                my:myPos + ' center',
+                adjust: {
+                  x: adjustX
+                  }
+                },
+              style: {
+                def: false,
+                classes: 'tooltip-style',
+                  tip: {
+                      corner: myPos +' center',
+                      mimic: 'center center',
+                      height: 8,
+                      width: 9
+                  }
+                },
+              show: {
+                ready: true,
+                event: false
+              },
+              hide: {
+                delay: 100,
+                event: 'focus keydown click'
+              },
+              events: {
+                hide: (function() {
+                  thisElem.removeClass('field-error');
+                  thisElem.parent('.project-upload-input').removeClass('field-error');
+                    thisElem.parent('.project-file').removeClass('field-error');
+                })
+            }
+
+          });
+        }
+      });
+      if (!inputsGroup.hasClass('field-error')){
+        console.log('Форма прошла валидацию');
+      }
+    };
+
+
+  // Возвращаем объект (публичные методы)
+  return {
+    init: attachEvents
+  };
+
+})();
+
+// Вызов модуля
+// Проверяем есть ли на странице формы для проверки
+if ($('.rf')) {
+  validForm.init();
+}
+
+
 
 
 
