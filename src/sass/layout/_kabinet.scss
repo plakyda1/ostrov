@@ -63,12 +63,18 @@
 }
 .kabinet-nav__link{
 	margin-left: 13px;
+	@include transition(.8s);
+	color: #7b7d81;
+	&:hover{
+		color: #232832;
+	}
 }
 .kabinet-nav__link_active{
 	font-weight: 600;
 }
 .kabinet-nav__link_head{
 	margin-left: 0px;
+	color: #232832;
 }
 .add-adress{
 	text-align: center;

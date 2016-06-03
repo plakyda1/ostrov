@@ -42,6 +42,22 @@ function _accordionZakazDetails(e){
 }
 function _accordionVacancy(e){
 	e.preventDefault();
+	
+	// если нужно что бы менялись блоки
+	
+	// $(this)
+	// 	.next()
+	// 	.stop(true, true)
+	// 	.slideToggle()
+	// 	.siblings(".vacancy__accordion-info:visible")
+	// 	.slideUp();
+	// $(this)
+	// 	.toggleClass("vacancy__accordion-link--active");
+	// $(this)
+	// 	.siblings(".vacancy__accordion-title")
+	// 	.removeClass("vacancy__accordion-link--active");
+
+
 	$(this)
 	.toggleClass("vacancy__accordion-link--active")
 	.next()
