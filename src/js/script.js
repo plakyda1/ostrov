@@ -204,7 +204,12 @@ $('input[name="subject-type"]').on('click', function(event) {
 $('.authorization__login-link').on('click', function(event) {
   event.preventDefault();
   $('.log-in-wrap').bPopup({
-    zIndex: 2
+    zIndex: 2,
+    onClose: function(){
+      $(this).find('form').each(function(index, el) {
+        $(this).trigger('reset');
+      });
+    }
 
   });
   /* Act on the event */
@@ -250,7 +255,22 @@ var validForm = (function () {
           e.preventDefault();
           _processForm(this);
       });
+      $('.rf').on('reset', function(e) {
+          _resetForm(this);
+      });
     };
+
+    function _resetForm(form){
+      var inputsGroup = $(form).find('.rfield');
+          inputsGroup.each(function(index, el) {
+          if (
+                $(this).val() === '' ||
+                ($(this).prop("type")==('checkbox' || 'radio') && !$(this).prop("checked"))
+              ) {
+              $(this).removeClass('field-error').qtip("hide");
+          }
+      });
+    }
 
     function _processForm (form) {
       var inputsGroup = $(form).find('.rfield');
@@ -269,12 +289,11 @@ var validForm = (function () {
             checkbox=false;
           if ($(this).prop("type")==('checkbox' || "radio")) {
             thisElem=thisElem.closest('.checkbox-input');
-            console.log(thisElem);
-            adjustX=150;
+            // adjustX=150;
           } else {
             checkbox=true;
           }
-            var atPos = $(this).attr('data-position');
+            var atPos = $(this).attr('data-position') || 'right'; // по умолчанию справа тултипчик
 
           if (atPos == 'left') {
             myPos = 'right';

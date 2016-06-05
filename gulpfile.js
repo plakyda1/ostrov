@@ -29,7 +29,7 @@ gulp.task('jade-templates', function() {
 gulp.task('sass-dev', function() {
   return gulp.src('src/sass/**/*.scss')
     .pipe(plumber())
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
 
     .pipe(sass({
       style: 'compressed',
@@ -42,7 +42,7 @@ gulp.task('sass-dev', function() {
       cascade: true
      }))
     .pipe(cssnano())
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(gulp.dest('build/css/'))
     .pipe(browserSync.stream());
 });

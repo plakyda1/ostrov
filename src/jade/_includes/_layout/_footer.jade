@@ -1,13 +1,13 @@
 .log-in-wrap
 	h2.__title Вход
 	a(href='registration.html').link-simple Регистрация
-	form.log-in-form
+	form.log-in-form.rf
 		label.log-in-form__label
 			span Электронная почта
-			input.input-main-theme(type='text' name='user-name')
+			input.input-main-theme.rfield(type='text' name='user-name' data-tooltip='Введите логин')
 		label.log-in-form__label
 			span Пароль
-			input.input-main-theme(type='text' name='user-password')
+			input.input-main-theme.rfield(type='text' name='user-password' data-tooltip='Вы забыли ввести пароль')
 		.button-wrap
 			button.button-main-theme(type='submit') Войти
 			a(href='#').link-simple Забыли пароль?
