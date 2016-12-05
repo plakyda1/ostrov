@@ -318,11 +318,6 @@
 		padding-left: 10px;
 	    padding-bottom: 5px;
 	}
-	.tooltip__label{
-		display: block;
-		@include font-size(14px);
-		margin-bottom: 20px;
-	}
 	.tooltip__input{
 		outline: none;
 		border-top:none;
@@ -331,7 +326,10 @@
 	    border-bottom: 1px solid $gray;
 	    width: 100%;
 	    height: 30px;
+		@include font-size(14px);
 	    margin-bottom: 10px;
+	    height: 60px;
+	    resize: none;
 	}
 	.btn_tooltip{
 		vertical-align: top;

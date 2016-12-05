@@ -2,7 +2,8 @@
 .footer{
 	padding: 15px 20px 0;
 	background: #f1f1f1;
-	min-width: 100%;
+	min-width: 1240px;
+
 	// font-size: 16px;
 	@include font-size(16px);
 	font-family: 'pt_sansregular', serif;
@@ -52,12 +53,12 @@
 .footer__nav-link{
 	text-transform: uppercase;
 	color: #232832;
-	@include opacity(.7); 
+	@include opacity(.7);
 	font-family: 'pt_sansbold';
 	transition: .25s;
 	&:hover{
 		color: #232832;
-		@include opacity(1); 
+		@include opacity(1);
 	}
 }
 .soc__yt{
@@ -128,7 +129,7 @@
 	position: absolute;
 	bottom: 11px;
 	right: 11px;
-}	
+}
 // Index Media
 
 @include breakpoint(800px){

@@ -7,6 +7,7 @@
 	position: relative;
 }
 	.header{
+		min-width: 1240px;
 		.header__search-line,
 		.header__menu-line {
 			width: 100%;
@@ -45,7 +46,6 @@
 		height: 29px;
 	}
 	.search-form {
-		margin-right: 110px;
 		float: left;
 		font-size: 0;
 			&__input {
@@ -175,7 +175,7 @@
 .main-menu{
 	float: left;
 	padding:0;
-	margin: 25px 47px 0 0 ;
+	margin: 25px 0 0 0 ;
 	text-align: justify;
 	&__li{
 		margin-right: 30px;
